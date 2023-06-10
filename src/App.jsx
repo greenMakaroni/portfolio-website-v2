@@ -5,6 +5,13 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 
+/* Router */
+import { 
+  RouterProvider,
+} from "react-router-dom";
+import router from "./router.jsx"
+
+
 /* CSS */
 import './App.css'
 
@@ -12,10 +19,7 @@ import './App.css'
 function App() {
 
   return (
-    <>
-      <h1> Dawid Markieton </h1>
-      <p> BSc. Software Engineering </p>
-    </>
+    <RouterProvider router={router} />
   )
 }
 
