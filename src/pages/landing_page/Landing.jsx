@@ -1,11 +1,9 @@
-import useWindowDimensions from "../../custom_hooks/useWindowDimensions"
+import Banner from "../../components/landing_banner/Banner"
 
 const Landing = () => {
 
-  const { width, height } = useWindowDimensions()
-
   return (
-    <div>width: {width}, height: {height}</div>
+    <Banner />
   )
 }
 
