@@ -1,18 +1,16 @@
-import { Toolbar, AppBar, Typography } from '@mui/material';
+import { Toolbar, AppBar } from '@mui/material';
+import theme from '../../colorTheme';
+
+import './navigation.css'
 
 const Navigation = () => {
+
   return (
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Home
-          </Typography>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Projects
-          </Typography>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Contact
-          </Typography>
+      <AppBar theme={theme} color="neutral" position="static">
+        <Toolbar className="toolbar-custom">
+          <p className="toolbar-par"> Home </p>
+          <p className="toolbar-par"> Projects </p>
+          <p className="toolbar-par"> Contact </p>
         </Toolbar>
       </AppBar>
   )
