@@ -1,7 +1,11 @@
+import "./banner.css"
 
 const Banner = () => {
   return (
-    <div>Banner</div>
+    <div className="banner-main">
+      <h1 className="name"> Dawid Markieton </h1>
+      <p className="title"> BSc. Software engineering</p>
+    </div>
   )
 }
 
