@@ -1,19 +1,16 @@
-import { Toolbar, AppBar } from '@mui/material';
-import theme from '../../colorTheme';
+import MobileNav from "./MobileNav"
+import Nav from "./Nav"
 
-import './navigation.css'
+// window dimensions hook
+import useWindowDimensions from '../../custom_hooks/useWindowDimensions';
 
-const Navigation = () => {
+export default function Navigation() {
+
+    const { width } = useWindowDimensions();
 
   return (
-      <AppBar theme={theme} color="neutral" position="static">
-        <Toolbar className="toolbar-custom">
-          <p className="toolbar-par"> Home </p>
-          <p className="toolbar-par"> Projects </p>
-          <p className="toolbar-par"> Contact </p>
-        </Toolbar>
-      </AppBar>
+    <>
+        { width < 650 ? <MobileNav /> : <Nav /> }
+    </>
   )
 }
-
-export default Navigation

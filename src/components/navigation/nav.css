@@ -1,0 +1,45 @@
+.nav {
+    position: fixed;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 50px;
+    background-color: #EEEEEE;
+    padding: 20px 0px 20px 0px;
+    user-select: none;
+    transition-duration: 0.1s;
+    z-index: 7;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    justify-content: center;
+}
+
+.nav-link {
+    margin: 0 30px 0 0;
+    padding: 0;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 300;
+    color: #222831;
+    font-family: 'Geologica', sans-serif;
+
+}
+.active {
+    text-decoration: underline;
+    text-decoration-color: #393E46;
+    text-decoration-thickness: 2px;
+}
+
+.nav-hidden {
+    opacity: 0;
+}

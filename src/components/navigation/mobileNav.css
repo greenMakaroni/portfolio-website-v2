@@ -1,0 +1,145 @@
+.div-hamburger {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    right: 3vh;
+    top: 3vh;
+    width: 50px;
+    height: 50px;
+    background: #393E46;
+    border-radius: 50%;
+    z-index: 7;
+}
+
+.div-hamburger:hover {
+    cursor: pointer;
+}
+
+.hamburger-top {
+    background-color: #DFF6FF;
+    width: 55%;
+    height: 4%;  
+    margin-bottom: 12%;
+}
+
+.hamburger-middle {
+    background-color: #DFF6FF;
+    width: 55%;
+    height: 4%;
+    margin-bottom: 12%;
+}
+
+.hamburger-bottom {
+    background-color: #DFF6FF;
+    width: 55%;
+    height: 4%;
+}
+
+.top-close {
+    position: absolute;
+    align-self: center;
+    background-color: #DFF6FF;
+    width: 55%;
+    height: 10%; 
+    animation: hamburger-close-top ease 0.2s;
+    transform: rotate(45deg);
+}
+
+.bottom-close {
+    position: absolute;
+    align-self: center;
+    background-color: #DFF6FF;
+    width: 55%;
+    height: 10%; 
+    animation: hamburger-close-bottom ease 0.2s;
+    transform: rotate(135deg);
+}
+
+.middle-close {
+    width: 0;
+    height: 0; 
+}
+
+.navigation-menu {
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    position:fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    padding-top: 50px;
+    width: 100vw;
+    height: 100vh;
+    background: #00ADB5;
+    animation: menuAppear-Mobile ease 0.3s;
+    z-index: 5;
+    user-select: none;
+}
+
+.link {
+    margin-bottom: 10vh;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #DFF6FF;
+    animation: linkFadeIn ease 1s;
+    user-select: none;
+    z-index: 5;
+    font-family: 'Geologica', sans-serif;
+}
+
+.link:first {
+    margin-top: 10vh;
+}
+
+.mobile-active {
+    text-decoration: underline;
+    text-decoration-color: #EEEEEE;
+    text-decoration-thickness: 2px;
+}
+
+/************** Animations ****************/
+@keyframes linkFadeIn {
+    0% {
+        opacity: 0;
+        margin-bottom: 20vh;
+    }
+    100% {
+        opacity: 1;
+        margin-bottom: 10vh;
+    }
+}
+
+@keyframes menuAppear-Mobile {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@keyframes hamburger-close-top {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(45deg)
+    }
+}
+
+@keyframes hamburger-close-bottom {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(135deg)
+    }
+}

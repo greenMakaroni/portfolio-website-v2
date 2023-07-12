@@ -8,7 +8,6 @@ import viteLogo from '/vite.svg'
 /* Router & Navigation*/
 import { RouterProvider} from "react-router-dom"
 import router from "./router.jsx"
-import Navigation from './components/navigation/Navigation'
 
 
 /* CSS */
@@ -19,7 +18,6 @@ function App() {
 
   return (
     <>  
-        <Navigation />
         <RouterProvider router={router} />
     </>
   )

@@ -1,8 +1,8 @@
 // pages
-import Landing from "./pages/landing_page/Landing"
+import Home from "./pages/home/Home"
 import Portfolio from "./pages/portfolio/Portfolio"
 import Contact from "./pages/contact/Contact"
-import Error from "./pages/error/Error";
+import Error from "./pages/error/Error"
 
 // router
 import { 
@@ -12,7 +12,7 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Landing />,
+    element: <Home />,
     errorElement: <Error />,
   },
   {
