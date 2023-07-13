@@ -13,6 +13,7 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   background-color: #EEEEEE;
+  overflow-x: hidden;
 }
 
 #root {
