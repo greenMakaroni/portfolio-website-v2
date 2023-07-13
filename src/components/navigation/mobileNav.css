@@ -18,21 +18,21 @@
 }
 
 .hamburger-top {
-    background-color: #DFF6FF;
+    background-color: #ffffff;
     width: 55%;
     height: 4%;  
     margin-bottom: 12%;
 }
 
 .hamburger-middle {
-    background-color: #DFF6FF;
+    background-color: #ffffff;
     width: 55%;
     height: 4%;
     margin-bottom: 12%;
 }
 
 .hamburger-bottom {
-    background-color: #DFF6FF;
+    background-color: #ffffff;
     width: 55%;
     height: 4%;
 }
@@ -40,7 +40,7 @@
 .top-close {
     position: absolute;
     align-self: center;
-    background-color: #DFF6FF;
+    background-color: #ffffff;
     width: 55%;
     height: 10%; 
     animation: hamburger-close-top ease 0.2s;
@@ -50,7 +50,7 @@
 .bottom-close {
     position: absolute;
     align-self: center;
-    background-color: #DFF6FF;
+    background-color: #ffffff;
     width: 55%;
     height: 10%; 
     animation: hamburger-close-bottom ease 0.2s;
@@ -75,7 +75,7 @@
     padding-top: 50px;
     width: 100vw;
     height: 100vh;
-    background: #00ADB5;
+    background: #4e4e4e;
     animation: menuAppear-Mobile ease 0.3s;
     z-index: 5;
     user-select: none;
@@ -86,7 +86,7 @@
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: 300;
-    color: #DFF6FF;
+    color: #ffffff;
     animation: linkFadeIn ease 1s;
     user-select: none;
     z-index: 5;
