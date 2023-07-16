@@ -14,8 +14,11 @@ const Banner = () => {
       {
       isVisible &&
         <>
-          <h1 className="name"> Dawid Markieton </h1>
+        <div className="landingText">
+        <h1 className="name"> Dawid Markieton </h1>
           <p className="title"> BSc. Software engineering</p>
+        </div>
+
           <Scene />
         </>
         }
