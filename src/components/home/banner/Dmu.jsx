@@ -10,7 +10,6 @@ export function Dmu(props) {
   const { nodes, materials } = useGLTF('./dmu.glb')
   return (
     <group  {...props} dispose={null}>
-      <mesh geometry={nodes.platform.geometry} material={materials['Material.001']} position={[-0.06, 0.09, 0.27]} scale={[1.14, 0.03, 1.12]} />
       <mesh geometry={nodes.pedestal.geometry} material={materials.Material} position={[0, 0.33, 0.29]} scale={[0.3, 0.26, 0.3]} />
       <mesh geometry={nodes.shuriken.geometry} material={materials['DMU.001']} position={[-0.07, 2.05, 0.24]} rotation={[-1.53, -0.01, 2.6]} scale={-0.03} />
       <mesh geometry={nodes.mouth.geometry} material={materials['DMU.001']} position={[0.13, 2.69, 0.01]} rotation={[-1.53, -0.01, 2.6]} scale={-20.38} />
