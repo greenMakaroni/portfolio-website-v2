@@ -16,9 +16,10 @@
     margin-top: 15vw;
     font-size: 3rem;
     animation: text-in-smooth 0.6s ease;
-    animation-delay: 0.3s;
+    animation-delay: 1s;
     animation-fill-mode: forwards;
     z-index: 2;
+    user-select: none;
 }
 
 .title {
@@ -27,9 +28,10 @@
     margin-left: 15vw;
     font-size: 1.2rem;
     animation: text-in-smooth 0.6s ease;
-    animation-delay: 0.3s;
+    animation-delay: 1s;
     animation-fill-mode: forwards;
     z-index: 2;
+    user-select: none;
 }
 
 .landingText {
