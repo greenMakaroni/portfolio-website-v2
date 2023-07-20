@@ -12,16 +12,16 @@ const Banner = () => {
     <div ref={banner} className="banner-main">
 
       {
-      isVisible &&
+        isVisible &&
         <>
-        <div className="landingText">
-        <h1 className="name"> Dawid Markieton </h1>
-          <p className="title"> BSc. Software engineering</p>
-        </div>
+          <div className="landingText">
+            <h1 className="name"> Dawid Markieton </h1>
+            <p className="title"> BSc. Software engineering</p>
+          </div>
 
           <Scene />
         </>
-        }
+      }
 
 
     </div>
