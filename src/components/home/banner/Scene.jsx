@@ -1,8 +1,8 @@
 import { useRef, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { Dmu } from './Dmu'
 import Shadows from '../../shadows/Shadows.jsx'
 import { GizmoHelper, GizmoViewport, OrbitControls, Center, Environment } from '@react-three/drei'
+import { Dmu } from './Dmu.jsx'
 
 const Scene = () => {
 
@@ -21,7 +21,7 @@ const Scene = () => {
         {/* Drei helpers */}
         <Shadows />
         {/* <CameraControls /> */}
-        <OrbitControls enableZoom={true} enablePan={false} minPolarAngle={Math.PI / 3} maxPolarAngle={Math.PI / 2} />
+        <OrbitControls enableZoom={false} enablePan={false} minPolarAngle={Math.PI / 3} maxPolarAngle={Math.PI / 2} />
 
         <GizmoHelper
           alignment="bottom-right" // widget alignment within scene

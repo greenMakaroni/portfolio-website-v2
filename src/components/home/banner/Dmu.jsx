@@ -9,16 +9,16 @@ import { useGLTF } from '@react-three/drei'
 export function Dmu(props) {
   const { nodes, materials } = useGLTF('./dmu.glb')
   return (
-    <group  {...props} dispose={null}>
-      <mesh geometry={nodes.pedestal.geometry} material={materials.Material} position={[0, 0.33, 0.29]} scale={[0.3, 0.26, 0.3]} />
-      <mesh geometry={nodes.shuriken.geometry} material={materials['DMU.001']} position={[-0.07, 2.05, 0.24]} rotation={[-1.53, -0.01, 2.6]} scale={-0.03} />
-      <mesh geometry={nodes.mouth.geometry} material={materials['DMU.001']} position={[0.13, 2.69, 0.01]} rotation={[-1.53, -0.01, 2.6]} scale={-20.38} />
-      <mesh geometry={nodes.tongue.geometry} material={materials['DMU.001']} position={[0.04, 2.52, 0.3]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
-      <mesh geometry={nodes.nose.geometry} material={materials['DMU.001']} position={[0.07, 2.79, 0.33]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
-      <mesh geometry={nodes.tail.geometry} material={materials['DMU.001']} position={[-0.19, 3.14, 0.18]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
-      <mesh geometry={nodes.eye.geometry} material={materials['DMU.001']} position={[0.05, 2.8, 0.31]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
-      <mesh geometry={nodes.face.geometry} material={materials['DMU.001']} position={[0.06, 2.72, 0.31]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
-      <mesh geometry={nodes.claw.geometry} material={materials['DMU.001']} position={[0.32, 2.45, 0.46]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
+    <group {...props} dispose={null}>
+      <mesh geometry={nodes.pedestal.geometry} material={materials['Material']} position={[0.01, 0.22, 0]} scale={[0.3, 0.26, 0.3]} />
+      <mesh geometry={nodes.tongue.geometry} material={materials['DMU']} position={[0.05, 2.38, 0.01]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
+      <mesh geometry={nodes.tail.geometry} material={materials['DMU']} position={[-0.19, 2.99, -0.1]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
+      <mesh geometry={nodes.shuriken.geometry} material={materials['DMU']} position={[-0.07, 1.91, -0.05]} rotation={[-1.53, -0.01, 2.6]} scale={-0.03} />
+      <mesh geometry={nodes.nose.geometry} material={materials['DMU']} position={[0.08, 2.64, 0.04]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
+      <mesh geometry={nodes.mouth.geometry} material={materials['DMU']} position={[0.14, 2.54, -0.27]} rotation={[-1.53, -0.01, 2.6]} scale={-20.38} />
+      <mesh geometry={nodes.face.geometry} material={materials['DMU']} position={[0.06, 2.58, 0.03]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
+      <mesh geometry={nodes.eye.geometry} material={materials['DMU']} position={[0.06, 2.65, 0.03]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
+      <mesh geometry={nodes.claw.geometry} material={materials['DMU']} position={[0.32, 2.31, 0.17]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
     </group>
   )
 }
