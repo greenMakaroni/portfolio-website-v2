@@ -14,10 +14,10 @@ const Banner = () => {
       {
         isVisible &&
         <>
-          <div className="landingText">
+          {/* <div className="landingText">
             <h1 className="name"> Dawid Markieton </h1>
             <p className="title"> BSc. Software engineering</p>
-          </div>
+          </div> */}
 
           <Scene />
         </>
