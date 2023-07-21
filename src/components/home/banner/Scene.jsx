@@ -24,9 +24,11 @@ const Scene = () => {
       .then(() => sheet_entry.sequence.play({ iterationCount: 1, range: [0, 6.5] }))
   }, [])
 
+  // After first iteration of entry animation, pointer.playing will change from true to false
   onChange(sheet_entry.sequence.pointer.playing, (playing) => {
     if (!playing) {
-      sheet_entry.sequence.play({ iterationCount: 1, range: [6.5, 12.5] })
+      // when entry animation finished playing, play the loop infinitely
+      sheet_entry.sequence.play({ iterationCount: Infinity, range: [6.5, 12.5] })
     }
   })
 
