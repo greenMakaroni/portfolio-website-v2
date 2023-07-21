@@ -10,7 +10,7 @@ export function Dmu(props) {
   const { nodes, materials } = useGLTF('./dmu.glb')
   return (
     <group {...props} dispose={null}>
-      <editable.mesh castShadow receiveShadow theatreKey="pedestal" geometry={nodes.pedestal.geometry} material={materials['Material']} position={[0.01, 0.22, 0]} scale={[0.3, 0.26, 0.3]} />
+      <editable.mesh theatreKey="pedestal" geometry={nodes.pedestal.geometry} material={materials['Material']} position={[0.01, 0.22, 0]} scale={[0.3, 0.26, 0.3]} />
       <editable.mesh theatreKey="tongue" geometry={nodes.tongue.geometry} material={materials['DMU']} position={[0.05, 2.38, 0.01]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
       <editable.mesh theatreKey="tail" geometry={nodes.tail.geometry} material={materials['DMU']} position={[-0.19, 2.99, -0.1]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
       <editable.mesh theatreKey="shuriken" geometry={nodes.shuriken.geometry} material={materials['DMU']} position={[-0.07, 1.91, -0.05]} rotation={[-1.53, -0.01, 2.6]} scale={-0.03} />

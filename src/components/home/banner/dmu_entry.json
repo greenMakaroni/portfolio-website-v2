@@ -32,7 +32,7 @@
       },
       "sequence": {
         "subUnitsPerUnit": 30,
-        "length": 10,
+        "length": 13,
         "type": "PositionalSequence",
         "tracksByObject": {
           "tail": {
@@ -57,6 +57,45 @@
                   {
                     "id": "Ane5A_iumo",
                     "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": -0.19
+                  },
+                  {
+                    "id": "z3cJQXmeOf",
+                    "position": 6.533,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": -0.19
+                  },
+                  {
+                    "id": "3X0TVrYUXc",
+                    "position": 9.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": -0.23
+                  },
+                  {
+                    "id": "KC5wL6T8bV",
+                    "position": 12.5,
                     "connectedRight": true,
                     "handles": [
                       0.5,
@@ -98,6 +137,45 @@
                     ],
                     "type": "bezier",
                     "value": 2.99
+                  },
+                  {
+                    "id": "W1f6YEHcgt",
+                    "position": 6.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 2.89
+                  },
+                  {
+                    "id": "O_iG6s0Y4H",
+                    "position": 9.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 2.99
+                  },
+                  {
+                    "id": "UdqzJ2V-Fi",
+                    "position": 12.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 2.89
                   }
                 ]
               },
@@ -270,6 +348,45 @@
                     ],
                     "type": "bezier",
                     "value": 0.32
+                  },
+                  {
+                    "id": "B3VPJklKM4",
+                    "position": 6.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0.32
+                  },
+                  {
+                    "id": "XErnVLcTMT",
+                    "position": 9.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0.38000000000000006
+                  },
+                  {
+                    "id": "Vz1qUm0deC",
+                    "position": 12.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0.32
                   }
                 ]
               },
@@ -302,6 +419,45 @@
                     ],
                     "type": "bezier",
                     "value": 2.31
+                  },
+                  {
+                    "id": "8waqKUS5pz",
+                    "position": 6.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 2.21
+                  },
+                  {
+                    "id": "8NgPsuK3t3",
+                    "position": 9.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 2.31
+                  },
+                  {
+                    "id": "GWaNw5fOOI",
+                    "position": 12.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 2.21
                   }
                 ]
               },
@@ -474,6 +630,19 @@
                     ],
                     "type": "bezier",
                     "value": -0.07
+                  },
+                  {
+                    "id": "_E4sRhbfKT",
+                    "position": 6.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": -0.07
                   }
                 ]
               },
@@ -506,6 +675,45 @@
                     ],
                     "type": "bezier",
                     "value": 1.91
+                  },
+                  {
+                    "id": "1ORHvvDxdM",
+                    "position": 6.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 1.81
+                  },
+                  {
+                    "id": "KvGbtrLDj4",
+                    "position": 9.367,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 1.91
+                  },
+                  {
+                    "id": "ynWRSLwPbY",
+                    "position": 12.4,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 1.81
                   }
                 ]
               },
@@ -529,6 +737,19 @@
                   {
                     "id": "mylcmhcsrn",
                     "position": 5.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": -0.05
+                  },
+                  {
+                    "id": "QyixFAptKv",
+                    "position": 6.5,
                     "connectedRight": true,
                     "handles": [
                       0.5,
@@ -591,8 +812,34 @@
                     "value": 0
                   },
                   {
-                    "id": "JXP-L3Yv-D",
-                    "position": 5.5,
+                    "id": "-e_wN43Z-9",
+                    "position": 6.967,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.86,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "hC4rs2u3Vr",
+                    "position": 9.4,
+                    "connectedRight": true,
+                    "handles": [
+                      0.07,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 15
+                  },
+                  {
+                    "id": "78XURSkvTs",
+                    "position": 12.4,
                     "connectedRight": true,
                     "handles": [
                       0.5,
@@ -601,7 +848,7 @@
                       0
                     ],
                     "type": "bezier",
-                    "value": -0.01
+                    "value": 15.079999999999998
                   }
                 ]
               },
@@ -623,8 +870,8 @@
                     "value": 0
                   },
                   {
-                    "id": "UICCSj-CK7",
-                    "position": 5.5,
+                    "id": "duRchj7pUV",
+                    "position": 6.5,
                     "connectedRight": true,
                     "handles": [
                       0.5,
@@ -633,7 +880,7 @@
                       0
                     ],
                     "type": "bezier",
-                    "value": 2.6
+                    "value": 0
                   }
                 ]
               }
@@ -668,7 +915,7 @@
                   },
                   {
                     "id": "oV1oOS8xFI",
-                    "position": 6,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [
                       0.5,
@@ -700,7 +947,7 @@
                   },
                   {
                     "id": "sw-xK6mq_-",
-                    "position": 6,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [
                       0.5,
@@ -710,6 +957,45 @@
                     ],
                     "type": "bezier",
                     "value": 2.58
+                  },
+                  {
+                    "id": "-habKTXtBc",
+                    "position": 6.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 2.48
+                  },
+                  {
+                    "id": "Tv2Vp5xP7E",
+                    "position": 9.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 2.58
+                  },
+                  {
+                    "id": "q4kY7OLfBE",
+                    "position": 12.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 2.48
                   }
                 ]
               },
@@ -732,7 +1018,7 @@
                   },
                   {
                     "id": "Mr4onK5c4H",
-                    "position": 6,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [
                       0.5,
@@ -764,7 +1050,7 @@
                   },
                   {
                     "id": "au-7msA_mU",
-                    "position": 6,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [
                       0.5,
@@ -796,7 +1082,7 @@
                   },
                   {
                     "id": "On7eTOk333",
-                    "position": 6,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [
                       0.5,
@@ -828,7 +1114,7 @@
                   },
                   {
                     "id": "pWY_fX6rQt",
-                    "position": 6,
+                    "position": 5.5,
                     "connectedRight": true,
                     "handles": [
                       0.5,
@@ -914,6 +1200,45 @@
                     ],
                     "type": "bezier",
                     "value": 2.54
+                  },
+                  {
+                    "id": "zQtAlXY4DP",
+                    "position": 6.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 2.44
+                  },
+                  {
+                    "id": "ZzfAsn4wxd",
+                    "position": 9.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 2.54
+                  },
+                  {
+                    "id": "QvzKqRvETV",
+                    "position": 12.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 2.44
                   }
                 ]
               },
@@ -1118,6 +1443,45 @@
                     ],
                     "type": "bezier",
                     "value": 2.65
+                  },
+                  {
+                    "id": "KxkQPl9ii8",
+                    "position": 6.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 2.55
+                  },
+                  {
+                    "id": "ifxm6ZT0RZ",
+                    "position": 9.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 2.65
+                  },
+                  {
+                    "id": "wZuhUtil9P",
+                    "position": 12.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 2.55
                   }
                 ]
               },
@@ -1322,6 +1686,45 @@
                     ],
                     "type": "bezier",
                     "value": 2.64
+                  },
+                  {
+                    "id": "Bb1Fue1OpV",
+                    "position": 6.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 2.54
+                  },
+                  {
+                    "id": "tk11totK1D",
+                    "position": 9.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 2.64
+                  },
+                  {
+                    "id": "kAKrktonHE",
+                    "position": 12.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 2.54
                   }
                 ]
               },
@@ -1507,6 +1910,45 @@
                     ],
                     "type": "bezier",
                     "value": 0.05
+                  },
+                  {
+                    "id": "sPTYCN0Ws6",
+                    "position": 6.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0.05
+                  },
+                  {
+                    "id": "sO7O9N35PM",
+                    "position": 9.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0.07
+                  },
+                  {
+                    "id": "JuMeNnWmOu",
+                    "position": 12.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0.05
                   }
                 ]
               },
@@ -1552,6 +1994,45 @@
                     ],
                     "type": "bezier",
                     "value": 2.38
+                  },
+                  {
+                    "id": "irn_ODux1f",
+                    "position": 6.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 2.28
+                  },
+                  {
+                    "id": "IC06uAKh5g",
+                    "position": 9.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 2.38
+                  },
+                  {
+                    "id": "JlSQ4XWjH0",
+                    "position": 12.5,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 2.28
                   }
                 ]
               },
@@ -1895,6 +2376,11 @@
   },
   "definitionVersion": "0.4.0",
   "revisionHistory": [
+    "7mADrX5sTwVpb5ym",
+    "2DDwTwCVQsG7RgP9",
+    "TJcGyCxDBx1wQDbw",
+    "fmXZIy4lsEzLDxpf",
+    "VjHAUBmv2aN0La-O",
     "UnXAfMXuAEhMw42k",
     "ffGgUNGfgJjR_67B",
     "Wz0bLIJT-9vQ3d67"
