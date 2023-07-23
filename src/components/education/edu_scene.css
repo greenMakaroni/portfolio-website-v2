@@ -1,5 +1,5 @@
 .canvas {
-    position: relative;
+    position: fixed;
     margin: 0;
     padding: 0;
     width: 100vw;
@@ -9,6 +9,7 @@
 }
 
 .canvas_body {
+    position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
