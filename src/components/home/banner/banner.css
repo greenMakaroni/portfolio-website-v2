@@ -44,14 +44,6 @@
     justify-content: flex-start;
 }
 
-.canvas {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    border: 1px solid blue;
-}
-
 @keyframes text-in-smooth {
     0% {
         opacity: 0;

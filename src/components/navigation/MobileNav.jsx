@@ -19,6 +19,14 @@ const MobileNav = () => {
         </Link>
 
         <Link 
+          to="/education" 
+          style={open ? { animation: "none" } : { animation: "linkFadeIn ease 1s;" }} 
+          className={location.pathname === "/education" ? "link mobile-active" : "link"} 
+          onClick={() => setOpen(!open)} > 
+          Education 
+        </Link>
+
+        <Link 
           to="/portfolio" style={open ? { animation: "none" } : { animation: "linkFadeIn ease 1s;" }} 
           className={location.pathname === "/portfolio" ? "link mobile-active" : "link"} 
           onClick={() => setOpen(!open)} > 

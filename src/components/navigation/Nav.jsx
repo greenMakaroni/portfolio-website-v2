@@ -28,6 +28,7 @@ export default function Nav() {
     <nav className={show ? "nav" : "nav-hidden"}>
       <div className="links">
         <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}> Home </Link>
+        <Link to="/education" className={location.pathname === "/education" ? "nav-link active" : "nav-link"}> Education </Link>
         <Link to="/portfolio" className={location.pathname === "/portfolio" ? "nav-link active" : "nav-link"}> Portfolio </Link>
         <Link to="/contact" className={location.pathname === "/contact" ? "nav-link active" : "nav-link"}> Contact </Link>
       </div>

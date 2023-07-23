@@ -1,5 +1,9 @@
 .skills-main {
     width: 100vw;
-    height: 200vh;
-    background-color: black;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }

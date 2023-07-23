@@ -1,0 +1,57 @@
+.progress {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: #ff8800;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+.progress_transition {
+    font-family: 'Nunito', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    animation: fadeOut ease-out 2s forwards;
+}
+
+.loaderTransition_bg {
+    position: absolute;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background: #ff8800;
+    animation: loaderTransition ease 2s forwards;
+    align-items: center;
+    justify-content: center;
+    z-index: 13;
+}
+
+@keyframes loaderTransition {
+    0% {
+       width: 100vw;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

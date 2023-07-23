@@ -2,6 +2,7 @@
 import Home from "./pages/home/Home"
 import Portfolio from "./pages/portfolio/Portfolio"
 import Contact from "./pages/contact/Contact"
+import Education from "./pages/education/Education"
 import Error from "./pages/error/Error"
 
 // router
@@ -25,7 +26,11 @@ const router = createBrowserRouter([
     element: <Contact />,
     errorElement: <Error />,
   },
-  
+  {
+    path: "/education",
+    element: <Education />,
+    errorElement: <Error />
+  } 
 ])
 
 export default router
