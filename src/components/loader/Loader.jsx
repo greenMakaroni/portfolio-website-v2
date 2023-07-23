@@ -3,8 +3,8 @@ import "./loader.css";
 
 const Loader = ({ setLoaded }) => {
     const { progress } = useProgress();
-    progress == 100 && setLoaded(true);
-    return <Html center className="progress"> {progress}% </Html>
+    progress > 99 && setLoaded(true);
+    return <Html center className="progress"> {Math.round(progress)}% </Html>
     
 }
 

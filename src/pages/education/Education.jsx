@@ -1,10 +1,12 @@
 import Navigation from "../../components/navigation/Navigation"
 import Scene from "../../components/education/Scene"
+import DelayRendering from "../../custom_hooks/delayRendering"
 
 const Education = () => {
+
   return (
     <>
-        <Navigation />
+        <DelayRendering delay={2000} component={<Navigation />} />
         <Scene />
     </>
   )

@@ -12,6 +12,12 @@ export default function Nav() {
   const scrollPosition = useScrollPosition();
   const [show, setShow] = useState(true);
 
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     setShow(true)
+  //   }, 3000)
+  // }, [])
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [height, width]);
