@@ -8,9 +8,11 @@
     top: 3vh;
     width: 50px;
     height: 50px;
-    background: #393E46;
+    background: #ffffff;
     border-radius: 50%;
     z-index: 7;
+    box-shadow: 0px 0px 35px #ff8800;
+    user-select: none;
 }
 
 .div-hamburger:hover {
@@ -18,21 +20,21 @@
 }
 
 .hamburger-top {
-    background-color: #ffffff;
+    background-color: #000000;
     width: 55%;
     height: 4%;  
     margin-bottom: 12%;
 }
 
 .hamburger-middle {
-    background-color: #ffffff;
+    background-color: #000000;
     width: 55%;
     height: 4%;
     margin-bottom: 12%;
 }
 
 .hamburger-bottom {
-    background-color: #ffffff;
+    background-color: #000000;
     width: 55%;
     height: 4%;
 }
@@ -40,7 +42,7 @@
 .top-close {
     position: absolute;
     align-self: center;
-    background-color: #ffffff;
+    background-color: #000000;
     width: 55%;
     height: 10%; 
     animation: hamburger-close-top ease 0.2s;
@@ -50,7 +52,7 @@
 .bottom-close {
     position: absolute;
     align-self: center;
-    background-color: #ffffff;
+    background-color: #000000;
     width: 55%;
     height: 10%; 
     animation: hamburger-close-bottom ease 0.2s;
@@ -60,6 +62,7 @@
 .middle-close {
     width: 0;
     height: 0; 
+    user-select: none;
 }
 
 .navigation-menu {
@@ -75,7 +78,7 @@
     padding-top: 50px;
     width: 100vw;
     height: 100vh;
-    background: #4e4e4e;
+    background: #000000;
     animation: menuAppear-Mobile ease 0.3s;
     z-index: 5;
     user-select: none;
@@ -99,7 +102,7 @@
 
 .mobile-active {
     text-decoration: underline;
-    text-decoration-color: #EEEEEE;
+    text-decoration-color: #ff8800;
     text-decoration-thickness: 2px;
     text-underline-offset: 7px;
 }

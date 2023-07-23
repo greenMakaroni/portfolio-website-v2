@@ -23,7 +23,7 @@
           },
           "Camera": {
             "rotation": {
-              "x": 0,
+              "x": 6.09,
               "y": 0,
               "z": 0
             }
@@ -554,19 +554,6 @@
                     ],
                     "type": "bezier",
                     "value": 0.02
-                  },
-                  {
-                    "id": "6DC9icN4rA",
-                    "position": 6.367,
-                    "connectedRight": true,
-                    "handles": [
-                      0.5,
-                      1,
-                      0.5,
-                      0
-                    ],
-                    "type": "bezier",
-                    "value": 0
                   }
                 ]
               },
@@ -677,7 +664,7 @@
                     "value": 1.2199999999999993
                   },
                   {
-                    "id": "ZcmPyXOjjM",
+                    "id": "MvhWQLv_G5",
                     "position": 5.5,
                     "connectedRight": true,
                     "handles": [
@@ -687,7 +674,7 @@
                       0
                     ],
                     "type": "bezier",
-                    "value": 1.91
+                    "value": 1.881821225822533
                   },
                   {
                     "id": "1ORHvvDxdM",
@@ -838,8 +825,21 @@
                     "value": 0
                   },
                   {
-                    "id": "YRf2St757i",
-                    "position": 9.5,
+                    "id": "hC4rs2u3Vr",
+                    "position": 9.4,
+                    "connectedRight": true,
+                    "handles": [
+                      0.07,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 6.28
+                  },
+                  {
+                    "id": "78XURSkvTs",
+                    "position": 12.4,
                     "connectedRight": true,
                     "handles": [
                       0.5,
@@ -2168,45 +2168,6 @@
                     ],
                     "type": "bezier",
                     "value": 0.02
-                  },
-                  {
-                    "id": "y1naZwkT4P",
-                    "position": 6.5,
-                    "connectedRight": true,
-                    "handles": [
-                      0.5,
-                      1,
-                      0.5,
-                      0
-                    ],
-                    "type": "bezier",
-                    "value": 0.02
-                  },
-                  {
-                    "id": "UHmrEpZiGE",
-                    "position": 9.5,
-                    "connectedRight": true,
-                    "handles": [
-                      0.5,
-                      1,
-                      0.5,
-                      0
-                    ],
-                    "type": "bezier",
-                    "value": -0.04
-                  },
-                  {
-                    "id": "U4AhEJFYFk",
-                    "position": 12.5,
-                    "connectedRight": true,
-                    "handles": [
-                      0.5,
-                      1,
-                      0.5,
-                      0
-                    ],
-                    "type": "bezier",
-                    "value": 0.02
                   }
                 ]
               },
@@ -2278,8 +2239,8 @@
                     "handles": [
                       0.5,
                       1,
-                      0.5,
-                      0.5
+                      0.165,
+                      0.84
                     ],
                     "type": "bezier",
                     "value": 10
@@ -2289,8 +2250,8 @@
                     "position": 1,
                     "connectedRight": true,
                     "handles": [
-                      0.5,
-                      0.5,
+                      0.44,
+                      1,
                       0.645,
                       0.045
                     ],
@@ -2308,7 +2269,7 @@
                       0
                     ],
                     "type": "bezier",
-                    "value": -3
+                    "value": -4.319999999999999
                   }
                 ]
               },
@@ -2323,19 +2284,19 @@
                     "handles": [
                       0.5,
                       1,
-                      0.5,
-                      0.5
+                      0.165,
+                      0.84
                     ],
                     "type": "bezier",
-                    "value": 10
+                    "value": 40
                   },
                   {
                     "id": "TaosE4GiGI",
                     "position": 1,
                     "connectedRight": true,
                     "handles": [
-                      0.5,
-                      0.5,
+                      0.44,
+                      1,
                       0.645,
                       0.045
                     ],
@@ -2353,7 +2314,7 @@
                       0
                     ],
                     "type": "bezier",
-                    "value": 2
+                    "value": 0.32000000000000034
                   }
                 ]
               },
@@ -2368,8 +2329,8 @@
                     "handles": [
                       0.5,
                       1,
-                      0.5,
-                      0.5
+                      0.165,
+                      0.84
                     ],
                     "type": "bezier",
                     "value": -11
@@ -2379,8 +2340,8 @@
                     "position": 1,
                     "connectedRight": true,
                     "handles": [
-                      0.5,
-                      0.5,
+                      0.44,
+                      1,
                       0.645,
                       0.117
                     ],
@@ -2415,7 +2376,7 @@
   },
   "definitionVersion": "0.4.0",
   "revisionHistory": [
-    "_uWFOOM4NKn6qyy9",
+    "S6ij56_gcL-Nf3uV",
     "7mADrX5sTwVpb5ym",
     "2DDwTwCVQsG7RgP9",
     "TJcGyCxDBx1wQDbw",

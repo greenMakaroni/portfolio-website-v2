@@ -28,13 +28,17 @@ const Scene = () => {
 
   // play animation when models are loaded
   useEffect(() => {
-    if(isLoaded) {
+    if (isLoaded) {
       sheet_entry.project.ready
-      .then(() => sheet_entry.sequence.play({ iterationCount: 1, range: [0, 6.5] }))
+        .then(() => sheet_entry.sequence.play({ iterationCount: 1, range: [0, 6.5] }))
     }
+
+    return (
+      setLoaded(false)
+    )
   }, [isLoaded])
 
-  // After first iteration of entry animation, pointer.playing will change from true to false
+  // After first iteration of the animation, pointer.playing will change from true to false
   onChange(sheet_entry.sequence.pointer.playing, (playing) => {
     if (!playing) {
       // when entry animation finished playing, play the loop infinitely
@@ -43,37 +47,40 @@ const Scene = () => {
   })
 
   return (
-    <div className="canvas">
-      {/* { play the transition when the scene is loaded} */}
-      {isLoaded && <LoadingTransition />}
-      <Canvas shadows camera={{ position: [-3, 1, 8], fov: 25 }}>
-        {/* { Suspense execution and serve loader until models are loaded } */}
-        <Suspense fallback={<Loader setLoaded={setLoaded} />}>
-          {/* { animation sheet provider } */}
-          <SheetProvider sheet={sheet_entry}> 
-            <PerspectiveCamera theatreKey="Camera" makeDefault position={[-3, 2, 10]} lookAt={[0, 0, 0]} fov={30} />
-            {/* Lights */}
-            <editable.pointLight theatreKey="light" position={[-10, 20, 10]} />
+    <div className="canvas_body">
+      <div className="canvas">
+        {/* { play the transition when the scene is loaded} */}
+        { isLoaded && <LoadingTransition /> }
+        <Canvas shadows camera={{ position: [-3, 1, 8], fov: 25 }}>
+          {/* { Suspense execution and serve loader until models are loaded } */}
+          <Suspense fallback={<Loader setLoaded={setLoaded} />}>
+            {/* { animation sheet provider } */}
+            <SheetProvider sheet={sheet_entry}>
+              <PerspectiveCamera theatreKey="Camera" makeDefault position={[-3, 2, 10]} fov={30} />
+              {/* Lights */}
+              <editable.pointLight theatreKey="light" position={[-10, 20, 10]} />
 
-            {/* Models */}
-            <Center>
-              <Dmu />
-            </Center>
+              {/* Models */}
+              <Center>
+                <Dmu />
+              </Center>
 
-            {/* Drei helpers */}
-            <Shadows />
-            <OrbitControls enableZoom={true} enablePan={true} minPolarAngle={Math.PI / 3} maxPolarAngle={Math.PI / 2} />
-            {/* <GizmoHelper
+              {/* Drei helpers */}
+              <Shadows />
+              <OrbitControls enableZoom={false} enablePan={true} minPolarAngle={Math.PI / 3} maxPolarAngle={Math.PI / 2} />
+              {/* <GizmoHelper
           alignment="bottom-right" // widget alignment within scene
           margin={[80, 80]} // widget margins (X, Y)
         >
           <GizmoViewport axisColors={['red', 'green', 'blue']} labelColor="black" />
         </GizmoHelper> */}
-            <Environment preset="city" />
-          </SheetProvider>
-        </Suspense>
-      </Canvas>
+              <Environment preset="city" />
+            </SheetProvider>
+          </Suspense>
+        </Canvas>
+      </div>
     </div>
+
   )
 }
 
