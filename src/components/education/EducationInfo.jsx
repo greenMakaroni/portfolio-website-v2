@@ -1,17 +1,8 @@
-import "./edu_info.css"
 import PDF from './Appraisal Document.pdf'
-
 const EducationInfo = () => {
   return (
-    <div className="edu_info_main">
-        <h1 className="edu-title"> University </h1>
-        <h2 className="edu-info-text"> De Montfort University, Leicester</h2>
-        <h1 className="edu-title"> Undergraduate degree </h1>
-        <h2 className="edu-info-text"> Bachelor of Science (BSc) </h2>
-        <h1 className="edu-title"> Course </h1>
-        <h2 className="edu-info-text"> Software Engineering </h2>
-
-        <button className="flex justify-center align-center border-2 border-black w-36 pt-4 pb-4 z-10 hover:bg-black hover:text-white " onClick={() => window.open(PDF, "_blank")} > My marks </button>
+    <div className="flex flex-column w-[60vw] h-[200vh] pt-[150px] pl-[150px]">
+        <button className="flex justify-center align-center border-2 border-black w-36 h-16 pt-4 pb-4 z-10 font-['Geologica'] font-thin hover:bg-black hover:text-white hover:cursor-pointer " onClick={() => window.open(PDF, "_blank")} > My marks </button>
     </div>
   )
 }
