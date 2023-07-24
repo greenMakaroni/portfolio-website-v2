@@ -14,9 +14,6 @@ import dmuEntryAnimation from "./dmu_entry.json"
 // development utils
 // import studio from "@theatre/studio"
 // studio.initialize();
-// css
-import "./edu_scene.css"
-
 
 // get animations sheet
 const sheet_entry = getProject('Logo entry', { state: dmuEntryAnimation }).sheet('Logo entry');
@@ -47,8 +44,8 @@ const Scene = () => {
   })
 
   return (
-    <div className="canvas_body">
-      <div className="canvas">
+    <div className="absolute m-0 p-0 w-screen h-screen flex flex-row justify-end">
+      <div className="fixed m-0 p-0 w-screen h-screen">
         {/* { play the transition when the scene is loaded} */}
         { isLoaded && <LoadingTransition /> }
         <Canvas shadows camera={{ position: [-3, 1, 8], fov: 25 }}>
