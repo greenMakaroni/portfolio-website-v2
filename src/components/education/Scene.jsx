@@ -1,9 +1,8 @@
 import { useEffect, useState, Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { GizmoHelper, GizmoViewport, OrbitControls, Center, Environment } from '@react-three/drei'
+import { OrbitControls, Center, Environment } from '@react-three/drei'
 // models
 import { Dmu } from './Dmu.jsx'
-import Shadows from '../shadows/Shadows.jsx'
 // loader
 import LoadingTransition from '../loader/LoadingTransition.jsx';
 import Loader from '../loader/Loader.jsx';
@@ -58,19 +57,12 @@ const Scene = () => {
               <editable.pointLight theatreKey="light" position={[-10, 20, 10]} />
 
               {/* Models */}
-              <Center>
+              <Center right>
                 <Dmu />
               </Center>
 
               {/* Drei helpers */}
-              <Shadows />
               <OrbitControls enableZoom={false} enablePan={true} minPolarAngle={Math.PI / 3} maxPolarAngle={Math.PI / 2} />
-              {/* <GizmoHelper
-          alignment="bottom-right" // widget alignment within scene
-          margin={[80, 80]} // widget margins (X, Y)
-        >
-          <GizmoViewport axisColors={['red', 'green', 'blue']} labelColor="black" />
-        </GizmoHelper> */}
               <Environment preset="city" />
             </SheetProvider>
           </Suspense>

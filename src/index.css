@@ -24,15 +24,20 @@ body {
   min-width: 100vw;
 }
 
-h1 {
-  color: #393E46;
-  font-family: 'Geologica', sans-serif;
-  font-size: 3em;
+@keyframes enterTransition {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -110vh;
+  }
 }
 
-p {
-  color: #222831;
-  font-family: 'Geologica', sans-serif;
-  font-weight: 100;
-  font-size: 1.5em;
+@keyframes exitTransition {
+  0% {
+    top: -110;
+  }
+  100% {
+    top: 0;
+  }
 }
