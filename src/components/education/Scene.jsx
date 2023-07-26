@@ -19,7 +19,6 @@ const sheet_entry = getProject('Logo entry', { state: dmuEntryAnimation }).sheet
 
 const Scene = () => {
 
-  // true when models are fully loaded
   const [isLoaded, setLoaded] = useState(false)
 
   // play animation when models are loaded
@@ -28,10 +27,6 @@ const Scene = () => {
       sheet_entry.project.ready
         .then(() => sheet_entry.sequence.play({ iterationCount: 1, range: [0, 6.5] }))
     }
-
-    return (
-      setLoaded(false)
-    )
   }, [isLoaded])
 
   // After first iteration of the animation, pointer.playing will change from true to false
@@ -43,10 +38,9 @@ const Scene = () => {
   })
 
   return (
-    <div className="absolute m-0 p-0 w-screen h-screen flex flex-row justify-end">
-      <div className="fixed m-0 p-0 w-screen h-screen">
+    <div className="absolute flex flex-row justify-end w-screen h-screen">
+      <div className="fixed m-0 p-0 w-screen h-screen animate-moveCanvas">
         {/* { play the transition when the scene is loaded} */}
-        { isLoaded && <LoadingTransition /> }
         <Canvas shadows camera={{ position: [-3, 1, 8], fov: 25 }}>
           {/* { Suspense execution and serve loader until models are loaded } */}
           <Suspense fallback={<Loader setLoaded={setLoaded} />}>
@@ -57,7 +51,7 @@ const Scene = () => {
               <editable.pointLight theatreKey="light" position={[-10, 20, 10]} />
 
               {/* Models */}
-              <Center right>
+              <Center>
                 <Dmu />
               </Center>
 
@@ -69,7 +63,6 @@ const Scene = () => {
         </Canvas>
       </div>
     </div>
-
   )
 }
 

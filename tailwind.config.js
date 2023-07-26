@@ -11,18 +11,29 @@ export default {
     },
     extend: {
       keyframes: {
-        'moveCanvas': {
+        'shortTransition': {
           '0%': { left: '0'},
           '100%': {  left: '-105vw' },
         },
-        'wiggle': {
-          '0%, 100%': { transform: 'rotate(-3deg)' },
-          '50%': { transform: 'rotate(3deg)' },
+        'moveCanvas': {
+          '0%': {margin: '0'},
+          '100%': {margin: '0 -15vw 0 0'}
+        },
+        'showNav': {
+          '0%': {opacity: '0'},
+          '100%': {opacity: '1'}
+        },
+        'elementIn': {
+          '0%': {opacity: '0', margin: '0 0 0 -5vw'},
+          '100%': {opacity: '1', margin: '0'}
         }
       },
       animation: {
-        moveCanvas: 'moveCanvas ease-in-out 0.7s forwards',
-        wiggle: 'wiggle 1s ease-in-out infinite',
+        shortTransition: 'shortTransition ease-in-out 0.7s forwards',
+        moveCanvas: '2s moveCanvas ease-in-out 1s forwards',
+        showNav: 'showNav ease 0.3s forwards',
+        infoElementIn: '1s elementIn ease 1.6s forwards',
+        elementIn: 'elementIn 1s forwards'
       },
     },
   },
