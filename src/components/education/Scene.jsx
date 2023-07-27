@@ -16,9 +16,16 @@ import dmuEntryAnimation from "./dmu_entry.json"
 // get animations sheet
 const sheet_entry = getProject('Logo entry', { state: dmuEntryAnimation }).sheet('Logo entry');
 
+// responsive
+import useWindowDimensions from '../../custom_hooks/useWindowDimensions.jsx';
+
+
+
 const Scene = () => {
 
   const [isLoaded, setLoaded] = useState(false)
+  const { height, width } = useWindowDimensions()
+  const isMobile = width < 650
 
   // play animation when models are loaded
   useEffect(() => {
@@ -37,8 +44,8 @@ const Scene = () => {
   })
 
   return (
-    <div className="absolute flex flex-row justify-end w-screen h-screen">
-      <div className="fixed m-0 p-0 w-screen h-screen animate-moveCanvas">
+    <div className="m-0 p-0 absolute flex flex-row justify-end w-screen h-screen">
+      <div className={` m-0 p-0 w-screen h-screen ${!isMobile ? "animate-moveCanvas fixed" : "relative"}`}>
         {/* { play the transition when the scene is loaded} */}
         <Canvas shadows camera={{ position: [-3, 1, 8], fov: 25 }}>
           {/* { Suspense execution and serve loader until models are loaded } */}
@@ -55,7 +62,7 @@ const Scene = () => {
               </Center>
 
               {/* Drei helpers */}
-              <OrbitControls enableZoom={false} enablePan={true} minPolarAngle={Math.PI / 3} maxPolarAngle={Math.PI / 2} />
+              <OrbitControls enableZoom={false} enableRotate={!isMobile} enablePan={true} minPolarAngle={Math.PI / 3} maxPolarAngle={Math.PI / 2} />
               <Environment preset="city" />
             </SheetProvider>
           </Suspense>
