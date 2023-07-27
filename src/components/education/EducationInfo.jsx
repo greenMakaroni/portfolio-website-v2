@@ -1,8 +1,8 @@
 import PDF from './Appraisal Document.pdf'
 const EducationInfo = () => {
   return (
-    <div className="flex flex-col justify-start w-[60vw] h-[200vh] pt-[20vh] pl-[10vw]">
-      <div className="w-screen h-screen flex flex-col select-none">
+    <div className="flex flex-col justify-start w-[60vw] h-[200vh] pt-[20vh] ">
+      <div className="pl-[10vw] w-screen h-screen flex flex-col select-none">
         <h1 className="animate-infoElementIn opacity-0 pt-[40px] text-xl text-black font-['Open Sans'] font-bold">
           University
         </h1>
@@ -23,7 +23,7 @@ const EducationInfo = () => {
         </p>
         <button className="animate-infoElementIn opacity-0 flex z-10 justify-center align-center border-2 border-black w-36 h-16 pt-4 pb-4 font-['Geologica'] font-thin hover:bg-black hover:text-white hover:cursor-pointer " onClick={() => window.open(PDF, "_blank")} > My marks </button>
       </div>
-      <div className="w-screen h-screen flex flex-col select-none">
+      <div className="pl-[10vw] w-screen h-screen flex flex-col select-none">
         <h1 className="animate-infoElementIn opacity-0 pt-[40px] text-xl text-black font-['Open Sans'] font-bold">
           Coursework
         </h1>

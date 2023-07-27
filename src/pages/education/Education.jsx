@@ -7,7 +7,6 @@ const Education = () => {
 
   return (
     <>
-
       <DelayRendering delay={1000} component={<Navigation />} />
       <Scene />
       <EducationInfo />

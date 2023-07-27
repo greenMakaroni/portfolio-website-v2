@@ -4,7 +4,6 @@ import { OrbitControls, Center, Environment } from '@react-three/drei'
 // models
 import { Dmu } from './Dmu.jsx'
 // loader
-import LoadingTransition from '../loader/LoadingTransition.jsx';
 import Loader from '../loader/Loader.jsx';
 // theatre.js
 import { editable, SheetProvider, PerspectiveCamera } from '@theatre/r3f'
