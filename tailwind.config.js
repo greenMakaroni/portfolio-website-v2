@@ -16,16 +16,16 @@ export default {
           '100%': {  left: '-105vw' },
         },
         'moveCanvas': {
-          '0%': {margin: '0'},
-          '100%': {margin: '0 -15vw 0 0'}
+          '0%': {marginRight: '0'},
+          '100%': {marginRight: '-15vw'}
         },
         'showNav': {
           '0%': {opacity: '0'},
           '100%': {opacity: '1'}
         },
         'elementIn': {
-          '0%': {opacity: '0', margin: '0 0 0 -5vw'},
-          '100%': {opacity: '1', margin: '0'}
+          '0%': {opacity: '0', marginLeft: '-5vw'},
+          '100%': {opacity: '1', marginLeft: '0'}
         }
       },
       animation: {
