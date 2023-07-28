@@ -17,15 +17,12 @@ const EducationInfo = () => {
         <Info
           header="Course"
           paragraph="BSc. Software engineering with foundation year in computing." />
-
         <Info
           header="Institution"
           paragraph="De Montfort University, Leicester, England." />
-
         <Info
           header="Years"
           paragraph="2019-2023" />
-
         <Info
           header="Degree classification"
           paragraph="First class honours, (85%)." />
@@ -36,16 +33,13 @@ const EducationInfo = () => {
         <h1 className="mb-[3vh] animate-elementIn opacity-0 text-4xl text-black font-['Open Sans'] font-bold pt-[20vh]">
           A-levels
         </h1>
-
         <Info
           header="Course"
           paragraph="IT Technician with specialization in online 
           applications." />
-
         <Info
           header="Institution"
           paragraph="ZSTiO nr1. Chorzów, Poland." />
-
         <Info
           header="Years"
           paragraph="2011–2015" />
@@ -64,8 +58,6 @@ const EducationInfo = () => {
           paragraph="The complete web development with MERN bootcamp, (2020)." />
         <Button text="See online" link="https://www.udemy.com/certificate/UC-79a9ec62-66fe-4a13-9890-f954ceadcfec/" />
       </InfoSection>
-
-
     </div>
   )
 }
