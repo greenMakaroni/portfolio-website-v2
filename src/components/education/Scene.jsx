@@ -45,7 +45,7 @@ const Scene = () => {
 
   return (
     <div className="m-0 p-0 absolute flex flex-row justify-end w-screen h-screen">
-      <div className={` m-0 p-0 w-screen h-screen ${!isMobile ? "animate-moveCanvas fixed" : "relative"}`}>
+      <div className={` m-0 p-0 w-screen h-screen ${!isMobile ? "animate-moveCanvas fixed z-20" : "relative"}`}>
         {/* { play the transition when the scene is loaded} */}
         <Canvas shadows camera={{ position: [-3, 1, 8], fov: 25 }}>
           {/* { Suspense execution and serve loader until models are loaded } */}
