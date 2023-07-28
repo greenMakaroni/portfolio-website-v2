@@ -24,9 +24,8 @@ const Portfolio = () => {
         <Project
           title="Batuhan's resume"
           description="Developed a resume 
-          website, for a good friend of 
-          mine, with animated 3D 
-          scene, using React and three.js."
+          website for a friend, with animated 3D 
+          scene created in Blender, using React, three.js and react-three-fiber."
           link="https://batuhan-ozgur-basal-portfolio.firebaseapp.com/"
         />
 
