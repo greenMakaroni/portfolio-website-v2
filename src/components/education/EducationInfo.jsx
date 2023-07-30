@@ -55,7 +55,7 @@ const EducationInfo = () => {
         <Button text="See online" link="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=395&cvid=4yFp9n9HAW1ZqqgywoTHOg==" />
         <Info
           header="Udemy course"
-          paragraph="The complete web development with MERN bootcamp, (2020)." />
+          paragraph="The complete web development bootcamp using MERN, (2020)." />
         <Button text="See online" link="https://www.udemy.com/certificate/UC-79a9ec62-66fe-4a13-9890-f954ceadcfec/" />
       </InfoSection>
     </div>
