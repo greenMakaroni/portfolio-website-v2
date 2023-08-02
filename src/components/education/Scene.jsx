@@ -8,7 +8,7 @@ import { Zstio } from './Zstio.jsx'
 import Loader from '../loader/Loader.jsx';
 // theatre.js
 import { editable, SheetProvider, PerspectiveCamera } from '@theatre/r3f'
-import { getProject, onChange } from '@theatre/core'
+import { getProject } from '@theatre/core'
 import dmuEntryAnimation from "./dmu_entry.json"
 
 // development utils
@@ -25,7 +25,7 @@ const sheet_entry = getProject('Logo entry', { state: dmuEntryAnimation }).sheet
 // responsive
 import useWindowDimensions from '../../custom_hooks/useWindowDimensions.jsx';
 
-const Scene = () => {
+const Scene = ({ section }) => {
 
   const [isLoaded, setLoaded] = useState(false)
   const { width } = useWindowDimensions()
@@ -35,17 +35,25 @@ const Scene = () => {
   useEffect(() => {
     if (isLoaded) {
       sheet_entry.project.ready
-        .then(() => sheet_entry.sequence.play({ iterationCount: 1, range: [0, 6.5] }))
+        .then(() => sheet_entry.sequence.play({ iterationCount: 1, range: [0.2, 6.5] })).then(() =>
+          sheet_entry.sequence.play({ iterationCount: Infinity, range: [6.5, 12.5] })
+        )
     }
   }, [isLoaded])
 
-  // After first iteration of the animation, pointer.playing will change from true to false
-  onChange(sheet_entry.sequence.pointer.playing, (playing) => {
-    if (!playing) {
-      // when entry animation finished playing, play the loop infinitely
-      sheet_entry.sequence.play({ iterationCount: Infinity, range: [6.5, 12.5] })
+  useEffect(() => {
+    if (section == "second") {
+      sheet_entry.sequence.play({ iterationCount: 1, range: [13, 14.9] }).then(() => {
+        sheet_entry.sequence.play({ iterationCount: Infinity, range: [14.9, 15] })
+      })
     }
-  })
+
+    if (section == "first") {
+      sheet_entry.sequence.play({ iterationCount: 1, range: [13, 14.9], direction: 'reverse' }).then(() => {
+        sheet_entry.sequence.play({ iterationCount: Infinity, range: [6.5, 12.5] })
+      })
+    }
+  }, [section])
 
   return (
     <div className="m-0 p-0 absolute flex flex-row justify-end w-screen h-screen">
@@ -61,6 +69,7 @@ const Scene = () => {
               <editable.pointLight theatreKey="light" position={[-10, 20, 10]} />
 
               {/* Models */}
+
               <Center>
                 <Dmu />
               </Center>

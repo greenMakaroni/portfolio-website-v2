@@ -1,16 +1,27 @@
 import useWindowDimensions from '../../custom_hooks/useWindowDimensions'
+import useOnScreen from '../../custom_hooks/useOnScreen.jsx'
+import { useRef, useEffect } from 'react'
 import InfoSection from './InfoSection'
 import Info from './Info'
 import Button from '../shared/Button'
 import PDF from './Appraisal Document.pdf'
 
-const EducationInfo = () => {
+
+const EducationInfo = ({ setSection }) => {
+  
+  const first = useRef()
+  const isFirst = useOnScreen(first)
+
   const { width } = useWindowDimensions()
   const isMobile = width < 650
 
+  useEffect(()=>{
+    isFirst ? setSection("first") : setSection("second")
+  }, [isFirst])
+
   return (
     <div className={`flex flex-col absolute justify-start ${!isMobile ? "pt-[15vh] w-[60vw]" : " w-[100vw] pt-[100vh]"} `}>
-      <div className="animate-infoElementIn opacity-0 pl-[10vw] w-screen h-screen flex flex-col select-none">
+      <div ref={first} className="animate-infoElementIn opacity-0 pl-[10vw] w-screen h-screen flex flex-col select-none">
         <h1 className="mb-[3vh] text-4xl text-black font-['Open Sans'] font-bold">
           Degree
         </h1>
