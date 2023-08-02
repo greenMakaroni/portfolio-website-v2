@@ -20,7 +20,7 @@ const EducationInfo = ({ setSection }) => {
   }, [isFirst])
 
   return (
-    <div className={`flex flex-col absolute justify-start ${!isMobile ? "pt-[15vh] w-[60vw]" : " w-[100vw] pt-[100vh]"} `}>
+    <div className="flex flex-col absolute justify-start pt-[15vh] w-[60vw]">
       <div ref={first} className="animate-infoElementIn opacity-0 pl-[10vw] w-screen h-screen flex flex-col select-none">
         <h1 className="mb-[3vh] text-4xl text-black font-['Open Sans'] font-bold">
           Degree

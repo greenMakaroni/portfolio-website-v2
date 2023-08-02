@@ -22,14 +22,9 @@ import dmuEntryAnimation from "./dmu_entry.json"
 /* Production mode */
 const sheet_entry = getProject('Logo entry', { state: dmuEntryAnimation }).sheet('Logo entry')
 
-// responsive
-import useWindowDimensions from '../../custom_hooks/useWindowDimensions.jsx';
-
 const Scene = ({ section }) => {
 
   const [isLoaded, setLoaded] = useState(false)
-  const { width } = useWindowDimensions()
-  const isMobile = width < 650
 
   // play animation when models are loaded
   useEffect(() => {
@@ -43,8 +38,8 @@ const Scene = ({ section }) => {
 
   useEffect(() => {
     if (section == "second") {
-      sheet_entry.sequence.play({ iterationCount: 1, range: [13, 14.9] }).then(() => {
-        sheet_entry.sequence.play({ iterationCount: Infinity, range: [14.9, 15] })
+      sheet_entry.sequence.play({ iterationCount: 1, range: [13, 14.5] }).then(() => {
+        sheet_entry.sequence.play({ iterationCount: Infinity, range: [14.5, 20.5] })
       })
     }
 
@@ -57,7 +52,7 @@ const Scene = ({ section }) => {
 
   return (
     <div className="m-0 p-0 absolute flex flex-row justify-end w-screen h-screen">
-      <div className={` m-0 p-0 w-screen h-screen ${!isMobile ? "animate-moveCanvas fixed z-20" : "relative"}`}>
+      <div className="m-0 p-0 w-screen h-screen animate-moveCanvas fixed z-20">
         {/* { play the transition when the scene is loaded} */}
         <Canvas shadows camera={{ position: [-3, 1, 8], fov: 25 }}>
           {/* { Suspense execution and serve loader until models are loaded } */}
@@ -67,16 +62,13 @@ const Scene = ({ section }) => {
               <PerspectiveCamera theatreKey="Camera" makeDefault position={[-3, 2, 10]} fov={30} />
               {/* Lights */}
               <editable.pointLight theatreKey="light" position={[-10, 20, 10]} />
-
               {/* Models */}
-
               <Center>
                 <Dmu />
               </Center>
               <Zstio />
-
               {/* Drei helpers */}
-              <OrbitControls enableZoom={false} enableRotate={!isMobile} enablePan={true} minPolarAngle={Math.PI / 3} maxPolarAngle={Math.PI / 2} />
+              <OrbitControls enableZoom={false} enableRotate={true} enablePan={true} minPolarAngle={Math.PI / 3} maxPolarAngle={Math.PI / 2} />
               <Environment preset="city" />
             </SheetProvider>
           </Suspense>
