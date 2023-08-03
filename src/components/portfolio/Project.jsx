@@ -3,7 +3,7 @@ import useOnScreen from "../../custom_hooks/useOnScreen.jsx"
 import useWindowDimensions from "../../custom_hooks/useWindowDimensions.jsx"
 
 const Project = ({ title, description, link }) => {
-    const { height, width } = useWindowDimensions()
+    const { width } = useWindowDimensions()
     const isMobile = width < 650
     const project = useRef()
     const isVisible = useOnScreen(project)
