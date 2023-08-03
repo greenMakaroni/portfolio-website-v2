@@ -2,7 +2,7 @@
 const Info = ({header, paragraph}) => {
     return (
         <>
-            <h1 className="animate-elementIn opacity-0 pt-[40px] text-xl text-black font-['Open Sans'] font-bold">
+            <h1 className="animate-elementIn opacity-0 pt-[40px] text-xl text-black font-['Kanit'] font-bold">
                 {header}
             </h1>
             <p className="animate-elementIn opacity-0 text-lg text-black font-['Geologica'] font-thin ">

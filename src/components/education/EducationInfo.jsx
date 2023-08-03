@@ -1,4 +1,3 @@
-import useWindowDimensions from '../../custom_hooks/useWindowDimensions'
 import useOnScreen from '../../custom_hooks/useOnScreen.jsx'
 import { useRef, useEffect } from 'react'
 import InfoSection from './InfoSection'
@@ -12,9 +11,6 @@ const EducationInfo = ({ setSection }) => {
   const first = useRef()
   const isFirst = useOnScreen(first)
 
-  const { width } = useWindowDimensions()
-  const isMobile = width < 650
-
   useEffect(()=>{
     isFirst ? setSection("first") : setSection("second")
   }, [isFirst])
@@ -22,7 +18,7 @@ const EducationInfo = ({ setSection }) => {
   return (
     <div className="flex flex-col absolute justify-start pt-[15vh] w-[60vw]">
       <div ref={first} className="animate-infoElementIn opacity-0 pl-[10vw] w-screen h-screen flex flex-col select-none">
-        <h1 className="mb-[3vh] text-4xl text-black font-['Open Sans'] font-bold">
+        <h1 className="mb-[3vh] text-4xl text-black font-['Kanit'] font-bold">
           Degree
         </h1>
         <Info
@@ -41,7 +37,7 @@ const EducationInfo = ({ setSection }) => {
       </div>
 
       <InfoSection>
-        <h1 className="mb-[3vh] animate-elementIn opacity-0 text-4xl text-black font-['Open Sans'] font-bold pt-[20vh]">
+        <h1 className="mb-[3vh] animate-elementIn opacity-0 text-4xl text-black font-['Kanit'] font-bold pt-[20vh]">
           A-levels
         </h1>
         <Info
@@ -57,7 +53,7 @@ const EducationInfo = ({ setSection }) => {
       </InfoSection>
 
       <InfoSection>
-        <h1 className="mb-[3vh] animate-elementIn opacity-0 text-4xl text-black font-['Open Sans'] font-bold">
+        <h1 className="mb-[3vh] animate-elementIn opacity-0 text-4xl text-black font-['Kanit'] font-bold">
           Certifications
         </h1>
         <Info

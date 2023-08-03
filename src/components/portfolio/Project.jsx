@@ -10,7 +10,7 @@ const Project = ({ title, description, link }) => {
 
     return (
         <div ref={project} className={`${isMobile ? "" : "w-1/2"} mt-[40px] opacity-0 relative py-[40px] px-[20px] mb-1.5 flex flex-col border-2 border-black ${isVisible && "animate-elementIn"}`}>
-            <h1 className="mb-[20px] text-xl text-black font-['Open Sans'] font-bold"> {title} </h1>
+            <h1 className="mb-[20px] text-xl text-black font-['Kanit'] font-bold"> {title} </h1>
             <p className="mr-[30px] p-0 text-base text-black font-['Geologica'] font-thin"> {description} </p>
             <button 
                 className="mt-[20px] flex justify-center align-center border-2 border-black w-36 h-16 pt-4 pb-4 font-['Geologica'] font-thin hover:bg-black hover:text-white hover:cursor-pointer" 

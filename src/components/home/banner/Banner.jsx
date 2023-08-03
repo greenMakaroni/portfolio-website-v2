@@ -14,7 +14,7 @@ const Banner = () => {
         isVisible &&
         <>
           <div className="w-screen h-screen flex flex-col justify-start items-start">
-            <h1 className={`font-['Open Sans'] font-bold text-4xl select-none ${isMobile ? "ml-[5vw] mt-[30vh]" :  "ml-[15vw] mt-[30vh]" }`}>Dawid Markieton </h1>
+            <h1 className={`font-['Kanit'] font-bold text-4xl select-none ${isMobile ? "ml-[5vw] mt-[30vh]" :  "ml-[15vw] mt-[30vh]" }`}>Dawid Markieton </h1>
             <p className={`font-['Geologica'] font-thin text-lg ${isMobile ?  "ml-[5vw]" : "ml-[15vw]"} select-none`}>BSc. Software Engineering</p>
           </div>
         </>

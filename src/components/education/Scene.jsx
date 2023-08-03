@@ -30,7 +30,7 @@ const Scene = ({ section }) => {
   useEffect(() => {
     if (isLoaded) {
       sheet_entry.project.ready
-        .then(() => sheet_entry.sequence.play({ iterationCount: 1, range: [0.2, 6.5] })).then(() =>
+        .then(() => sheet_entry.sequence.play({ iterationCount: 1, range: [0, 6.5] })).then(() =>
           sheet_entry.sequence.play({ iterationCount: Infinity, range: [6.5, 12.5] })
         )
     }
