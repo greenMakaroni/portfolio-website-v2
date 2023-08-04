@@ -10,7 +10,7 @@ import * as THREE from 'three'
 
 export function Dmu(props) {
   const { nodes, materials } = useGLTF('./dmu.glb')
-  const texture = useTexture('./bakedTexture_pedestal.png')
+  const texture = useTexture('./baked_pedestal.jpg')
   texture.flipY = false
   const pedestalMaterial = new THREE.MeshStandardMaterial({
     map: texture,
