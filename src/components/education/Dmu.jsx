@@ -4,22 +4,30 @@ Command: npx gltfjsx@6.1.4 dmu.glb
 */
 
 import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import { useGLTF, useTexture } from '@react-three/drei'
 import { editable } from '@theatre/r3f'
+import * as THREE from 'three'
 
 export function Dmu(props) {
   const { nodes, materials } = useGLTF('./dmu.glb')
+  const texture = useTexture('./bakedTexture_pedestal.png')
+  texture.flipY = false
+  const pedestalMaterial = new THREE.MeshStandardMaterial({
+    map: texture,
+  })
+
+
   return (
     <group {...props} dispose={null}>
-      <editable.mesh theatreKey="pedestal" geometry={nodes.pedestal.geometry} material={materials.Material} position={[0.01, 0.22, 0]} scale={[0.3, 0.26, 0.3]} />
-      <editable.mesh theatreKey="tongue" geometry={nodes.tongue.geometry} material={materials.DMU} position={[0.05, 2.38, 0.01]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
-      <editable.mesh theatreKey="tail" geometry={nodes.tail.geometry} material={materials.DMU} position={[-0.19, 2.99, -0.1]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
-      <editable.mesh theatreKey="shuriken" geometry={nodes.shuriken.geometry} material={materials.DMU} position={[-0.07, 1.91, -0.05]} rotation={[-1.53, -0.01, 2.6]} scale={-0.03} />
-      <editable.mesh theatreKey="nose" geometry={nodes.nose.geometry} material={materials.DMU} position={[0.08, 2.64, 0.04]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
-      <editable.mesh theatreKey="mouth" geometry={nodes.mouth.geometry} material={materials.DMU} position={[0.14, 2.54, -0.27]} rotation={[-1.53, -0.01, 2.6]} scale={-20.38} />
-      <editable.mesh theatreKey="face" geometry={nodes.face.geometry} material={materials.DMU} position={[0.06, 2.58, 0.03]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
-      <editable.mesh theatreKey="eye" geometry={nodes.eye.geometry} material={materials.DMU} position={[0.06, 2.65, 0.03]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
-      <editable.mesh theatreKey="claw" geometry={nodes.claw.geometry} material={materials.DMU} position={[0.32, 2.31, 0.17]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
+      <editable.mesh theatreKey="pedestal" geometry={nodes.pedestal.geometry} material={pedestalMaterial} position={[0.01, 0.22, 0]} scale={[0.3, 0.26, 0.3]} />
+      <editable.mesh theatreKey="tongue" geometry={nodes.tongue.geometry} material={nodes.tongue.material} position={[0.05, 2.38, 0.01]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
+      <editable.mesh theatreKey="tail" geometry={nodes.tail.geometry} material={nodes.tail.material} position={[-0.19, 2.99, -0.1]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
+      <editable.mesh theatreKey="shuriken" geometry={nodes.shuriken.geometry} material={nodes.shuriken.material} position={[-0.07, 1.91, -0.05]} rotation={[-1.53, -0.01, 2.6]} scale={-0.03} />
+      <editable.mesh theatreKey="nose" geometry={nodes.nose.geometry} material={nodes.nose.material} position={[0.08, 2.64, 0.04]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
+      <editable.mesh theatreKey="mouth" geometry={nodes.mouth.geometry} material={nodes.mouth.material} position={[0.14, 2.54, -0.27]} rotation={[-1.53, -0.01, 2.6]} scale={-20.38} />
+      <editable.mesh theatreKey="face" geometry={nodes.face.geometry} material={nodes.face.material} position={[0.06, 2.58, 0.03]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
+      <editable.mesh theatreKey="eye" geometry={nodes.eye.geometry} material={nodes.eye.material} position={[0.06, 2.65, 0.03]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
+      <editable.mesh theatreKey="claw" geometry={nodes.claw.geometry} material={nodes.claw.material} position={[0.32, 2.31, 0.17]} rotation={[1.6, 0.02, 0.54]} scale={21.19} />
     </group>
   )
 }
