@@ -6,7 +6,7 @@ import Button from '../shared/Button'
 import PDF from './Appraisal Document.pdf'
 
 
-const EducationInfo = ({ setSection, isLoaded }) => {
+const EducationInfo = ({ setSection }) => {
   
   const first = useRef()
   const isFirst = useOnScreen(first)
@@ -17,7 +17,7 @@ const EducationInfo = ({ setSection, isLoaded }) => {
 
   return (
     <div className="flex flex-col absolute justify-start pt-[15vh] w-[60vw]">
-      <div ref={first} className={`opacity-0 pl-[10vw] w-screen h-screen flex flex-col select-none ${isLoaded && "animate-infoElementIn"}`}> 
+      <div ref={first} className="opacity-0 pl-[10vw] w-screen h-screen flex flex-col select-none animate-infoElementIn" > 
         <h1 className="mb-[3vh] text-4xl text-black font-['Kanit'] font-bold">
           Degree
         </h1>
@@ -30,9 +30,6 @@ const EducationInfo = ({ setSection, isLoaded }) => {
         <Info
           header="Years"
           paragraph="2019-2023" />
-        <Info
-          header="Degree classification"
-          paragraph="First class honours, (85%)." />
         <Button text="My marks PDF" link={PDF} />
       </div>
 
