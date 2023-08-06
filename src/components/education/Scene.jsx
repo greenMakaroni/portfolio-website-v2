@@ -1,4 +1,4 @@
-import { useEffect, useState, Suspense } from 'react'
+import { useEffect, Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Center, Environment } from '@react-three/drei'
 // models
@@ -65,6 +65,7 @@ const Scene = ({ section, isLoaded, setLoaded }) => {
                 <Dmu />
               </Center>
               <Zstio />
+          
               {/* Drei helpers */}
               <OrbitControls enableZoom={false} enableRotate={true} enablePan={true} minPolarAngle={Math.PI / 3} maxPolarAngle={Math.PI / 2} />
               <Environment preset="city" />
