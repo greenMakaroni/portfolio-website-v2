@@ -50,7 +50,7 @@ const Scene = ({ section, isLoaded, setLoaded }) => {
 
   return (
     <div className="m-0 p-0 absolute flex flex-row justify-end w-screen h-screen">
-      <div className="m-0 p-0 w-screen h-screen fixed z-20 animate-moveCanvas">
+      <div className="m-0 p-0 z-[0] w-screen h-screen fixed animate-moveCanvas">
         {/* { play the transition when the scene is loaded} */}
         <Canvas shadows>
           {/* { Suspense execution and serve loader until models are loaded } */}
@@ -59,18 +59,18 @@ const Scene = ({ section, isLoaded, setLoaded }) => {
             <SheetProvider sheet={sheet_entry}>
               <PerspectiveCamera theatreKey="Camera" makeDefault position={[-3, -20, 10]} fov={30} />
               {/* Lights */}
-              <editable.pointLight theatreKey="light" position={[-10, 20, 10]} />
+              <pointLight position={[-10, 20, 10]} />
               {/* Models */}
               <Center>
                 <Dmu />
               </Center>
               <Zstio />
-          
+
               {/* Drei helpers */}
               <OrbitControls enableZoom={false} enableRotate={true} enablePan={true} minPolarAngle={Math.PI / 3} maxPolarAngle={Math.PI / 2} />
               <Environment preset="city" />
             </SheetProvider>
-      
+
           </Suspense>
         </Canvas>
       </div>
