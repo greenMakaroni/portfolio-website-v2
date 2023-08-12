@@ -8,7 +8,7 @@ import { Star } from './Star.jsx'
 // loader
 import Loader from '../loader/Loader.jsx';
 // theatre.js
-import { editable, SheetProvider, PerspectiveCamera } from '@theatre/r3f'
+import { SheetProvider, PerspectiveCamera } from '@theatre/r3f'
 import { getProject } from '@theatre/core'
 import dmuEntryAnimation from "./dmu_entry.json"
 
