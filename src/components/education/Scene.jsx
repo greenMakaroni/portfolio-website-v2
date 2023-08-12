@@ -4,6 +4,7 @@ import { OrbitControls, Center, Environment } from '@react-three/drei'
 // models
 import { Dmu } from './Dmu.jsx'
 import { Zstio } from './Zstio.jsx'
+import { Star } from './Star.jsx'
 // loader
 import Loader from '../loader/Loader.jsx';
 // theatre.js
@@ -35,17 +36,30 @@ const Scene = ({ section, isLoaded, setLoaded }) => {
   }, [isLoaded])
 
   useEffect(() => {
-    if (section == "second") {
+    if (section.current == "third") {
+      sheet_entry.sequence.play({ iterationCount: 1, range: [20.5, 21.5] }).then(() => {
+        sheet_entry.sequence.play({ iterationCount: Infinity, range: [21.7, 27.5] })
+      })
+    }
+
+    if (section.current == "second" && section.prev == "first") {
       sheet_entry.sequence.play({ iterationCount: 1, range: [13, 14] }).then(() => {
         sheet_entry.sequence.play({ iterationCount: Infinity, range: [14, 20.5] })
       })
     }
 
-    if (section == "first") {
+    if (section.current == "second" && section.prev == "third") {
+      sheet_entry.sequence.play({ iterationCount: 1, range: [20.5, 21.5], direction: 'reverse' }).then(() => {
+        sheet_entry.sequence.play({ iterationCount: Infinity, range: [14, 20.5] })
+      })
+    }
+
+    if (section.current == "first") {
       sheet_entry.sequence.play({ iterationCount: 1, range: [13, 14], direction: 'reverse' }).then(() => {
         sheet_entry.sequence.play({ iterationCount: Infinity, range: [6.5, 12.5] })
       })
     }
+
   }, [section])
 
   return (
@@ -65,6 +79,7 @@ const Scene = ({ section, isLoaded, setLoaded }) => {
                 <Dmu />
               </Center>
               <Zstio />
+              <Star />
 
               {/* Drei helpers */}
               <OrbitControls enableZoom={false} enableRotate={true} enablePan={true} minPolarAngle={Math.PI / 3} maxPolarAngle={Math.PI / 2} />

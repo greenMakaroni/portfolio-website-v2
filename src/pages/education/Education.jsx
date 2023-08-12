@@ -6,9 +6,9 @@ import { useState } from "react"
 import useWindowDimensions from '../../custom_hooks/useWindowDimensions.jsx';
 
 const Education = () => {
-  const { width } = useWindowDimensions()
+  const { width, height } = useWindowDimensions()
   const isMobile = width < 650
-  const [section, setSection] = useState("first")
+  const [section, setSection] = useState({prev: "first", current: "first"})
   const [isLoaded, setLoaded] = useState(false)
 
 
@@ -17,6 +17,7 @@ const Education = () => {
       <DelayRendering delay={1000} component={<Navigation />} />
       {!isMobile && <Scene section={section} isLoaded={isLoaded} setLoaded={setLoaded} />}
       <EducationInfo setSection={setSection} />
+      {console.log(width, height)}
     </>
   )
 }

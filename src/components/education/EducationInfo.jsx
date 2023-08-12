@@ -11,17 +11,21 @@ const EducationInfo = ({ setSection }) => {
 
   const first = useRef()
   const isFirst = useOnScreen(first)
+
   const { width } = useWindowDimensions()
   const isMobile = width < 650
 
   useEffect(() => {
-    isFirst ? setSection("first") : setSection("second")
+    isFirst && setSection((prevState) => ({
+      prev: prevState.current,
+      current: "first"
+    }))
   }, [isFirst])
 
-  
+
   return (
     <div className="flex flex-col absolute justify-start pt-[15vh] w-[60vw]">
-      <div ref={first} className={`opacity-0 pl-[10vw]  h-screen flex flex-col select-none animate-infoElementIn ${isMobile ? "w-[100vw]" : "w-[50vw]"  }`}>
+      <div ref={first} className={`opacity-0 pl-[10vw]  h-screen flex flex-col select-none animate-infoElementIn ${isMobile ? "w-[100vw]" : "w-[50vw]"}`}>
         <h1 className="mb-[3vh] text-4xl text-black font-['Kanit'] font-bold">
           Degree
         </h1>
@@ -36,24 +40,26 @@ const EducationInfo = ({ setSection }) => {
           paragraph="2019-2023" />
         <Button text="My marks PDF" link={PDF} />
       </div>
-
-      <InfoSection>
-        <h1 className="mb-[3vh] animate-elementIn opacity-0 text-4xl text-black font-['Kanit'] font-bold pt-[20vh]">
-          A-levels
-        </h1>
-        <Info
-          header="Course"
-          paragraph="IT Technician with specialization in online 
+      <>
+        <InfoSection setSection={setSection} param="second" isMobile={isMobile}>
+          <h1 className="mb-[3vh] animate-elementIn opacity-0 text-4xl text-black font-['Kanit'] font-bold pt-[20vh]">
+            A-levels
+          </h1>
+          <Info
+            header="Course"
+            paragraph="IT Technician with specialization in online 
           applications." />
-        <Info
-          header="Institution"
-          paragraph="ZSTiO nr1. Chorzów, Poland." />
-        <Info
-          header="Years"
-          paragraph="2011–2015" />
-      </InfoSection>
+          <Info
+            header="Institution"
+            paragraph="ZSTiO nr1. Chorzów, Poland." />
+          <Info
+            header="Years"
+            paragraph="2011–2015" />
+        </InfoSection>
+      </>
 
-      <InfoSection>
+
+      <InfoSection setSection={setSection} param="third" isMobile={isMobile}>
         <h1 className="mb-[3vh] animate-elementIn opacity-0 text-4xl text-black font-['Kanit'] font-bold">
           Certifications
         </h1>
