@@ -5,9 +5,10 @@ Command: npx gltfjsx@6.1.4 zstio.glb
 
 import { useGLTF } from '@react-three/drei'
 import { editable } from '@theatre/r3f'
+import zstioURL from './3Dmodels/zstio.glb'
 
 export function Zstio(props) {
-  const { nodes, materials } = useGLTF('./zstio.glb')
+  const { nodes, materials } = useGLTF(zstioURL)
   return (
     <editable.group theatreKey="zstio" {...props} dispose={null}>
       <mesh geometry={nodes.circle.geometry} material={materials.deep_blue} position={[-0.04, 2.41, -0.04]} rotation={[Math.PI / 2, 0, 0]} scale={[0.5, 0.05, 0.5]} />

@@ -12,7 +12,7 @@ const sheet_entry = getProject('main').sheet('main');
 const Scene = () => {
 
   return (
-    <div className="m-0 p-0 border-2 border-orange-500 absolute flex flex-row justify-end w-screen h-screen">
+    <div className="m-0 p-0 absolute flex flex-row justify-end w-screen h-screen">
       <div className="m-0 p-0 w-screen h-screen fixed">
         {/* { play the transition when the scene is loaded} */}
         <Canvas shadows>

@@ -6,9 +6,10 @@ Command: npx gltfjsx@6.1.4 dmu.glb
 import { useGLTF, useTexture } from '@react-three/drei'
 import { editable } from '@theatre/r3f'
 import * as THREE from 'three'
+import dmuURL from './3Dmodels/dmu.glb'
 
 export function Dmu(props) {
-  const { nodes, materials } = useGLTF('./dmu.glb')
+  const { nodes, materials } = useGLTF(dmuURL)
   const texture = useTexture('./baked_pedestal.jpg')
   texture.flipY = false
   const pedestalMaterial = new THREE.MeshStandardMaterial({

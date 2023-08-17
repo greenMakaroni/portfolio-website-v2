@@ -25,7 +25,7 @@ const EducationInfo = ({ setSection }) => {
 
   return (
     <div className="flex flex-col absolute justify-start pt-[15vh] w-[60vw]">
-      <div ref={first} className={`opacity-0 pl-[10vw]  h-screen flex flex-col select-none animate-infoElementIn ${isMobile ? "w-[100vw]" : "w-[50vw]"}`}>
+      <div ref={first} className={`opacity-0 pl-[10vw]  h-screen flex flex-col select-none ${isMobile ? "animate-elementIn w-[100vw]" : "animate-infoElementIn w-[50vw]"}`}>
         <h1 className="mb-[3vh] text-4xl text-black font-['Kanit'] font-bold">
           Degree
         </h1>
