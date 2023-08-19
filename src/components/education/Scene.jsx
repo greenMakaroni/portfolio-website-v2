@@ -80,12 +80,10 @@ const Scene = ({ section, isLoaded, setLoaded }) => {
               </Center>
               <Zstio />
               <Star />
-
               {/* Drei helpers */}
-              <OrbitControls enableZoom={false} enableRotate={true} enablePan={true} minPolarAngle={Math.PI / 3} maxPolarAngle={Math.PI / 2} />
+              <OrbitControls enableZoom={false} enableRotate={true} enablePan={false} minPolarAngle={Math.PI / 3} maxPolarAngle={Math.PI / 2} />
               <Environment preset="city" />
             </SheetProvider>
-
           </Suspense>
         </Canvas>
       </div>

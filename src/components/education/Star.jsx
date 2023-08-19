@@ -11,7 +11,7 @@ export function Star(props) {
   const { nodes, materials } = useGLTF(starURL)
   return (
     <editable.group theatreKey="star" {...props} dispose={null}>
-      <mesh geometry={nodes.star.geometry} material={materials.star} rotation={[Math.PI / 2, 0, 0.64]} scale={0.4} />
+      <mesh geometry={nodes.star.geometry} material={materials.star} rotation={[Math.PI / 2, 0, 0.64]} scale={0.33} />
     </editable.group>
   )
 }
