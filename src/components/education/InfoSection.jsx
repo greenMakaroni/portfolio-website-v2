@@ -14,7 +14,7 @@ const InfoSection = (props) => {
       }, [isVisible])
 
     return (
-        <div ref={section} className={`p-[15vh] h-screen flex flex-col select-none ${props.isMobile ? "w-[100vw]" : "w-[50vw]"}`}>
+        <div ref={section} className={`pl-[15vh] pt-[5vh] h-screen flex flex-col select-none ${props.isMobile ? "w-[100vw]" : "w-[50vw]"}`}>
             {isVisible && props.children}
         </div>
     )
