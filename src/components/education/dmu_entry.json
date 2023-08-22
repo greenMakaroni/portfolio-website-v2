@@ -3952,7 +3952,7 @@
                       0.46
                     ],
                     "type": "bezier",
-                    "value": -2
+                    "value": -1.4
                   },
                   {
                     "id": "we9bIyoe0-",
@@ -3965,7 +3965,7 @@
                       0
                     ],
                     "type": "bezier",
-                    "value": -1.77
+                    "value": -1.2
                   },
                   {
                     "id": "q0IwiKDkm1",
@@ -3978,7 +3978,7 @@
                       0.04
                     ],
                     "type": "bezier",
-                    "value": -2
+                    "value": -1.4
                   },
                   {
                     "id": "Y4IeGb9xVX",
@@ -4162,7 +4162,7 @@
                       0
                     ],
                     "type": "bezier",
-                    "value": 1
+                    "value": 0.9
                   },
                   {
                     "id": "kZ5hGPBlnC",
@@ -4175,7 +4175,7 @@
                       0.04
                     ],
                     "type": "bezier",
-                    "value": 1
+                    "value": 0.9
                   }
                 ]
               },
@@ -4220,7 +4220,7 @@
                       0
                     ],
                     "type": "bezier",
-                    "value": 1
+                    "value": 0.9
                   },
                   {
                     "id": "zHThL3lFNb",
@@ -4233,7 +4233,7 @@
                       0.04
                     ],
                     "type": "bezier",
-                    "value": 1
+                    "value": 0.9
                   }
                 ]
               },
@@ -4278,7 +4278,7 @@
                       0
                     ],
                     "type": "bezier",
-                    "value": 1
+                    "value": 0.9
                   },
                   {
                     "id": "OObr69hT3C",
@@ -4291,7 +4291,7 @@
                       0.04
                     ],
                     "type": "bezier",
-                    "value": 1
+                    "value": 0.9
                   }
                 ]
               }
@@ -4643,6 +4643,7 @@
   },
   "definitionVersion": "0.4.0",
   "revisionHistory": [
+    "QMFxUv0QOKIn9Jv-",
     "XFpBKC-zZApgq7cy",
     "nIC_Gu9o3ygtUTA1",
     "8dIupBAb-Y2qHaPU",
