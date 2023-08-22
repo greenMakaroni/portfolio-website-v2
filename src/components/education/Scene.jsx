@@ -35,6 +35,7 @@ const Scene = ({ section, isLoaded, setLoaded }) => {
     }
   }, [isLoaded])
 
+  // play transition animation on section change
   useEffect(() => {
     if (section.current == "third") {
       sheet_entry.sequence.play({ iterationCount: 1, range: [20.5, 21.5] }).then(() => {

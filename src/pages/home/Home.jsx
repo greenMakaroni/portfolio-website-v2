@@ -1,7 +1,7 @@
 import Navigation from '../../components/navigation/Navigation.jsx'
 import Banner from "../../components/home/banner/Banner.jsx"
 import Skills from "../../components/home/skills/Skills.jsx"
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 
 const Home = () => {
 
