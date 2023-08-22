@@ -23,21 +23,3 @@ body {
 #root {
   min-width: 100vw;
 }
-
-@keyframes enterTransition {
-  0% {
-    margin-top: 0;
-  }
-  100% {
-    margin-top: -110vh;
-  }
-}
-
-@keyframes exitTransition {
-  0% {
-    top: -110;
-  }
-  100% {
-    top: 0;
-  }
-}

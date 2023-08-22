@@ -14,10 +14,10 @@ const Banner = () => {
         isVisible &&
         <>
           <div className="w-screen h-screen flex flex-col justify-start items-start">
-            <h1 className={`font-['Kanit'] font-bold text-4xl select-none ${isMobile ? "ml-[5vw] mt-[30vh]" :  "ml-[15vw] mt-[30vh]" }`}> Hello visitor!</h1>
-            <p className={`font-['Geologica'] font-thin text-2xl ${isMobile ?  "ml-[5vw]" : "ml-[15vw]"} select-none`}> This website is still in development, please come back later (ᴖᴗᴖ)   </p>
+            <h1 className={`font-['Kanit'] font-bold text-4xl select-none ${isMobile ? "ml-[5vw] mt-[30vh]" : "ml-[15vw] mt-[30vh]"}`}> Hello visitor!</h1>
+            <p className={`font-['Geologica'] font-thin text-2xl ${isMobile ? "ml-[5vw]" : "ml-[15vw]"} select-none`}> This website is still in development, please come back later (ᴖᴗᴖ)   </p>
           </div>
-        <Scene />
+          <Scene />
         </>
       }
     </div>

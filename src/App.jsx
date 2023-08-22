@@ -6,7 +6,7 @@ import { getAnalytics } from "firebase/analytics";
 import { RouterProvider} from "react-router-dom"
 import router from "./router.jsx"
 
-// init firebase
+// config firebase
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_APP_API_KEY,
   authDomain: import.meta.env.VITE_APP_AUTH_DOMAIN,
@@ -16,6 +16,8 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_APP_APP_ID,
   measurementId: import.meta.env.VITE_APP_MEASUREMENT_ID
 }
+
+// init firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
