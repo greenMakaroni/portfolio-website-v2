@@ -26,7 +26,7 @@ const Project = ({ title, description, link }) => {
             onMouseLeave={() => onLeave()}
             ref={project}
             className={`
-            ${isMobile ? "" : "w-[70vw] h-[60vh]"} 
+            ${isMobile ? "" : "w-[60vw] h-[60vh]"} 
             border-l-8
             opacity-0 
             relative 

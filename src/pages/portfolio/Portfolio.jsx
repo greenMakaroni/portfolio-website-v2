@@ -1,6 +1,6 @@
 import Navigation from '../../components/navigation/Navigation'
 import Project from '../../components/portfolio/Project'
-import {academicProjects, freelanceProjects, personalProjects} from './projects.js'
+import { academicProjects, freelanceProjects, personalProjects } from './projects.js'
 
 const Portfolio = () => {
   return (
@@ -22,7 +22,7 @@ const Portfolio = () => {
             )
           })
         }
-     <h1 className="mt-[100px] animate-elementIn opacity-0 text-4xl text-black font-['Kanit'] font-bold">
+        <h1 className="mt-[100px] animate-elementIn opacity-0 text-4xl text-black font-['Kanit'] font-bold">
           Academic Projects
         </h1>
         {
@@ -37,7 +37,7 @@ const Portfolio = () => {
             )
           })
         }
-             <h1 className="mt-[100px] animate-elementIn opacity-0 text-4xl text-black font-['Kanit'] font-bold">
+        <h1 className="mt-[100px] animate-elementIn opacity-0 text-4xl text-black font-['Kanit'] font-bold">
           Personal Projects
         </h1>
         {
@@ -54,7 +54,6 @@ const Portfolio = () => {
         }
       </div>
     </>
-
   )
 }
 
