@@ -31,7 +31,7 @@ const EducationInfo = ({ setSection }) => {
 
       <InfoSection setSection={setSection} param="second" isMobile={isMobile}>
         <h1 className="mb-[3vh] animate-elementIn opacity-0 text-4xl text-black font-['Kanit'] font-bold pt-[20vh]">
-          A-levels
+         IT Technician T-levels
         </h1>
         <Info
           header="Course"

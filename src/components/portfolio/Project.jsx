@@ -18,7 +18,7 @@ const Project = ({ title, description, link }) => {
     }
 
     const onLeave = () => {
-        setFonts({header: "text-xl", par: ""})
+        setFonts({header: "text-xl", par: "text-base"})
     }
     return (
         <div
