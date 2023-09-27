@@ -14,11 +14,11 @@ const Project = ({ title, description, link }) => {
     })
 
     const onEnter = () => {
-        setFonts({header: "text-[26px]", par: "text-[22px]"})
+        setFonts({ header: "text-[26px]", par: "text-[22px]" })
     }
 
     const onLeave = () => {
-        setFonts({header: "text-xl", par: "text-base"})
+        setFonts({ header: "text-xl", par: "text-base" })
     }
     return (
         <div
