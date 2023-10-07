@@ -14,7 +14,7 @@ const Education = () => {
 
   return (
     <>
-      <DelayRendering delay={1000} component={<Navigation />} />
+      { isMobile ? <Navigation /> : isLoaded && <Navigation /> }
       {!isMobile && <Scene section={section} isLoaded={isLoaded} setLoaded={setLoaded} />}
       <EducationInfo setSection={setSection} />
     </>

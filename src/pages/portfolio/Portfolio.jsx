@@ -8,7 +8,7 @@ const Portfolio = () => {
       <Navigation />
       <div className="px-[10vw] mt-[150px] w-screen flex flex-col select-none">
         <h1 className="animate-elementIn opacity-0 text-4xl text-black font-['Kanit'] font-bold">
-          Freelance Pojects
+          Freelance Projects
         </h1>
         {
           freelanceProjects.map((project, index) => {
