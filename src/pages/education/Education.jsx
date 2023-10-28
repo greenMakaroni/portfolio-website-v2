@@ -1,6 +1,5 @@
 import Navigation from "../../components/navigation/Navigation"
 import Scene from "../../components/education/Scene"
-import DelayRendering from "../../custom_hooks/delayRendering"
 import EducationInfo from "../../components/education/EducationInfo"
 import { useState } from "react"
 import useWindowDimensions from '../../custom_hooks/useWindowDimensions.jsx';

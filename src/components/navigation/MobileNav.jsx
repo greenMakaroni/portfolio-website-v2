@@ -8,6 +8,7 @@ const MobileNav = () => {
 
   const NavigationMenu = () => {
     return (
+
       <nav className="navigation-menu" style={open ? { animation: "none" } : { animation: "menuAppear-Mobile ease 0.3s" }}>
 
         <Link 
@@ -42,11 +43,12 @@ const MobileNav = () => {
         </Link>
 
       </nav>
+
     )
   }
   return (
     <>
-      <div className={"div-hamburger"} onClick={() => setOpen(!open)}>
+      <div className={"div-hamburger"} onClick={ () => setOpen(!open) }>
         <div className={open ? "top-close" : "hamburger-top"}></div>
         <div className={open ? "middle-close" : "hamburger-middle"}></div>
         <div className={open ? "bottom-close" : "hamburger-bottom"}></div>
