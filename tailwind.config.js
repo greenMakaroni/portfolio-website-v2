@@ -12,8 +12,8 @@ export default {
     extend: {
       keyframes: {
         'moveCanvas': {
-          '0%': {marginRight: '0'},
-          '100%': {marginRight: '-15vw'}
+          '0%': {marginRight: '0', opacity: '0'},
+          '100%': {marginRight: '-15vw', opacity: '1'}
         },
         'elementIn': {
           '0%': {opacity: '0', marginLeft: '-5vw'},
