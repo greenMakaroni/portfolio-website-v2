@@ -8,13 +8,12 @@ const Education = () => {
   const { width } = useWindowDimensions()
   const isMobile = width < 650
   const [section, setSection] = useState({prev: "first", current: "first"})
-  const [isLoaded, setLoaded] = useState(false)
 
 
   return (
     <>
-      { isMobile ? <Navigation /> : isLoaded && <Navigation /> }
-      {!isMobile && <Scene section={section} isLoaded={isLoaded} setLoaded={setLoaded} />}
+      <Navigation />
+      {!isMobile && <Scene section={section} />}
       <EducationInfo setSection={setSection} />
     </>
   )
