@@ -8,7 +8,7 @@ import { editable } from '@theatre/r3f'
 import * as THREE from 'three'
 import dmuURL from './3Dmodels/dmu.glb'
 
-export function Dmu(props) {
+ export const Dmu = (props) => {
   const { nodes, materials } = useGLTF(dmuURL)
   const texture = useTexture('./baked_pedestal.jpg')
   texture.flipY = false
@@ -32,3 +32,5 @@ export function Dmu(props) {
 }
 
 useGLTF.preload('./dmu.glb')
+
+

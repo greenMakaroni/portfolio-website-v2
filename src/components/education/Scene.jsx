@@ -27,20 +27,8 @@ const sheet_entry = getProject('Logo entry', { state: dmuEntryAnimation }).sheet
 
 const Scene = ({ section }) => {
   const [isLoaded, setLoaded] = useState(false)
-
-  // play animation when models are loaded
   useEffect(() => {
-    if (isLoaded) {
-      sheet_entry.project.ready
-        .then(() => sheet_entry.sequence.play({ iterationCount: 1, range: [0.1, 6.5] })).then(() =>
-          sheet_entry.sequence.play({ iterationCount: Infinity, range: [6.5, 12.5] })
-        )
-    }
-  }, [isLoaded])
 
-  // play transition animation on section change
-  useEffect(() => {
-    if (isLoaded) {
       if (section.current == "third") {
         sheet_entry.sequence.play({ iterationCount: 1, range: [20.5, 21.5] }).then(() => {
           sheet_entry.sequence.play({ iterationCount: Infinity, range: [21.7, 27.5] })
@@ -64,8 +52,20 @@ const Scene = ({ section }) => {
           sheet_entry.sequence.play({ iterationCount: Infinity, range: [6.5, 12.5] })
         })
       }
-    }
+    
   }, [section])
+  // play animation when models are loaded
+  useEffect(() => {
+    if (isLoaded && (section.current == "first" && section.prev == "first")) {
+      sheet_entry.project.ready
+        .then(() => sheet_entry.sequence.play({ iterationCount: 1, range: [0.1, 6.5] })).then(() =>
+          sheet_entry.sequence.play({ iterationCount: Infinity, range: [6.5, 12.5] })
+        )
+    }
+  }, [isLoaded])
+
+  // play transition animation on section change
+
 
   return (
     <div className={`m-0 p-0 absolute flex flex-row justify-end w-screen h-screen`}>

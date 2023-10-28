@@ -1,6 +1,4 @@
-import useOnScreen from '../../custom_hooks/useOnScreen.jsx'
 import useWindowDimensions from '../../custom_hooks/useWindowDimensions.jsx'
-import { useRef, useEffect } from 'react'
 import InfoSection from './InfoSection'
 import Info from './Info'
 import Button from '../shared/Button'
@@ -19,7 +17,7 @@ const EducationInfo = ({ setSection }) => {
         </h1>
         <Info
           header="Course"
-          paragraph="BSc. Software engineering with foundation year in computing." />
+          paragraph="Bachelor of Science in Software Engineering with foundation year in computing." />
         <Info
           header="Institution"
           paragraph="De Montfort University, Leicester, England." />
@@ -31,7 +29,7 @@ const EducationInfo = ({ setSection }) => {
 
       <InfoSection setSection={setSection} param="second" isMobile={isMobile}>
         <h1 className="mb-[3vh] animate-elementIn opacity-0 text-4xl text-black font-['Kanit'] font-bold pt-[20vh]">
-         IT Technician T-levels
+          IT Technician T-levels
         </h1>
         <Info
           header="Course"
@@ -41,8 +39,8 @@ const EducationInfo = ({ setSection }) => {
           paragraph="ZSTiO nr1. Chorzów, Poland." />
         <Info
           header="Years"
-          paragraph="2011–2015" />
-      </InfoSection>
+          paragraph="2011–2015" /> 
+      </InfoSection> 
 
       <InfoSection setSection={setSection} param="third" isMobile={isMobile}>
         <h1 className="mb-[3vh] animate-elementIn opacity-0 text-4xl text-black font-['Kanit'] font-bold">
