@@ -7,8 +7,6 @@ import { OrbitControls, Center, Environment } from '@react-three/drei'
 import { Dmu } from './Dmu.jsx'
 import { Zstio } from './Zstio.jsx'
 import { Star } from './Star.jsx'
-// loader
-import Loader from '../loader/Loader.jsx';
 // theatre.js
 import { SheetProvider, PerspectiveCamera } from '@theatre/r3f'
 import { getProject } from '@theatre/core'
@@ -28,6 +26,17 @@ const sheet_entry = getProject('Logo entry', { state: dmuEntryAnimation }).sheet
 const Scene = ({ section }) => {
   const [isLoaded, setLoaded] = useState(false)
 
+  // play animation when models are loaded
+  useEffect(() => {
+    if (isLoaded) {
+      sheet_entry.project.ready
+        .then(() => sheet_entry.sequence.play({ iterationCount: 1, range: [0.1, 6.5] })).then(() =>
+          sheet_entry.sequence.play({ iterationCount: Infinity, range: [6.5, 12.5] })
+        )
+    }
+  }, [isLoaded])
+
+  // play transition animation on section change
   useEffect(() => {
     if (isLoaded) {
       if (section.current == "third") {
@@ -56,18 +65,6 @@ const Scene = ({ section }) => {
     }
 
   }, [section])
-  // play animation when models are loaded
-  useEffect(() => {
-    if (isLoaded) {
-      sheet_entry.project.ready
-        .then(() => sheet_entry.sequence.play({ iterationCount: 1, range: [0.1, 6.5] })).then(() =>
-          sheet_entry.sequence.play({ iterationCount: Infinity, range: [6.5, 12.5] })
-        )
-    }
-  }, [isLoaded])
-
-  // play transition animation on section change
-
 
   return (
     <div className={`m-0 p-0 absolute flex flex-row justify-end w-screen h-screen`}>
@@ -75,7 +72,7 @@ const Scene = ({ section }) => {
         {/* { play the transition when the scene is loaded} */}
         <Canvas shadows>
           {/* { Suspense execution and serve loader until models are loaded } */}
-          <Suspense fallback={<Loader setLoaded={setLoaded} />}>
+          <Suspense fallback={<></>}>
             {/* { animation sheet provider } */}
             <SheetProvider sheet={sheet_entry}>
               <PerspectiveCamera theatreKey="Camera" makeDefault position={[-3, -20, 10]} fov={30} />
@@ -83,7 +80,7 @@ const Scene = ({ section }) => {
               <pointLight position={[-10, 20, 10]} />
               {/* Models */}
               <Center>
-                <Dmu />
+                <Dmu setLoaded={setLoaded} />
               </Center>
               <Zstio />
               <Star />

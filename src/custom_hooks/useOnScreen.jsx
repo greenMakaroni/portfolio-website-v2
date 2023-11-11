@@ -4,7 +4,7 @@ export default function useOnScreen(ref) {
     const [isIntersecting, setIntersecting] = useState(false)
 
     const observer = useMemo(() => new IntersectionObserver(
-        ([entry]) => setIntersecting(entry.isIntersecting), { threshold: 0.1 }
+        ([entry]) => setIntersecting(entry.isIntersecting), { threshold: 0.01 }
     ), [ref])
 
 

@@ -22,7 +22,7 @@ export default {
       },
       animation: {
         moveCanvas: '2s moveCanvas ease-in-out 2s forwards',
-        infoElementIn: '1s elementIn ease 3s forwards',
+        infoElementIn: '1.3s elementIn ease 3s forwards',
         elementIn: 'elementIn 1s forwards'
       },
     },

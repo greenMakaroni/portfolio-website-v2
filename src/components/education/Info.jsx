@@ -1,14 +1,9 @@
-import { useRef } from "react"
-import useOnScreen from "../../custom_hooks/useOnScreen"
+import { memo } from 'react'
 
 const Info = ({ header, paragraph }) => {
 
-    const info = useRef()
-    const isVisible = useOnScreen(info)
-
     return (
-        <div ref={info}>
-            {isVisible &&
+        <div>
                 <>
                     <h1 className="animate-elementIn opacity-0 pt-[40px] text-xl text-black font-['Kanit'] font-bold">
                         {header}
@@ -16,9 +11,9 @@ const Info = ({ header, paragraph }) => {
                     <p className="animate-elementIn opacity-0 text-lg text-black font-['Geologica'] font-thin ">
                         {paragraph}
                     </p>
-                </>}
+                </>
         </ div>
     )
 }
 
-export default Info
+export default memo(Info);
