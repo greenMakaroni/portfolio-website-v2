@@ -21,8 +21,8 @@ export default {
         }
       },
       animation: {
-        moveCanvas: '2s moveCanvas ease-in-out 2s forwards',
-        infoElementIn: '1.3s elementIn ease 3s forwards',
+        moveCanvas: '4s moveCanvas ease-in-out 1s forwards',
+        infoElementIn: '1.3s elementIn ease 2s forwards',
         elementIn: 'elementIn 1s forwards'
       },
     },

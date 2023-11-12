@@ -9,7 +9,6 @@ const Education = () => {
   const isMobile = width < 650
   const [section, setSection] = useState({prev: "first", current: "first"})
 
-
   return (
     <>
       <Navigation />

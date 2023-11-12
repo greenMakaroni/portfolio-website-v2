@@ -12,7 +12,11 @@ import { SheetProvider, PerspectiveCamera } from '@theatre/r3f'
 import { getProject } from '@theatre/core'
 import dmuEntryAnimation from "./dmu_entry.json"
 
+// Loader
+import Loader from '../shared/Loader.jsx'
+
 // development utils
+// import { onChange, val } from '@theatre/core'
 // import studio from "@theatre/studio"
 // studio.initialize();
 
@@ -39,32 +43,47 @@ const Scene = ({ section }) => {
   // play transition animation on section change
   useEffect(() => {
     if (isLoaded) {
-      if (section.current == "third") {
-        sheet_entry.sequence.play({ iterationCount: 1, range: [20.5, 21.5] }).then(() => {
-          sheet_entry.sequence.play({ iterationCount: Infinity, range: [21.7, 27.5] })
-        })
-      }
-
-      if (section.current == "second" && section.prev == "first") {
-        sheet_entry.sequence.play({ iterationCount: 1, range: [13, 14] }).then(() => {
-          sheet_entry.sequence.play({ iterationCount: Infinity, range: [14, 20.5] })
-        })
-      }
-
-      if (section.current == "second" && section.prev == "third") {
-        sheet_entry.sequence.play({ iterationCount: 1, range: [20.5, 21.5], direction: 'reverse' }).then(() => {
-          sheet_entry.sequence.play({ iterationCount: Infinity, range: [14, 20.5] })
-        })
-      }
-
-      if (section.current == "first") {
-        sheet_entry.sequence.play({ iterationCount: 1, range: [13, 14], direction: 'reverse' }).then(() => {
-          sheet_entry.sequence.play({ iterationCount: Infinity, range: [6.5, 12.5] })
-        })
+      if (!(section.current == "first" && section.prev == "first")) {
+        if (section.current == "second") {
+          if (section.prev == "first") {
+            // transition animation, from first section to the second section
+            sheet_entry.sequence.play({ iterationCount: 1, range: [13, 14] }).then(() => {
+              sheet_entry.sequence.play({ iterationCount: Infinity, range: [14, 20.5] })
+            })
+          } else {
+            // transition animation, from third section to the second section
+            sheet_entry.sequence.play({ iterationCount: 1, range: [20.5, 21.5], direction: 'reverse' }).then(() => {
+              sheet_entry.sequence.play({ iterationCount: Infinity, range: [14, 20.5] })
+            })
+          }
+        }
+  
+        // transition animation, from second section to the third section
+        if (section.current == "third") {
+          sheet_entry.sequence.play({ iterationCount: 1, range: [20.5, 21.5] }).then(() => {
+            sheet_entry.sequence.play({ iterationCount: Infinity, range: [21.7, 27.5] })
+          })
+        }
+  
+        // transition animation, from second section to the first section
+        if (section.current == "first") {
+          sheet_entry.sequence.play({ iterationCount: 1, range: [13, 14], direction: 'reverse' }).then(() => {
+            sheet_entry.sequence.play({ iterationCount: Infinity, range: [6.5, 12.5] })
+          })
+        }
       }
     }
-
   }, [section])
+
+  // // scouting sequence
+  // onChange(sheet_entry.sequence.pointer.length, (len) => {
+  //   console.log('Length of the sequence changed to:', len)
+  // })
+
+  // onChange(sheet_entry.sequence.pointer.position, (position) => {
+  //   console.log('Position of the sequence changed to:', position)
+  // })
+
 
   return (
     <div className={`m-0 p-0 absolute flex flex-row justify-end w-screen h-screen`}>
@@ -72,7 +91,7 @@ const Scene = ({ section }) => {
         {/* { play the transition when the scene is loaded} */}
         <Canvas shadows>
           {/* { Suspense execution and serve loader until models are loaded } */}
-          <Suspense fallback={<></>}>
+          <Suspense fallback={<Loader setLoaded={setLoaded} />}>
             {/* { animation sheet provider } */}
             <SheetProvider sheet={sheet_entry}>
               <PerspectiveCamera theatreKey="Camera" makeDefault position={[-3, -20, 10]} fov={30} />
@@ -80,7 +99,7 @@ const Scene = ({ section }) => {
               <pointLight position={[-10, 20, 10]} />
               {/* Models */}
               <Center>
-                <Dmu setLoaded={setLoaded} />
+                <Dmu />
               </Center>
               <Zstio />
               <Star />

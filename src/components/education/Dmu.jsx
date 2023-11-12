@@ -16,7 +16,6 @@ import dmuURL from './3Dmodels/dmu.glb'
     map: texture,
   })
 
-  props.setLoaded(true)
   return (
     <group {...props} >
       <editable.mesh theatreKey="pedestal" geometry={nodes.pedestal.geometry} material={pedestalMaterial} position={[0.01, 0.22, 0]} scale={[0.3, 0.26, 0.3]} />
