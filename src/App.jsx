@@ -21,12 +21,15 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
+// tell react app we're lazy loading router components
+import { Suspense } from "react";
+
 function App() {
 
   return (
-    <>  
+    <Suspense fallback={<p>Loading...</p>}>  
       <RouterProvider router={router} />
-    </>
+    </Suspense>
   )
 }
 

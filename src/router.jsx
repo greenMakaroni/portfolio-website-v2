@@ -1,9 +1,12 @@
+// code splitting components
+import { lazy } from 'react'
+
 // pages
-import Home from "./pages/home/Home"
-import Portfolio from "./pages/portfolio/Portfolio"
-import Contact from "./pages/contact/Contact"
-import Education from "./pages/education/Education"
-import Error from "./pages/error/Error"
+const Home = lazy(() => import("./pages/home/Home"))
+const Portfolio = lazy(() => import("./pages/portfolio/Portfolio"))
+const Contact = lazy(() => import("./pages/contact/Contact"))
+const Education = lazy(() => import("./pages/education/Education"))
+const Error = lazy(() => import("./pages/error/Error"))
 
 // router
 import { 
