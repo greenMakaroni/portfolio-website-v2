@@ -1,21 +1,32 @@
-import useWindowDimensions from '../../custom_hooks/useWindowDimensions.jsx'
+// Components
 import InfoSection from './InfoSection'
 import Info from './Info'
 import Button from '../shared/Button'
 import PDF from './Appraisal Document.pdf'
+
+// Icons
+import AccountBalanceOutlinedIcon from '@mui/icons-material/AccountBalanceOutlined';
+import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
+import MilitaryTechOutlinedIcon from '@mui/icons-material/MilitaryTechOutlined';
+import EngineeringSharpIcon from '@mui/icons-material/EngineeringSharp';
+import PsychologySharpIcon from '@mui/icons-material/PsychologySharp';
+
+// Hooks
 import { useEffect } from 'react'
+import useWindowDimensions from '../../custom_hooks/useWindowDimensions.jsx'
+
 
 const EducationInfo = ({ setSection }) => {
 
   const { width } = useWindowDimensions()
   const isMobile = width < 650
-  
+
   useEffect(() => {
     return (
       setSection(() => ({
         prev: "first",
         current: "first"
-    }))
+      }))
     )
   }, [])
 
@@ -27,14 +38,21 @@ const EducationInfo = ({ setSection }) => {
         </h1>
         <Info
           header="Course"
-          paragraph="Bachelor of Science in Software Engineering with foundation year in computing." />
+          paragraph="Bachelor of Science in Software Engineering with foundation year in computing.">
+          <PsychologySharpIcon sx={{ fontSize: 30}} />
+        </Info>
         <Info
           header="Institution"
-          paragraph="De Montfort University, Leicester, England." />
+          paragraph="De Montfort University, Leicester, England." >
+          <AccountBalanceOutlinedIcon sx={{ fontSize: 30}} />
+        </Info>
         <Info
           header="Years"
-          paragraph="2019-2023" />
-        <Button text="My marks PDF" link={PDF} />
+          paragraph="2019-2023">
+          <CalendarMonthOutlinedIcon sx={{ fontSize: 28}} />
+        </Info>
+
+        <Button text="Course overview" link={PDF} />
       </InfoSection>
 
       <InfoSection setSection={setSection} param="second" isMobile={isMobile}>
@@ -43,27 +61,42 @@ const EducationInfo = ({ setSection }) => {
         </h1>
         <Info
           header="Course"
-          paragraph="IT Technician with specialization in online applications." />
+          paragraph="IT Technician with specialization in online applications." >
+          <EngineeringSharpIcon sx={{ fontSize: 30}} />
+        </Info>
         <Info
           header="Institution"
-          paragraph="ZSTiO nr1. Chorzów, Poland." />
+          paragraph="ZSTiO nr1. Chorzów, Poland.">
+          <AccountBalanceOutlinedIcon sx={{ fontSize: 30}} />
+        </Info>
         <Info
           header="Years"
-          paragraph="2011–2015" /> 
-      </InfoSection> 
+          paragraph="2011–2015" >
+          <CalendarMonthOutlinedIcon sx={{ fontSize: 28}} />
+        </Info>
+      </InfoSection>
 
       <InfoSection setSection={setSection} param="third" isMobile={isMobile}>
         <h1 className="mb-[3vh] animate-elementIn opacity-0 text-4xl text-black font-['Kanit'] font-bold">
           Certifications
         </h1>
+      
+        <Info
+          header="Full Stack Web Development Bootcamp"
+          paragraph="The complete web development bootcamp using MERN, (2020)." >
+          <MilitaryTechOutlinedIcon sx={{ fontSize: 35}} />
+        </Info>
+        <Button text="View online" link="https://www.udemy.com/certificate/UC-79a9ec62-66fe-4a13-9890-f954ceadcfec/" />
+       
+        <div className="bg-black h-[2px] w-[100%] my-[25px] ">
+        </div>
+
         <Info
           header="Microsoft Technology Associate"
-          paragraph="Introduction to programming using Python, (2019)." />
-        <Button text="See online" link="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=395&cvid=4yFp9n9HAW1ZqqgywoTHOg==" />
-        <Info
-          header="Udemy course"
-          paragraph="The complete web development bootcamp using MERN, (2020)." />
-        <Button text="See online" link="https://www.udemy.com/certificate/UC-79a9ec62-66fe-4a13-9890-f954ceadcfec/" />
+          paragraph="Introduction to programming using Python, (2019)." >
+          <MilitaryTechOutlinedIcon sx={{ fontSize: 35}} />
+        </Info>
+        <Button text="View online" link="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=395&cvid=4yFp9n9HAW1ZqqgywoTHOg==" />
       </InfoSection>
     </div>
   )

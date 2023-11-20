@@ -9,10 +9,11 @@ const Button = ({ text, link }) => {
     <div ref={button}>
       {isVisible &&
         <button
-          className=" duration-300 rounded-lg animate-elementIn z-20 mt-[40px] mb-[3vh] opacity-0 flex justify-center align-center border-2 border-black w-36 h-16 pt-4 pb-4 font-['Geologica'] hover:font-light font-thin hover:bg-black hover:text-white hover:cursor-pointer "
-          onClick={() => window.open(link, "_blank")} >
+          className=" duration-300 rounded-sm animate-elementIn z-20 my-[35px] opacity-0 flex justify-center items-center border-2 border-black px-[24px] py-[14px] font-['Geologica'] hover:font-light font-thin hover:bg-black hover:text-white hover:cursor-pointer "
+          onClick={() => window.open(link, "_blank")}>
           {text}
-        </button>}
+        </button>
+      }
     </div>
   )
 }
