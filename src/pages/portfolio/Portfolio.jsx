@@ -1,10 +1,14 @@
+// Components
 import Navigation from '../../components/navigation/Navigation'
 import Project from '../../components/portfolio/Project'
+import Footer from '../../components/footer/Footer.jsx'
+
+// Data
 import { academicProjects, freelanceProjects, personalProjects } from './projects.js'
 
 const Portfolio = () => {
   return (
-    <>
+    <div className="flex flex-col">
       <Navigation />
       <div className="px-[10vw] mt-[150px] w-screen flex flex-col select-none">
         <h1 className="animate-elementIn opacity-0 text-4xl text-black font-['Kanit'] font-bold">
@@ -53,7 +57,8 @@ const Portfolio = () => {
           })
         }
       </div>
-    </>
+      <Footer />
+    </div>
   )
 }
 
