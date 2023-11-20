@@ -42,7 +42,6 @@ const Scene = ({ section }) => {
 
   // play transition animation on section change
   useEffect(() => {
-    if (isLoaded) {
       if (!(section.current == "first" && section.prev == "first")) {
         if (section.current == "second") {
           if (section.prev == "first") {
@@ -72,7 +71,6 @@ const Scene = ({ section }) => {
           })
         }
       }
-    }
   }, [section])
 
   // // scouting sequence

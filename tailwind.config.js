@@ -12,12 +12,12 @@ export default {
     extend: {
       keyframes: {
         'moveCanvas': {
-          '0%': {marginRight: '0', opacity: '0'},
-          '100%': {marginRight: '-15vw', opacity: '1'}
+          '0%': {filter: "blur(2px)", marginRight: '0', opacity: '0'},
+          '100%': {filter: "blur(0)", marginRight: '-15vw', opacity: '1'}
         },
         'elementIn': {
-          '0%': {opacity: '0', marginLeft: '-5vw'},
-          '100%': {opacity: '1', marginLeft: '0'}
+          '0%': {filter: "blur(2px)", opacity: '0', marginLeft: '-5vw'},
+          '100%': {filter: "blur(0)", opacity: '1', marginLeft: '0'}
         }
       },
       animation: {

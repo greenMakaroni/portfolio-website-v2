@@ -3,14 +3,24 @@ import InfoSection from './InfoSection'
 import Info from './Info'
 import Button from '../shared/Button'
 import PDF from './Appraisal Document.pdf'
+import { useEffect } from 'react'
 
 const EducationInfo = ({ setSection }) => {
 
   const { width } = useWindowDimensions()
   const isMobile = width < 650
   
+  useEffect(() => {
+    return (
+      setSection(() => ({
+        prev: "first",
+        current: "first"
+    }))
+    )
+  }, [])
+
   return (
-    <div className="flex flex-col absolute justify-start w-[60vw]">
+    <div className="flex flex-col justify-start w-[60vw]">
       <InfoSection setSection={setSection} param="first" isMobile={isMobile}>
         <h1 className="mb-[3vh] text-4xl text-black font-['Kanit'] font-bold">
           Degree

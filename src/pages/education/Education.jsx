@@ -1,6 +1,11 @@
-import Navigation from "../../components/navigation/Navigation"
-import Scene from "../../components/education/Scene"
-import EducationInfo from "../../components/education/EducationInfo"
+
+// Components
+import Navigation from "../../components/navigation/Navigation.jsx"
+import Scene from "../../components/education/Scene.jsx"
+import EducationInfo from "../../components/education/EducationInfo.jsx"
+import Footer from "../../components/footer/Footer.jsx"
+
+// Hooks
 import { useState } from "react"
 import useWindowDimensions from '../../custom_hooks/useWindowDimensions.jsx';
 
@@ -10,11 +15,14 @@ const Education = () => {
   const [section, setSection] = useState({prev: "first", current: "first"})
 
   return (
-    <>
+    <div className="flex flex-col">
       <Navigation />
-      {!isMobile && <Scene section={section} />}
-      <EducationInfo setSection={setSection} />
-    </>
+      <div className="flex flex-row">
+        {!isMobile && <Scene section={section} />}
+        <EducationInfo setSection={setSection} />
+      </div>
+      <Footer />
+    </div>
   )
 }
 
