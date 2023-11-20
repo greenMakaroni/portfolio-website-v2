@@ -15,7 +15,7 @@ const Footer = () => {
         <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/dawid-markieton-1948391b8/">
           <LinkedInIcon sx={{ fontSize: 30, color: "white"}} />
         </a>
-        <a className="mx-[40px]" target="_blank" rel="noreferrer" href="https://github.com/greenMakaroni">
+        <a className="mx-[25px]" target="_blank" rel="noreferrer" href="https://github.com/greenMakaroni">
           <GitHubIcon sx={{ fontSize: 30, color: "white"}} />
         </a>
         <a target="_blank" rel="noreferrer" href="https://www.facebook.com/dawid.markieton.3">
