@@ -3,10 +3,10 @@
 import { useState, useEffect, Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Center, Environment } from '@react-three/drei'
+
 // models
 import { Dmu } from './Dmu.jsx'
-import { Zstio } from './Zstio.jsx'
-import { Star } from './Star.jsx'
+
 // theatre.js
 import { SheetProvider, PerspectiveCamera } from '@theatre/r3f'
 import { getProject } from '@theatre/core'
@@ -41,37 +41,37 @@ const Scene = ({ section }) => {
   }, [isLoaded])
 
   // play transition animation on section change
-  useEffect(() => {
-      if (!(section.current == "first" && section.prev == "first")) {
-        if (section.current == "second") {
-          if (section.prev == "first") {
-            // transition animation, from first section to the second section
-            sheet_entry.sequence.play({ iterationCount: 1, range: [13, 14] }).then(() => {
-              sheet_entry.sequence.play({ iterationCount: Infinity, range: [14, 20.5] })
-            })
-          } else {
-            // transition animation, from third section to the second section
-            sheet_entry.sequence.play({ iterationCount: 1, range: [20.5, 21.5], direction: 'reverse' }).then(() => {
-              sheet_entry.sequence.play({ iterationCount: Infinity, range: [14, 20.5] })
-            })
-          }
-        }
+  // useEffect(() => {
+  //     if (!(section.current == "first" && section.prev == "first")) {
+  //       if (section.current == "second") {
+  //         if (section.prev == "first") {
+  //           // transition animation, from first section to the second section
+  //           sheet_entry.sequence.play({ iterationCount: 1, range: [13, 14] }).then(() => {
+  //             sheet_entry.sequence.play({ iterationCount: Infinity, range: [14, 20.5] })
+  //           })
+  //         } else {
+  //           // transition animation, from third section to the second section
+  //           sheet_entry.sequence.play({ iterationCount: 1, range: [20.5, 21.5], direction: 'reverse' }).then(() => {
+  //             sheet_entry.sequence.play({ iterationCount: Infinity, range: [14, 20.5] })
+  //           })
+  //         }
+  //       }
   
-        // transition animation, from second section to the third section
-        if (section.current == "third") {
-          sheet_entry.sequence.play({ iterationCount: 1, range: [20.5, 21.5] }).then(() => {
-            sheet_entry.sequence.play({ iterationCount: Infinity, range: [21.7, 27.5] })
-          })
-        }
+  //       // transition animation, from second section to the third section
+  //       if (section.current == "third") {
+  //         sheet_entry.sequence.play({ iterationCount: 1, range: [20.5, 21.5] }).then(() => {
+  //           sheet_entry.sequence.play({ iterationCount: Infinity, range: [21.7, 27.5] })
+  //         })
+  //       }
   
-        // transition animation, from second section to the first section
-        if (section.current == "first") {
-          sheet_entry.sequence.play({ iterationCount: 1, range: [13, 14], direction: 'reverse' }).then(() => {
-            sheet_entry.sequence.play({ iterationCount: Infinity, range: [6.5, 12.5] })
-          })
-        }
-      }
-  }, [section])
+  //       // transition animation, from second section to the first section
+  //       if (section.current == "first") {
+  //         sheet_entry.sequence.play({ iterationCount: 1, range: [13, 14], direction: 'reverse' }).then(() => {
+  //           sheet_entry.sequence.play({ iterationCount: Infinity, range: [6.5, 12.5] })
+  //         })
+  //       }
+  //     }
+  // }, [section])
 
   // // scouting sequence
   // onChange(sheet_entry.sequence.pointer.length, (len) => {
@@ -99,8 +99,7 @@ const Scene = ({ section }) => {
               <Center>
                 <Dmu />
               </Center>
-              <Zstio />
-              <Star />
+
               {/* Drei helpers */}
               <OrbitControls enableZoom={false} enableRotate={true} enablePan={false} minPolarAngle={Math.PI / 3} maxPolarAngle={Math.PI / 2} />
               <Environment preset="city" />

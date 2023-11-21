@@ -6,7 +6,7 @@ import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
 const Footer = () => {
   return (
     <div className="flex flex-col w-[100vw] bg-black z-50">
-      <h1 className="font-['Kanit'] font-bold text-white text-center text-[25px] pt-[75px] pb-[20px]">
+      <h1 className="font-['Kanit'] font-extralight text-white text-center text-[25px] pt-[75px] pb-[20px]">
         <span className="mr-[10px]">
           <AutoAwesomeOutlinedIcon sx={{ fontSize: 40, color: "white"}} />
         </span>
