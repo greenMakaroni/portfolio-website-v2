@@ -6,7 +6,7 @@ const Info = (props) => {
         <div>
             <>
                 <h1 className="animate-elementIn opacity-0 pt-[35px] text-xl text-black font-['Kanit'] font-bold flex items-center">
-                    <span className="mr-[10px] mb-[10px]">
+                    <span className="mr-[15px] mb-[10px]">
                         {props.children}
                     </span>
                     {props.header}
