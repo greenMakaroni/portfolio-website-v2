@@ -9,7 +9,7 @@ const Banner = () => {
   const isVisible = useOnScreen(banner)
 
   return (
-    <div ref={banner} className="z-[10] w-screen h-screen p-0 m-0 flex flex-row justify-start">
+    <div ref={banner} className="w-screen h-screen p-0 m-0 flex flex-row justify-start">
       {
         isVisible &&
         <>
