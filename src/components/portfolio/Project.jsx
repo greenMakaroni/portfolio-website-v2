@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useRef } from "react"
 import useOnScreen from "../../custom_hooks/useOnScreen.jsx"
 import useWindowDimensions from "../../custom_hooks/useWindowDimensions.jsx"
 
@@ -8,61 +8,19 @@ const Project = ({ title, description, link }) => {
     const project = useRef()
     const isVisible = useOnScreen(project)
 
-    const [fonts, setFonts] = useState({
-        header: "text-xl",
-        par: "text-base"
-    })
-
-    const onEnter = () => {
-        setFonts({ header: "text-[26px]", par: "text-[22px]" })
-    }
-
-    const onLeave = () => {
-        setFonts({ header: "text-xl", par: "text-base" })
-    }
     return (
         <div
-            onMouseEnter={() => onEnter()}
-            onMouseLeave={() => onLeave()}
+    
             ref={project}
-            className={`
-            ${isMobile ? "" : "w-[60vw] h-[60vh]"} 
-            border-l-8
-            opacity-0 
-            relative 
-            py-[40px] 
-            px-[40px] 
-            my-[10vh]
-            flex 
-            flex-col 
-            justify-between 
-          border-black 
-            ${isVisible && "animate-elementIn"}`}>
+            className={`${isMobile ? "" : "w-[25vw]"} border-x-2 opacity-0 relative pt-[40px] px-[40px] my-[6vh] flex flex-col justify-between border-black ${isVisible && "animate-elementIn"}`}>
 
             <div className="flex flex-col">
-                <h1 className={`duration-700 absolute mb-[20px] ${fonts.header} text-black font-['Kanit'] font-bold`}> {title} </h1>
-                <p className={`duration-700 mt-[50px] mr-[30px] p-0 ${fonts.par} text-black font-['Geologica'] font-thin`}> {description} </p>
+                <h1 className={`duration-700 absolute mb-[20px] text-[22px] text-black font-['Kanit'] font-bold`}> {title} </h1>
+                <p className={`duration-700 mt-[50px] mr-[30px] p-0  text-black font-['Geologica'] font-thin`}> {description} </p>
             </div>
 
             <button
-                className="
-                duration-500
-                rounded-lg 
-                mt-[20px] 
-                flex 
-                justify-center 
-                align-center 
-                border-2 
-                border-black 
-                w-36 
-                h-16 
-                py-4 
-                font-['Geologica'] 
-                font-thin 
-                hover:bg-black 
-                hover:text-white 
-                hover:cursor-pointer
-                hover:text-lg"
+                className="rounded-bl-2xl duration-200 rounded-sm z-20 my-[30px] flex justify-center items-center border-2 border-black px-[24px] py-[14px] font-['Geologica'] hover:font-light font-thin hover:bg-black hover:text-white hover:cursor-pointer "
                 onClick={() => window.open(link, "_blank")} >
                 Go to project
             </button>

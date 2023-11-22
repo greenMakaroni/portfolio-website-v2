@@ -12,15 +12,12 @@ const academicProjects = [
     }
 ]
 
-const freelanceProjects = [
-    {
-        title: "Project management app",
-        description: "Full stack application to manage projects and clients.React, apollo client, and bootstrap on the front end.Express, GraphQL andMongoDB on the back end.",
-        link: "https://github.com/greenMakaroni/project-management-app.git",
-    },
-]
-
 const personalProjects = [
+    {
+        title: "My Notes",
+        description: "Full stack web application for creating and managing notes. Project created using PHP, Laravel and MySQL database.",
+        link: "https://github.com/greenMakaroni/myNotes"
+    },
     {
         title: "Interactive rating component",
         description: "This is my solution to the Interactive rating component challenge by the www.frontendmentor.io",
@@ -28,14 +25,14 @@ const personalProjects = [
     },
     {
         title: "Project management app",
-        description: "Full stack application to manage projects and clients.React, apollo client, and bootstrap on the front end.Express, GraphQL andMongoDB on the back end.",
+        description: "Full stack application to manage projects and clients. React, apollo client, and bootstrap on the front end.Express, GraphQL andMongoDB on the back end.",
         link: "https://github.com/greenMakaroni/project-management-app.git",
     },
     {
         title: "E-commerce store",
         description: "eCommerce storefront written in React, utilizing commerce.js API for backend, and stripe for processing of payments.",
         link: "https://github.com/greenMakaroni/react-commercejs-storefront",
-    },
+    }
 ]
 
-export { academicProjects, freelanceProjects, personalProjects}
+export { academicProjects, personalProjects}
