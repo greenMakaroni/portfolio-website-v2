@@ -12,7 +12,7 @@ const Project = ({ title, description, link }) => {
         <div
     
             ref={project}
-            className={`${isMobile ? "" : "w-[25vw]"} border-x-2 opacity-0 relative pt-[40px] px-[40px] my-[6vh] flex flex-col justify-between border-black ${isVisible && "animate-elementIn"}`}>
+            className={`${isMobile ? "" : "w-[35vw]"} border-x-2 opacity-0 relative pt-[40px] px-[40px] my-[8vh] flex flex-col justify-between items-center border-black ${isVisible && "animate-elementIn"}`}>
 
             <div className="flex flex-col">
                 <h1 className={`duration-700 absolute mb-[20px] text-[22px] text-black font-['Kanit'] font-bold`}> {title} </h1>
@@ -20,7 +20,7 @@ const Project = ({ title, description, link }) => {
             </div>
 
             <button
-                className="rounded-bl-2xl duration-200 rounded-sm z-20 my-[30px] flex justify-center items-center border-2 border-black px-[24px] py-[14px] font-['Geologica'] hover:font-light font-thin hover:bg-black hover:text-white hover:cursor-pointer "
+                className="w-[300px] rounded-bl-2xl duration-200 rounded-sm z-20 my-[40px] flex justify-center items-center border-2 border-black px-[24px] py-[14px] font-['Geologica'] hover:font-light font-thin hover:bg-black hover:text-white hover:cursor-pointer "
                 onClick={() => window.open(link, "_blank")} >
                 Go to project
             </button>
