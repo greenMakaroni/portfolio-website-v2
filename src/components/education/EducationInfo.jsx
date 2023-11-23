@@ -10,6 +10,7 @@ import SchoolIcon from '@mui/icons-material/School';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CloudOutlinedIcon from '@mui/icons-material/CloudOutlined';
 import QueryStatsRoundedIcon from '@mui/icons-material/QueryStatsRounded';
+import EngineeringIcon from '@mui/icons-material/Engineering';
 
 // Hooks
 import { useEffect } from 'react'
@@ -33,7 +34,7 @@ const EducationInfo = ({ setSection }) => {
   }, [])
 
   return (
-    <div className=" overflow-x-hidden overflow-y-auto flex flex-col justify-start w-screen">
+    <div className=" overflow-x-hidden overflow-y-auto flex flex-col justify-start">
       <div className="h-screen w-screen flex items-center mb-[20vw] ">
         <InfoSection setSection={setSection} param="first" isMobile={isMobile}>
           <h1 className=" mb-[3vh] text-4xl text-black font-['Kanit'] font-bold">
@@ -70,11 +71,11 @@ const EducationInfo = ({ setSection }) => {
           <Info
             header="Course"
             paragraph="IT Technician with specialization in online applications.">
-            <SchoolIcon sx={{ fontSize: 22 }} />
+            <EngineeringIcon sx={{ fontSize: 30 }} />
           </Info>
           <Info
             header="Location"
-            paragraph="ZSTiO nr1. Chorzów, Poland." >
+            paragraph="Zespół Szkół Technicznych i Ogólnokształcących nr 1. Chorzów, Poland." >
             <LocationOnIcon sx={{ fontSize: 22 }} />
           </Info>
           <Info
@@ -95,7 +96,7 @@ const EducationInfo = ({ setSection }) => {
             Certifications
           </h1>
 
-          <Info
+          {/* <Info
             header="Google Data Analytics"
             paragraph="Google Data Analytics Professional Certificate, (2023)." >
             <QueryStatsRoundedIcon sx={{ fontSize: 22 }} />
@@ -104,7 +105,7 @@ const EducationInfo = ({ setSection }) => {
           <div className="mb-[20px]">
           </div>
 
-          <Button text="View online" link="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=395&cvid=4yFp9n9HAW1ZqqgywoTHOg==" />
+          <Button text="View online" link=" " /> */}
 
           <Info
             header="Full Stack Web Development Bootcamp"

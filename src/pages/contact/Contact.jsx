@@ -4,8 +4,11 @@ import Footer from '../../components/footer/Footer'
 
 const Contact = () => {
   return (
-    <div className="flex flex-col">
+    <div className="w-screen h-screen flex flex-col">
       <Navigation />
+      <div className="w-screen h-screen flex flex-col">
+
+      </div>
       <Footer />
     </div>
 
