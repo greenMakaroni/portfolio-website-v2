@@ -19,6 +19,7 @@ import useWindowDimensions from '../../custom_hooks/useWindowDimensions.jsx'
 // PDF
 import PDF from './Appraisal Document.pdf'
 
+
 const EducationInfo = ({ setSection }) => {
 
   const { width } = useWindowDimensions()
@@ -34,8 +35,12 @@ const EducationInfo = ({ setSection }) => {
   }, [])
 
   return (
-    <div className=" overflow-x-hidden overflow-y-auto flex flex-col justify-start">
-      <div className="h-screen w-screen flex items-center mb-[20vw] ">
+    <div className={`overflow-x-hidden overflow-y-auto flex flex-col justify-start`}>
+      <div className="w-screen h-screen fixed bg-eduBg bg-cover -z-10">
+
+      </div>
+
+      <div className="flex items-center mb-[20vw] ">
         <InfoSection setSection={setSection} param="first" isMobile={isMobile}>
           <h1 className=" mb-[3vh] text-4xl text-black font-['Kanit'] font-bold">
             Bachelor's degree
@@ -55,9 +60,7 @@ const EducationInfo = ({ setSection }) => {
             paragraph="2020-2023">
             <CalendarMonthRoundedIcon sx={{ fontSize: 22 }} />
           </Info>
-
           <div className="mb-[20px]">
-
           </div>
           <Button text="Course overview" link={PDF} />
         </InfoSection>
@@ -75,7 +78,7 @@ const EducationInfo = ({ setSection }) => {
           </Info>
           <Info
             header="Location"
-            paragraph="Zespół Szkół Technicznych i Ogólnokształcących nr 1. Chorzów, Poland." >
+            paragraph="ZSTiO nr 1. Chorzów, Poland." >
             <LocationOnIcon sx={{ fontSize: 22 }} />
           </Info>
           <Info
@@ -83,9 +86,7 @@ const EducationInfo = ({ setSection }) => {
             paragraph="2011-2015">
             <CalendarMonthRoundedIcon sx={{ fontSize: 22 }} />
           </Info>
-
           <div className="mb-[20px]">
-
           </div>
         </InfoSection>
       </div>
@@ -109,13 +110,12 @@ const EducationInfo = ({ setSection }) => {
 
           <Info
             header="Full Stack Web Development Bootcamp"
-            paragraph="The complete web development bootcamp using MERN, (2020)." >
+            paragraph="The complete MERN bootcamp, (2020)." >
             <CloudOutlinedIcon sx={{ fontSize: 22 }} />
           </Info>
 
           <div className="mb-[20px]">
           </div>
-
           <Button text="View online" link="https://www.udemy.com/certificate/UC-79a9ec62-66fe-4a13-9890-f954ceadcfec/" />
 
           <Info
@@ -123,13 +123,11 @@ const EducationInfo = ({ setSection }) => {
             paragraph="Introduction to programming using Python, (2019)." >
             <ConstructionRoundedIcon sx={{ fontSize: 22 }} />
           </Info>
-
           <div className="mb-[20px]">
           </div>
-
           <Button text="View online" link="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=395&cvid=4yFp9n9HAW1ZqqgywoTHOg==" />
-
         </InfoSection>
+
       </div>
     </div>
   )

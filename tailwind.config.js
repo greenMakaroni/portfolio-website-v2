@@ -10,6 +10,9 @@ export default {
       'Geologica': ['Geologica'],
     },
     extend: {
+      backgroundImage: {
+        'eduBg': "url('/eduBg.jpg')"
+      },
       keyframes: {
         'moveCanvas': {
           '0%': {filter: "blur(2px)", marginRight: '0', opacity: '0'},
