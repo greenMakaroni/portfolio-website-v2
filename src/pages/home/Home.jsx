@@ -14,13 +14,24 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="flex flex-col">
-      <Navigation />
-      <Banner />
-      <Skills />
-      <Footer />
+    // <div className="flex flex-col">
+    //   <Navigation />
+    //   <Banner />
+    //   <Skills />
+    //   <Footer />
+    // </div>
+   <div className="w-screen h-screen snap-y snap-mandatory overflow-auto">
+    <div className="w-screen h-screen bg-yellow-300 snap-start">
+
     </div>
-   
+    <div className="w-screen h-screen bg-blue-300 snap-start">
+
+</div>
+<div className="w-screen h-screen bg-green-300 snap-start">
+
+</div>
+
+   </div>
   )
 }
 
