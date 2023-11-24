@@ -14,12 +14,20 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="flex flex-col">
+    <>
       <Navigation />
-      <Banner />
-      <Skills />
-      <Footer />
-    </div>
+      <div className="snap-y snap-mandatory h-screen w-screen overflow-y-auto overflow-x-hidden ">
+        <div className="bg-blue-300 snap-start h-screen w-screen">
+        </div>
+        <div className="bg-red-300 snap-start h-screen w-screen">
+        </div>
+        <div className="bg-green-300 snap-start h-screen w-screen">
+        </div>
+        <div className="bg-yellow-300 snap-start h-screen w-screen">
+        </div>
+      </div>
+    </>
+
   )
 }
 

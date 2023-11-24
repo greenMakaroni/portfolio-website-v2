@@ -42,7 +42,7 @@ const EducationInfo = ({ setSection }) => {
 
       <div className="flex items-center mb-[20vw] ">
         <InfoSection setSection={setSection} param="first" isMobile={isMobile}>
-          <h1 className=" mb-[3vh] text-4xl text-black font-['Kanit'] font-bold">
+          <h1 className=" mb-[3vh] text-4xl text-white font-['Kanit'] font-bold">
             Bachelor's degree
           </h1>
           <Info
@@ -60,7 +60,7 @@ const EducationInfo = ({ setSection }) => {
             paragraph="2020-2023">
             <CalendarMonthRoundedIcon sx={{ fontSize: 22 }} />
           </Info>
-          <div className="mb-[20px]">
+          <div className="mb-[15px]">
           </div>
           <Button text="Course overview" link={PDF} />
         </InfoSection>
@@ -68,7 +68,7 @@ const EducationInfo = ({ setSection }) => {
 
       <div className="h-screen w-screen flex items-center mb-[20vw] ">
         <InfoSection setSection={setSection} param="second" isMobile={isMobile}>
-          <h1 className=" mb-[3vh] text-4xl text-black font-['Kanit'] font-bold">
+          <h1 className=" mb-[3vh] text-4xl text-white font-['Kanit'] font-bold">
             T levels
           </h1>
           <Info
@@ -93,7 +93,7 @@ const EducationInfo = ({ setSection }) => {
 
       <div className="mb-[20vh] h-screen w-screen flex items-center">
         <InfoSection setSection={setSection} param="third" isMobile={isMobile}>
-          <h1 className="mb-[3vh] animate-elementIn opacity-0 text-4xl text-black font-['Kanit'] font-bold">
+          <h1 className="mb-[3vh] animate-elementIn opacity-0 text-4xl text-white font-['Kanit'] font-bold">
             Certifications
           </h1>
 
