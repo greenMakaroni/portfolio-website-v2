@@ -11,11 +11,11 @@ const InfoSection = (props) => {
             prev: prevState.current,
             current: props.param
         }))
-      }, [isVisible])
+    }, [isVisible])
 
     return (
-        <div ref={section} className={`${props.param == "first" ? "pt-[15vh]" : "pt-[5vh]"} opacity-0 animate-elementIn flex flex-col select-none ${props.isMobile ? "pl-[5vh] w-[100vw] " : "pl-[15vh] animate-infoElementIn w-[50vw]"}`}>
-            {props.children}
+        <div ref={section} className={`${props.param == "first" ? "pt-[15vh]" : "pt-[5vh]"} min-h-screen flex flex-col select-none ${props.isMobile ? "pl-[5vh] w-[100vw] " : "pl-[15vh] w-[50vw]"}`}>
+            {isVisible && props.children}
         </div>
     )
 }

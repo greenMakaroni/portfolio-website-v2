@@ -5,12 +5,11 @@ import Button from '../shared/Button'
 
 // Icons
 import CalendarMonthRoundedIcon from '@mui/icons-material/CalendarMonthRounded';
-import ConstructionRoundedIcon from '@mui/icons-material/ConstructionRounded';
 import SchoolIcon from '@mui/icons-material/School';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import CloudOutlinedIcon from '@mui/icons-material/CloudOutlined';
 import QueryStatsRoundedIcon from '@mui/icons-material/QueryStatsRounded';
 import EngineeringIcon from '@mui/icons-material/Engineering';
+import AccountBalanceOutlinedIcon from '@mui/icons-material/AccountBalanceOutlined';
 
 // Hooks
 import { useEffect } from 'react'
@@ -42,12 +41,12 @@ const EducationInfo = ({ setSection }) => {
 
       <div className="flex items-center mb-[20vw] ">
         <InfoSection setSection={setSection} param="first" isMobile={isMobile}>
-          <h1 className=" mb-[3vh] text-4xl text-white font-['Kanit'] font-bold">
+          <h1 className=" mb-[5vh] text-4xl text-white font-['Kanit'] font-bold">
             Bachelor's degree
           </h1>
           <Info
             header="Course"
-            paragraph="Bachelor of Science in Software Engineering.">
+            paragraph="Bachelor of Science in Software Engineering. ">
             <SchoolIcon sx={{ fontSize: 22 }} />
           </Info>
           <Info
@@ -57,7 +56,7 @@ const EducationInfo = ({ setSection }) => {
           </Info>
           <Info
             header="Time period"
-            paragraph="2020-2023">
+            paragraph="2020-2023.">
             <CalendarMonthRoundedIcon sx={{ fontSize: 22 }} />
           </Info>
           <div className="mb-[15px]">
@@ -68,7 +67,7 @@ const EducationInfo = ({ setSection }) => {
 
       <div className="h-screen w-screen flex items-center mb-[20vw] ">
         <InfoSection setSection={setSection} param="second" isMobile={isMobile}>
-          <h1 className=" mb-[3vh] text-4xl text-white font-['Kanit'] font-bold">
+          <h1 className=" mb-[5vh] text-4xl text-white font-['Kanit'] font-bold">
             T levels
           </h1>
           <Info
@@ -83,7 +82,7 @@ const EducationInfo = ({ setSection }) => {
           </Info>
           <Info
             header="Time period"
-            paragraph="2011-2015">
+            paragraph="2011-2015.">
             <CalendarMonthRoundedIcon sx={{ fontSize: 22 }} />
           </Info>
           <div className="mb-[20px]">
@@ -93,7 +92,7 @@ const EducationInfo = ({ setSection }) => {
 
       <div className="mb-[20vh] h-screen w-screen flex items-center">
         <InfoSection setSection={setSection} param="third" isMobile={isMobile}>
-          <h1 className="mb-[3vh] animate-elementIn opacity-0 text-4xl text-white font-['Kanit'] font-bold">
+          <h1 className="mb-[40px] animate-elementIn opacity-0 text-4xl text-white font-['Kanit'] font-bold">
             Certifications
           </h1>
 
@@ -109,23 +108,44 @@ const EducationInfo = ({ setSection }) => {
           <Button text="View online" link=" " /> */}
 
           <Info
-            header="Full Stack Web Development Bootcamp"
-            paragraph="The complete MERN bootcamp, (2020)." >
-            <CloudOutlinedIcon sx={{ fontSize: 22 }} />
+            header="Course"
+            paragraph="The Complete Web Development Bootcamp using MERN." >
+            <SchoolIcon sx={{ fontSize: 22 }} />
           </Info>
-
-          <div className="mb-[20px]">
-          </div>
+          <Info
+            header="Authority"
+            paragraph="London App Brewery, Udemy." >
+            <AccountBalanceOutlinedIcon sx={{ fontSize: 22 }} />
+          </Info>
+          <Info
+            header="Achievement Date"
+            paragraph="October 13th, 2020" >
+            <CalendarMonthRoundedIcon sx={{ fontSize: 22 }} />
+          </Info>
           <Button text="View online" link="https://www.udemy.com/certificate/UC-79a9ec62-66fe-4a13-9890-f954ceadcfec/" />
 
-          <Info
-            header="Microsoft Technology Associate"
-            paragraph="Introduction to programming using Python, (2019)." >
-            <ConstructionRoundedIcon sx={{ fontSize: 22 }} />
-          </Info>
-          <div className="mb-[20px]">
+          <div className="mb-[60px]">
           </div>
+
+          <Info
+            header="Course"
+            paragraph="Microsoft Technology Associate, Introduction to programming using Python." >
+            <SchoolIcon sx={{ fontSize: 22 }} />
+          </Info>
+          <Info
+            header="Authority"
+            paragraph="Microsoft." >
+            <AccountBalanceOutlinedIcon sx={{ fontSize: 22 }} />
+          </Info>
+          <Info
+            header="Achievement Date"
+            paragraph="November 5th, 2019" >
+            <CalendarMonthRoundedIcon sx={{ fontSize: 22 }} />
+          </Info>
           <Button text="View online" link="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=395&cvid=4yFp9n9HAW1ZqqgywoTHOg==" />
+
+          <div className="h-[200px] mb-[40px]">
+          </div>
         </InfoSection>
 
       </div>
