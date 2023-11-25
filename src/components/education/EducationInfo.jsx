@@ -34,7 +34,7 @@ const EducationInfo = ({ setSection }) => {
   }, [])
 
   return (
-    <div className={`overflow-x-hidden overflow-y-auto flex flex-col justify-start`}>
+    <div className={`flex flex-col justify-start`}>
       <div className="w-screen h-screen fixed bg-eduBg bg-cover -z-10">
 
       </div>
@@ -56,7 +56,7 @@ const EducationInfo = ({ setSection }) => {
           </Info>
           <Info
             header="Time period"
-            paragraph="2020-2023.">
+            paragraph="2020-2023">
             <CalendarMonthRoundedIcon sx={{ fontSize: 22 }} />
           </Info>
           <div className="mb-[15px]">
@@ -109,7 +109,7 @@ const EducationInfo = ({ setSection }) => {
 
           <Info
             header="Course"
-            paragraph="The Complete Web Development Bootcamp using MERN." >
+            paragraph="The Complete Web Development Bootcamp." >
             <SchoolIcon sx={{ fontSize: 22 }} />
           </Info>
           <Info
