@@ -6,13 +6,17 @@ import EducationInfo from "../../components/education/EducationInfo.jsx"
 import Footer from "../../components/footer/Footer.jsx"
 
 // Hooks
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import useWindowDimensions from '../../custom_hooks/useWindowDimensions.jsx';
 
 const Education = () => {
   const { width } = useWindowDimensions()
   const isMobile = width < 650
   const [section, setSection] = useState({prev: "first", current: "first"})
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="flex flex-col">

@@ -10,7 +10,6 @@ const Loader = ({ setLoaded }) => {
       }  
     }, [progress])
     
-    console.log(progress)
   return (
     <>
     </>
