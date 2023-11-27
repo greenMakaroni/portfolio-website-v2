@@ -5,8 +5,8 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Center, Environment } from '@react-three/drei'
 
 // models
-import { Dmu } from './Dmu.jsx'
-import { Zstio } from './Zstio.jsx'
+import { Dmu } from './3Dmodels/Dmu.jsx'
+import { Zstio } from './3Dmodels/Zstio.jsx'
 
 // theatre.js
 import { SheetProvider, PerspectiveCamera } from '@theatre/r3f'
@@ -16,17 +16,16 @@ import dmuEntryAnimation from "./dmu_entry.json"
 // Loader
 import Loader from '../shared/Loader.jsx'
 
-// development utils
+/* --------- Animation development mode --------- */
 // import { onChange, val } from '@theatre/core'
 // import studio from "@theatre/studio"
 // studio.initialize();
 
-// get animations sheet
-/* Development mode */
-// const sheet_entry = getProject('Logo entry').sheet('Logo entry');
 
-/* Production mode */
-const sheet_entry = getProject('Logo entry', { state: dmuEntryAnimation }).sheet('Logo entry')
+// const sheet_entry = getProject('Logo entry').sheet('Logo entry'); // Animation Sheet
+
+/* --------- Animation production mode --------- */
+const sheet_entry = getProject('Logo entry', { state: dmuEntryAnimation }).sheet('Logo entry') // Animation Sheet
 
 const Scene = ({ section }) => {
   const [isLoaded, setLoaded] = useState(false)
@@ -101,6 +100,7 @@ const Scene = ({ section }) => {
                 <Dmu />
               </Center>
               <Zstio />
+
 
               {/* Drei helpers */}
               <OrbitControls enableZoom={false} enableRotate={true} enablePan={false} minPolarAngle={Math.PI / 3} maxPolarAngle={Math.PI / 2} />

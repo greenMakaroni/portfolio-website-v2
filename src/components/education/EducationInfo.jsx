@@ -36,7 +36,6 @@ const EducationInfo = ({ setSection }) => {
   return (
     <div className={`flex flex-col justify-start`}>
       <div className="w-screen h-screen fixed bg-eduBg bg-cover -z-10">
-
       </div>
 
       <div className="flex items-center mb-[20vw] ">
@@ -82,7 +81,7 @@ const EducationInfo = ({ setSection }) => {
           </Info>
           <Info
             header="Time period"
-            paragraph="2011-2015.">
+            paragraph="2011-2015">
             <CalendarMonthRoundedIcon sx={{ fontSize: 22 }} />
           </Info>
           <div className="mb-[20px]">
@@ -129,7 +128,7 @@ const EducationInfo = ({ setSection }) => {
 
           <Info
             header="Course"
-            paragraph="Microsoft Technology Associate, Introduction to programming using Python." >
+            paragraph="Introduction to programming using Python." >
             <SchoolIcon sx={{ fontSize: 22 }} />
           </Info>
           <Info
@@ -143,7 +142,6 @@ const EducationInfo = ({ setSection }) => {
             <CalendarMonthRoundedIcon sx={{ fontSize: 22 }} />
           </Info>
           <Button text="View online" link="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=395&cvid=4yFp9n9HAW1ZqqgywoTHOg==" />
-
           <div className="h-[200px] mb-[40px]">
           </div>
         </InfoSection>

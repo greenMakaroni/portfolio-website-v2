@@ -6,7 +6,7 @@ Command: npx gltfjsx@6.1.4 dmu.glb
 import { useGLTF, useTexture } from '@react-three/drei'
 import { editable } from '@theatre/r3f'
 import * as THREE from 'three'
-import dmuURL from './3Dmodels/dmu.glb'
+import dmuURL from './dmu.glb'
 
  export const Dmu = (props) => {
   const { nodes } = useGLTF(dmuURL)

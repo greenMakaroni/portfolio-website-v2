@@ -47,7 +47,7 @@ const MobileNav = () => {
     )
   }
   return (
-    <>
+    <div className="z-50">
       <div className={"div-hamburger"} onClick={ () => setOpen(!open) }>
         <div className={open ? "top-close" : "hamburger-top"}></div>
         <div className={open ? "middle-close" : "hamburger-middle"}></div>
@@ -55,7 +55,7 @@ const MobileNav = () => {
       </div>
 
       {open && <NavigationMenu />}
-    </>
+    </div>
 
   )
 }

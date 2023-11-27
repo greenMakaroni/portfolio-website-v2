@@ -1,9 +1,7 @@
 // Components
 import Navigation from '../../components/navigation/Navigation.jsx'
-import Banner from "../../components/home/banner/Banner.jsx"
 import Skills from "../../components/home/skills/Skills.jsx"
 import Footer from '../../components/footer/Footer.jsx'
-
 // Hooks
 import { useEffect } from 'react'
 
@@ -16,8 +14,10 @@ const Home = () => {
   return (
     <>
       <Navigation />
-      <div className="snap-y snap-mandatory h-screen w-screen overflow-y-auto overflow-x-hidden ">
-        <div className="bg-blue-300 snap-start h-screen w-screen">
+      <div className="z-50 snap-y snap-mandatory h-screen w-screen overflow-y-auto overflow-x-hidden ">
+        <div className="snap-start h-screen w-screen">
+          <div className="w-screen h-screen fixed bg-homeBg bg-cover -z-20">
+          </div>
         </div>
         <div className="bg-red-300 snap-start h-screen w-screen">
         </div>

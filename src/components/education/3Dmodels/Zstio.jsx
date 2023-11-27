@@ -4,7 +4,7 @@ Command: npx gltfjsx@6.1.4 zstio.glb
 */
 
 import { useGLTF } from '@react-three/drei'
-import zstioURL from './3Dmodels/zstio.glb'
+import zstioURL from './zstio.glb'
 import { editable } from '@theatre/r3f'
 
 export function Zstio(props) {

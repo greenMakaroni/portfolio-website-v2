@@ -11,7 +11,9 @@ export default {
     },
     extend: {
       backgroundImage: {
-        'eduBg': "url('/eduBg.jpg')"
+        'eduBg': "url('/eduBg.jpg')",
+        'homeBg': "url('/homeBg.jpg')",
+        'portfolioBg': "url('/portfolioBg.jpg')"
       },
       keyframes: {
         'moveCanvas': {
