@@ -34,10 +34,7 @@ const Scene = ({ section }) => {
   const [isLoaded, setLoaded] = useState(false)
 
   useEffect(() => { isLoaded && entry(sheet_entry) }, [isLoaded])
-
-  useEffect(() => {
-    animationController(sheet_entry, section)
-  }, [section])
+  useEffect(() => { animationController(sheet_entry, section) }, [section])
 
   return (
     <div className={`m-0 p-0 absolute flex flex-row justify-end w-screen h-screen`}>

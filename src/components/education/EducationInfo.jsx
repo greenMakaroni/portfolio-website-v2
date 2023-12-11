@@ -83,32 +83,33 @@ const EducationInfo = ({ setSection }) => {
         </InfoSection>
       </div>
 
-      <div className="mb-[20vh] h-screen w-screen flex items-center">
+      <div className="mb-[20vh] w-screen flex items-center">
         <InfoSection setSection={setSection} param="third" isMobile={isMobile}>
           <h1 className="mb-[40px] animate-elementIn opacity-0 text-4xl text-white font-['Kanit'] font-bold">
             Certifications
           </h1>
 
-          {/* <Info
-            paragraph="Google Data Analytics Professional Certificate, (2023)." >
+          <Info paragraph="Data Analytics Professional Certificate." >
             <QueryStatsRoundedIcon sx={{ fontSize: 22 }} />
           </Info>
-
-          <div className="mb-[20px]">
-          </div> */}
-
-          {/* <Button text="View online" link=" " /> */}
-
-          <Info
-            paragraph="The Complete Web Development Bootcamp." >
-            <SchoolIcon sx={{ fontSize: 22 }} />
-          </Info>
-          <Info
-            paragraph="London App Brewery, Udemy." >
+          <Info paragraph="Google." >
             <AccountBalanceOutlinedIcon sx={{ fontSize: 22 }} />
           </Info>
-          <Info
-            paragraph="October 13th, 2020" >
+          <Info paragraph="November 2nd, 2023" >
+            <CalendarMonthRoundedIcon sx={{ fontSize: 22 }} />
+          </Info>
+          <Button text="View online" link="https://coursera.org/share/23b81ece187b0654c98ada825c5a3ca2" />
+
+          <div className="mb-[20vh]">
+          </div>
+
+          <Info paragraph="The Complete Web Development Bootcamp." >
+            <SchoolIcon sx={{ fontSize: 22 }} />
+          </Info>
+          <Info paragraph="London App Brewery, Udemy." >
+            <AccountBalanceOutlinedIcon sx={{ fontSize: 22 }} />
+          </Info>
+          <Info paragraph="October 13th, 2020" >
             <CalendarMonthRoundedIcon sx={{ fontSize: 22 }} />
           </Info>
           <Button text="View online" link="https://www.udemy.com/certificate/UC-79a9ec62-66fe-4a13-9890-f954ceadcfec/" />
@@ -116,24 +117,20 @@ const EducationInfo = ({ setSection }) => {
           <div className="mb-[20vh]">
           </div>
 
-          <Info
-            header="Course"
-            paragraph="Introduction to programming using Python." >
+          <Info paragraph="Introduction to programming using Python." >
             <SchoolIcon sx={{ fontSize: 22 }} />
           </Info>
-          <Info
-            header="Authority"
-            paragraph="Microsoft." >
+          <Info paragraph="Microsoft." >
             <AccountBalanceOutlinedIcon sx={{ fontSize: 22 }} />
           </Info>
-          <Info
-            header="Achievement Date"
-            paragraph="November 5th, 2019" >
+          <Info paragraph="November 5th, 2019" >
             <CalendarMonthRoundedIcon sx={{ fontSize: 22 }} />
           </Info>
           <Button text="View online" link="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=395&cvid=4yFp9n9HAW1ZqqgywoTHOg==" />
+
           <div className="h-[400px] mb-[40px]">
           </div>
+
         </InfoSection>
       </div>
     </div>
