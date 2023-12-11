@@ -2,6 +2,8 @@
 import Navigation from '../../components/navigation/Navigation.jsx'
 import Skills from "../../components/home/skills/Skills.jsx"
 import Footer from '../../components/footer/Footer.jsx'
+import Scene from '../../components/home/Scene.jsx'
+
 // Hooks
 import { useEffect } from 'react'
 
@@ -18,6 +20,7 @@ const Home = () => {
         <div className="snap-start h-screen w-screen">
           <div className="w-screen h-screen fixed bg-homeBg bg-cover -z-20">
           </div>
+          <Scene />
         </div>
         <div className="bg-red-300 snap-start h-screen w-screen">
         </div>

@@ -10,23 +10,25 @@ import { useState, useEffect } from "react"
 import useWindowDimensions from '../../custom_hooks/useWindowDimensions.jsx';
 
 const Education = () => {
+  const [section, setSection] = useState({prev: "first", current: "first"})
+
+
   const { width } = useWindowDimensions()
   const isMobile = width < 650
-  const [section, setSection] = useState({prev: "first", current: "first"})
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <div className="flex flex-col">
-      <Navigation />
-      <div className="flex flex-row">
-        {!isMobile && <Scene section={section} />}
-        <EducationInfo setSection={setSection} />
+      <div className="flex flex-col">
+        <Navigation />
+        <div className="flex flex-row">
+          {!isMobile && <Scene section={section} />}
+          <EducationInfo setSection={setSection} />
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
   )
 }
 

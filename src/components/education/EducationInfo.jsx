@@ -44,17 +44,14 @@ const EducationInfo = ({ setSection }) => {
             Bachelor's degree
           </h1>
           <Info
-            header="Course"
-            paragraph="Bachelor of Science in Software Engineering. ">
+            paragraph="Bachelor of Science in Software Engineering, ( 1st ). ">
             <SchoolIcon sx={{ fontSize: 22 }} />
           </Info>
           <Info
-            header="Location"
             paragraph="De Montfort University, Leicester, England." >
             <LocationOnIcon sx={{ fontSize: 22 }} />
           </Info>
           <Info
-            header="Time period"
             paragraph="2020-2023">
             <CalendarMonthRoundedIcon sx={{ fontSize: 22 }} />
           </Info>
@@ -70,17 +67,14 @@ const EducationInfo = ({ setSection }) => {
             T levels
           </h1>
           <Info
-            header="Course"
             paragraph="IT Technician with specialization in online applications.">
             <EngineeringIcon sx={{ fontSize: 30 }} />
           </Info>
           <Info
-            header="Location"
             paragraph="ZSTiO nr 1. Chorzów, Poland." >
             <LocationOnIcon sx={{ fontSize: 22 }} />
           </Info>
           <Info
-            header="Time period"
             paragraph="2011-2015">
             <CalendarMonthRoundedIcon sx={{ fontSize: 22 }} />
           </Info>
@@ -96,34 +90,30 @@ const EducationInfo = ({ setSection }) => {
           </h1>
 
           {/* <Info
-            header="Google Data Analytics"
             paragraph="Google Data Analytics Professional Certificate, (2023)." >
             <QueryStatsRoundedIcon sx={{ fontSize: 22 }} />
           </Info>
 
           <div className="mb-[20px]">
-          </div>
+          </div> */}
 
-          <Button text="View online" link=" " /> */}
+          {/* <Button text="View online" link=" " /> */}
 
           <Info
-            header="Course"
             paragraph="The Complete Web Development Bootcamp." >
             <SchoolIcon sx={{ fontSize: 22 }} />
           </Info>
           <Info
-            header="Authority"
             paragraph="London App Brewery, Udemy." >
             <AccountBalanceOutlinedIcon sx={{ fontSize: 22 }} />
           </Info>
           <Info
-            header="Achievement Date"
             paragraph="October 13th, 2020" >
             <CalendarMonthRoundedIcon sx={{ fontSize: 22 }} />
           </Info>
           <Button text="View online" link="https://www.udemy.com/certificate/UC-79a9ec62-66fe-4a13-9890-f954ceadcfec/" />
 
-          <div className="mb-[60px]">
+          <div className="mb-[20vh]">
           </div>
 
           <Info
@@ -142,10 +132,9 @@ const EducationInfo = ({ setSection }) => {
             <CalendarMonthRoundedIcon sx={{ fontSize: 22 }} />
           </Info>
           <Button text="View online" link="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=395&cvid=4yFp9n9HAW1ZqqgywoTHOg==" />
-          <div className="h-[200px] mb-[40px]">
+          <div className="h-[400px] mb-[40px]">
           </div>
         </InfoSection>
-
       </div>
     </div>
   )

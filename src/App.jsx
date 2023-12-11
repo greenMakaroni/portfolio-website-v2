@@ -6,6 +6,9 @@ import { getAnalytics } from "firebase/analytics";
 import { RouterProvider} from "react-router-dom"
 import router from "./router.jsx"
 
+// tell react app we're lazy loading router components
+import { Suspense } from "react";
+
 // config firebase
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_APP_API_KEY,
@@ -20,9 +23,6 @@ const firebaseConfig = {
 // init firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-
-// tell react app we're lazy loading router components
-import { Suspense } from "react";
 
 function App() {
 

@@ -7,81 +7,37 @@ import { OrbitControls, Center, Environment } from '@react-three/drei'
 // models
 import { Dmu } from './3Dmodels/Dmu.jsx'
 import { Zstio } from './3Dmodels/Zstio.jsx'
+import { Scroll } from './3Dmodels/Scroll.jsx'
 
 // theatre.js
 import { SheetProvider, PerspectiveCamera } from '@theatre/r3f'
 import { getProject } from '@theatre/core'
 import dmuEntryAnimation from "./dmu_entry.json"
+import { animationController, entry } from "./Animations.jsx"
 
 // Loader
 import Loader from '../shared/Loader.jsx'
 
-/* --------- Animation development mode --------- */
+/* --------------------------- Animation development mode --------------------------- */
 // import { onChange, val } from '@theatre/core'
 // import studio from "@theatre/studio"
-// studio.initialize();
 
+// studio.initialize();
 
 // const sheet_entry = getProject('Logo entry').sheet('Logo entry'); // Animation Sheet
 
-/* --------- Animation production mode --------- */
+
+/* --------------------------- Animation production mode --------------------------- */
 const sheet_entry = getProject('Logo entry', { state: dmuEntryAnimation }).sheet('Logo entry') // Animation Sheet
 
 const Scene = ({ section }) => {
   const [isLoaded, setLoaded] = useState(false)
 
-  // play animation when models are loaded
-  useEffect(() => {
-    if (isLoaded) {
-      sheet_entry.project.ready
-        .then(() => sheet_entry.sequence.play({ iterationCount: 1, range: [0.1, 6.5] })).then(() =>
-          sheet_entry.sequence.play({ iterationCount: Infinity, range: [6.5, 12.5] })
-        )
-    }
-  }, [isLoaded])
+  useEffect(() => { isLoaded && entry(sheet_entry) }, [isLoaded])
 
- // play transition animation on section change
   useEffect(() => {
-      if (!(section.current == "first" && section.prev == "first")) {
-        if (section.current == "second") {
-          if (section.prev == "first") {
-            // transition animation, from first section to the second section
-            sheet_entry.sequence.play({ iterationCount: 1, range: [13, 15.1] }).then(() => {
-              sheet_entry.sequence.play({ iterationCount: Infinity, range: [15.1, 20.5] })
-            })
-          } else {
-            // transition animation, from third section to the second section
-            sheet_entry.sequence.play({ iterationCount: 1, range: [20.5, 22], direction: 'reverse' }).then(() => {
-              sheet_entry.sequence.play({ iterationCount: Infinity, range: [15.1, 20.5] })
-            })
-          }
-        }
-  
-        // transition animation, from second section to the third section
-        if (section.current == "third") {
-          sheet_entry.sequence.play({ iterationCount: 1, range: [20.5, 22] }).then(() => {
-            sheet_entry.sequence.play({ iterationCount: Infinity, range: [22, 23] })
-          })
-        }
-  
-        // transition animation, from second section to the first section
-        if (section.current == "first") {
-          sheet_entry.sequence.play({ iterationCount: 1, range: [13, 14], direction: 'reverse' }).then(() => {
-            sheet_entry.sequence.play({ iterationCount: Infinity, range: [6.5, 12.5] })
-          })
-        }
-      }
+    animationController(sheet_entry, section)
   }, [section])
-
-  // // scouting sequence
-  // onChange(sheet_entry.sequence.pointer.length, (len) => {
-  //   console.log('Length of the sequence changed to:', len)
-  // })
-
-  // onChange(sheet_entry.sequence.pointer.position, (position) => {
-  //   console.log('Position of the sequence changed to:', position)
-  // })
-
 
   return (
     <div className={`m-0 p-0 absolute flex flex-row justify-end w-screen h-screen`}>
@@ -100,7 +56,7 @@ const Scene = ({ section }) => {
                 <Dmu />
               </Center>
               <Zstio />
-
+              <Scroll />
 
               {/* Drei helpers */}
               <OrbitControls enableZoom={false} enableRotate={true} enablePan={false} minPolarAngle={Math.PI / 3} maxPolarAngle={Math.PI / 2} />

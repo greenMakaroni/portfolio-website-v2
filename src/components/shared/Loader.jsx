@@ -11,8 +11,7 @@ const Loader = ({ setLoaded }) => {
     }, [progress])
     
   return (
-    <>
-    </>
+    <></>
   )
 }
 

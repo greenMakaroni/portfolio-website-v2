@@ -7,7 +7,7 @@ const projects = [
     },
     {
         title: "Project management app",
-        description: "Full stack application to manage projects and clients. React, apollo client, and bootstrap on the front end. The back end server created with express is communicating with MongoDB database with the help of GraphQL query language.",
+        description: "Full stack application to manage projects and clients. React, apollo client, and bootstrap on the front end. GraphQL, MongoDB, express on the back end.",
         link: "https://github.com/greenMakaroni/project-management-app.git",
         buttonText: "Inspect Code"
     },
