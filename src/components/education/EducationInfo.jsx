@@ -18,7 +18,6 @@ import useWindowDimensions from '../../custom_hooks/useWindowDimensions.jsx'
 // PDF
 import PDF from './Appraisal Document.pdf'
 
-
 const EducationInfo = ({ setSection }) => {
 
   const { width } = useWindowDimensions()
@@ -35,12 +34,12 @@ const EducationInfo = ({ setSection }) => {
 
   return (
     <div className={`flex flex-col justify-start`}>
-      <div className="w-screen h-screen fixed bg-eduBg bg-cover -z-10">
+      <div className="w-screen h-screen fixed -z-10">
       </div>
 
       <div className="flex items-center mb-[20vw] ">
         <InfoSection setSection={setSection} param="first" isMobile={isMobile}>
-          <h1 className=" mb-[5vh] text-4xl text-white font-['Kanit'] font-bold">
+          <h1 className=" mb-[5vh] text-4xl font-['Kanit'] font-bold bg-gradient-to-r from-[#8a0000] to-[#fc7474] inline-block text-transparent bg-clip-text">
             Bachelor's degree
           </h1>
           <Info
@@ -57,13 +56,13 @@ const EducationInfo = ({ setSection }) => {
           </Info>
           <div className="mb-[15px]">
           </div>
-          <Button text="Course overview" link={PDF} />
+          <Button text="Course Results" link={PDF} />
         </InfoSection>
       </div>
 
       <div className="h-screen w-screen flex items-center mb-[20vw] ">
         <InfoSection setSection={setSection} param="second" isMobile={isMobile}>
-          <h1 className=" mb-[5vh] text-4xl text-white font-['Kanit'] font-bold">
+          <h1 className=" mb-[5vh] text-4xl font-['Kanit'] font-bold bg-gradient-to-r from-[#8a0000] to-[#fc7474] inline-block text-transparent bg-clip-text">
             T levels
           </h1>
           <Info
@@ -85,7 +84,7 @@ const EducationInfo = ({ setSection }) => {
 
       <div className="mb-[20vh] w-screen flex items-center">
         <InfoSection setSection={setSection} param="third" isMobile={isMobile}>
-          <h1 className="mb-[40px] animate-elementIn opacity-0 text-4xl text-white font-['Kanit'] font-bold">
+          <h1 className="mb-[40px] animate-elementIn opacity-0 text-4xl font-['Kanit'] font-bold bg-gradient-to-r from-[#8a0000] to-[#fc7474] inline-block text-transparent bg-clip-text">
             Certifications
           </h1>
 
@@ -106,7 +105,7 @@ const EducationInfo = ({ setSection }) => {
           <Info paragraph="The Complete Web Development Bootcamp." >
             <SchoolIcon sx={{ fontSize: 22 }} />
           </Info>
-          <Info paragraph="London App Brewery, Udemy." >
+          <Info paragraph="London App Brewery." >
             <AccountBalanceOutlinedIcon sx={{ fontSize: 22 }} />
           </Info>
           <Info paragraph="October 13th, 2020" >

@@ -1,7 +1,7 @@
 
 const Box = (props) => {
-    
-    const colors = [0x3E3939, 0x2C2727, 0xFF7517, 0xFFFFFF]
+    // gray black red white
+    const colors = [0x3E3939, 0x2C2727, 0x8f0005, 0xFFFFFF, 0xb0453e]
     const random_color = Math.floor(Math.random() * colors.length);
 
     return (

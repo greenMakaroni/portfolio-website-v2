@@ -30,7 +30,7 @@ import Loader from '../shared/Loader.jsx'
 /* --------------------------- Animation production mode --------------------------- */
 const sheet_entry = getProject('Logo entry', { state: dmuEntryAnimation }).sheet('Logo entry') // Animation Sheet
 
-const Scene = ({ section }) => {
+const Scene = ({ section, setSection }) => {
   const [isLoaded, setLoaded] = useState(false)
 
   useEffect(() => { isLoaded && entry(sheet_entry) }, [isLoaded])

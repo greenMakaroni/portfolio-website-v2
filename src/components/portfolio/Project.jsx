@@ -12,7 +12,7 @@ const Project = ({ num, title, description, link, buttonText }) => {
         <div ref={project} className={`${isMobile ? "w-screen" : "w-[30vw] "} opacity-0 relative pt-[40px] px-[20px] mt-[8vh] mb-[25vh] flex flex-col items-start border-black ${isVisible && "animate-elementIn"}`}>
 
             <div className="flex flex-col">
-                <h1 className={`duration-700  mb-[20px] text-[22px] text-black font-['Kanit'] font-bold`}> 
+                <h1 className={`duration-700  mb-[20px] text-[22px] text-[#8a0000] font-['Kanit'] font-bold`}> 
                 <span className="font-['Geologica'] font-thin mr-[10px]">
                     {num}.
                 </span> 
@@ -21,7 +21,30 @@ const Project = ({ num, title, description, link, buttonText }) => {
             </div>
 
             <button
-                className="w-[200px] rounded-bl-2xl rounded-tr-2xl duration-200 rounded-sm z-20 my-[50px] flex justify-center items-center border-2 border-black px-[24px] font-thin py-[14px] font-['Kanit'] hover:bg-[rgba(0,0,0,0.1)] hover:cursor-pointer "
+                className="
+                w-[200px] 
+                rounded-bl-2xl 
+                rounded-tr-2xl 
+                duration-200 
+                rounded-sm 
+                z-20 
+                my-[50px] 
+                flex 
+                justify-center 
+                items-center 
+                border-2 
+                border-[#8a0000] 
+                px-[24px] 
+                text-[14px]                
+                font-thin 
+                py-[14px] 
+                font-['Kanit'] 
+                hover:cursor-pointer
+                
+                hover:bg-gradient-to-r 
+                hover:from-[#8a0000] 
+                hover:to-[#fc7474]
+                hover:text-white "
                 onClick={() => window.open(link, "_blank")} >
                 {buttonText}
             </button>

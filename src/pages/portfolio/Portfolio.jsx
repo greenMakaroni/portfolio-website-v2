@@ -26,7 +26,7 @@ const Portfolio = () => {
       <div className="w-screen h-screen fixed bg-portfolioBg bg-cover -z-20">
           </div>
       <div className={`${isMobile ? "" : "pl-[10vw]"} w-screen flex flex-col items-start select-none`}>
-        <h1 className="mt-[150px] animate-elementIn opacity-0 text-4xl text-black font-['Kanit'] font-bold">
+        <h1 className="mt-[150px] animate-elementIn opacity-0 text-4xl text-[#8a0000] font-['Kanit'] font-bold">
           Personal Projects
         </h1>
           {

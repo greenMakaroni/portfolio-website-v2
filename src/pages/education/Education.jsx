@@ -24,7 +24,7 @@ const Education = () => {
       <div className="flex flex-col">
         <Navigation />
         <div className="flex flex-row">
-          {!isMobile && <Scene section={section} />}
+          {!isMobile && <Scene section={section} setSection={setSection} />}
           <EducationInfo setSection={setSection} />
         </div>
         <Footer />

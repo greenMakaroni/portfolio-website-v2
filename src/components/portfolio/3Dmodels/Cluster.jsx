@@ -25,7 +25,7 @@ const Cluster = () => {
                         <Box 
                             key={i} 
                             scale={(Math.random() * 7) / 10} 
-                            position={[(Math.random() * 12), (Math.random() * 10) - 7, (Math.random() * 10) - 11]} />
+                            position={[(Math.random() * 12), (Math.random() * 12) - 7, (Math.random() * 10) - 13]} />
                         )
                 })
             }
