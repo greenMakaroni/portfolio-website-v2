@@ -34,11 +34,22 @@ const sheet_entry = getProject('Logo entry', { state: dmuEntryAnimation }).sheet
 const Scene = ({ section }) => {
   const [isLoaded, setLoaded] = useState(false)
 
-  useEffect(() => { isLoaded && entry(sheet_entry)
-  return (
-    resetAnimation(sheet_entry)
-  ) }, [isLoaded])
-  useEffect(() => { animationController(sheet_entry, section) }, [section])
+  useEffect(() => { 
+    isLoaded && entry(sheet_entry)
+  
+    return (
+      resetAnimation(sheet_entry)
+    ) }, [isLoaded])
+
+  // this logic is no good here *********************************************************** redo
+  useEffect(() => { 
+    if(section.current == "first" && section.prev == "first") {
+      return
+    } else {
+       animationController(sheet_entry, section) 
+    }
+
+  }, [section])
 
   return (
     <div className={`m-0 p-0 absolute flex flex-row justify-end w-screen h-screen`}>

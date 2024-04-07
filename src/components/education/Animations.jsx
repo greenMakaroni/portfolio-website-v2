@@ -25,7 +25,6 @@ export const entry = (animationSheet) => {
 }
 
 export const animationController = (animationSheet, section) => {
-    if(section.current == "first" && section.prev == "first") return entry(animationSheet)
     if(section.current == "first") { secondFirst(animationSheet) }
     if(section.current == "third") { secondThird(animationSheet) }
     if (section.current == "second") {
