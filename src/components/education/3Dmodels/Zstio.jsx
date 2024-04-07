@@ -11,18 +11,18 @@ export function Zstio(props) {
   const { nodes, materials } = useGLTF(zstioURL)
   return (
     <editable.group theatreKey="ZSTIO" {...props} dispose={null}>
-      <editable.mesh theatreKey="one" geometry={nodes.one.geometry} material={materials.one} position={[-0.1, 2.63, 0.05]} scale={[0.35, 0.35, 0.57]} />
-      <editable.mesh theatreKey="n" geometry={nodes.n.geometry} material={materials.deep_blue} position={[-0.36, 2.25, 0.03]} scale={[0.35, 0.35, 0.6]} />
-      <editable.group theatreKey="r" position={[0.01, 2.51, 0.03]} scale={[0.35, 0.35, 0.62]}>
-        <mesh geometry={nodes.Cube012.geometry} material={materials.deep_blue} />
-        <mesh geometry={nodes.Cube012_1.geometry} material={materials.deep_blue} />
+      <editable.mesh castShadow theatreKey="one" geometry={nodes.one.geometry} material={materials.one} position={[-0.1, 2.63, 0.05]} scale={[0.35, 0.35, 0.57]} />
+      <editable.mesh castShadow theatreKey="n" geometry={nodes.n.geometry} material={materials.deep_blue} position={[-0.36, 2.25, 0.03]} scale={[0.35, 0.35, 0.6]} />
+      <editable.group castShadow theatreKey="r" position={[0.01, 2.51, 0.03]} scale={[0.35, 0.35, 0.62]}>
+        <mesh castShadow geometry={nodes.Cube012.geometry} material={materials.deep_blue} />
+        <mesh castShadow geometry={nodes.Cube012_1.geometry} material={materials.deep_blue} />
       </editable.group>
-      <editable.mesh theatreKey="cluster" geometry={nodes.cluster.geometry} material={materials.light_blue} position={[-0.31, 2.56, -0.03]} rotation={[0, 0, -0.73]} scale={[0.07, 0.07, 0.06]} />
-      <editable.mesh theatreKey="bottom_text" geometry={nodes.bottom_text.geometry} material={nodes.bottom_text.material} position={[-0.04, 2.35, 0.02]} rotation={[Math.PI / 2, 0.85, 0]} scale={[0.07, 0.06, 0.07]} />
-      <editable.mesh theatreKey="top_text" geometry={nodes.top_text.geometry} material={nodes.top_text.material} position={[-0.03, 2.43, 0.02]} rotation={[-Math.PI / 2, -0.8, Math.PI]} scale={[0.07, 0.06, 0.07]} />
-      <editable.mesh theatreKey="back_face" geometry={nodes.back_face.geometry} material={materials.white} position={[-0.04, 2.41, -0.04]} rotation={[Math.PI / 2, 0, 0]} scale={[0.5, 0.05, 0.5]} />
-      <editable.mesh theatreKey="circle" geometry={nodes.circle.geometry} material={materials.deep_blue} position={[-0.04, 2.41, -0.04]} rotation={[Math.PI / 2, 0, 0]} scale={[0.5, 0.05, 0.5]} />
-      <editable.mesh theatreKey="front_face" geometry={nodes.front_face.geometry} material={nodes.front_face.material} position={[-0.04, 2.41, -0.04]} rotation={[Math.PI / 2, 0, 0]} scale={[0.5, 0.05, 0.5]} />
+      <editable.mesh castShadow theatreKey="cluster" geometry={nodes.cluster.geometry} material={materials.light_blue} position={[-0.31, 2.56, -0.03]} rotation={[0, 0, -0.73]} scale={[0.07, 0.07, 0.06]} />
+      <editable.mesh castShadow theatreKey="bottom_text" geometry={nodes.bottom_text.geometry} material={nodes.bottom_text.material} position={[-0.04, 2.35, 0.02]} rotation={[Math.PI / 2, 0.85, 0]} scale={[0.07, 0.06, 0.07]} />
+      <editable.mesh castShadow theatreKey="top_text" geometry={nodes.top_text.geometry} material={nodes.top_text.material} position={[-0.03, 2.43, 0.02]} rotation={[-Math.PI / 2, -0.8, Math.PI]} scale={[0.07, 0.06, 0.07]} />
+      <editable.mesh castShadow theatreKey="back_face" geometry={nodes.back_face.geometry} material={materials.white} position={[-0.04, 2.41, -0.04]} rotation={[Math.PI / 2, 0, 0]} scale={[0.5, 0.05, 0.5]} />
+      <editable.mesh castShadow theatreKey="circle" geometry={nodes.circle.geometry} material={materials.deep_blue} position={[-0.04, 2.41, -0.04]} rotation={[Math.PI / 2, 0, 0]} scale={[0.5, 0.05, 0.5]} />
+      <editable.mesh castShadow theatreKey="front_face" geometry={nodes.front_face.geometry} material={nodes.front_face.material} position={[-0.04, 2.41, -0.04]} rotation={[Math.PI / 2, 0, 0]} scale={[0.5, 0.05, 0.5]} />
     </editable.group>
   )
 }

@@ -12,6 +12,11 @@ import useWindowDimensions from '../../custom_hooks/useWindowDimensions.jsx';
 const Education = () => {
   const [section, setSection] = useState({prev: "first", current: "first"})
 
+  const resetSection = () => {
+    setSection(() => {
+      return ({prev: "first", current: "first"})
+    })
+  }
 
   const { width } = useWindowDimensions()
   const isMobile = width < 650
@@ -24,7 +29,7 @@ const Education = () => {
       <div className="flex flex-col">
         <Navigation />
         <div className="flex flex-row">
-          {!isMobile && <Scene section={section} setSection={setSection} />}
+          {!isMobile && <Scene section={section} resetSection={resetSection} />}
           <EducationInfo setSection={setSection} />
         </div>
         <Footer />

@@ -2,18 +2,19 @@
 /* eslint-disable react/no-unknown-property */
 import { useState, useEffect, Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, Center, Environment } from '@react-three/drei'
+import { OrbitControls, Center, Environment, Grid, GizmoHelper, GizmoViewport} from '@react-three/drei'
 
 // models
 import { Dmu } from './3Dmodels/Dmu.jsx'
 import { Zstio } from './3Dmodels/Zstio.jsx'
 import { Scroll } from './3Dmodels/Scroll.jsx'
+import Box from './3Dmodels/Box.jsx'
 
 // theatre.js
 import { SheetProvider, PerspectiveCamera } from '@theatre/r3f'
 import { getProject } from '@theatre/core'
 import dmuEntryAnimation from "./dmu_entry.json"
-import { animationController, entry } from "./Animations.jsx"
+import { animationController, resetAnimation, entry } from "./Animations.jsx"
 
 // Loader
 import Loader from '../shared/Loader.jsx'
@@ -30,10 +31,13 @@ import Loader from '../shared/Loader.jsx'
 /* --------------------------- Animation production mode --------------------------- */
 const sheet_entry = getProject('Logo entry', { state: dmuEntryAnimation }).sheet('Logo entry') // Animation Sheet
 
-const Scene = ({ section, setSection }) => {
+const Scene = ({ section }) => {
   const [isLoaded, setLoaded] = useState(false)
 
-  useEffect(() => { isLoaded && entry(sheet_entry) }, [isLoaded])
+  useEffect(() => { isLoaded && entry(sheet_entry)
+  return (
+    resetAnimation(sheet_entry)
+  ) }, [isLoaded])
   useEffect(() => { animationController(sheet_entry, section) }, [section])
 
   return (
@@ -45,19 +49,25 @@ const Scene = ({ section, setSection }) => {
           <Suspense fallback={<Loader setLoaded={setLoaded} />}>
             {/* { animation sheet provider } */}
             <SheetProvider sheet={sheet_entry}>
-              <PerspectiveCamera theatreKey="Camera" makeDefault position={[-3, -20, 10]} fov={30} />
+              <PerspectiveCamera theatreKey="Camera" makeDefault position={[-10, -20, 10]} fov={30} />
               {/* Lights */}
-              <pointLight position={[-10, 20, 10]} />
+              <spotLight castShadow intensity={0.4} position={[-4, 6, 4]} />
+
               {/* Models */}
               <Center>
                 <Dmu />
               </Center>
               <Zstio />
               <Scroll />
+              <Box time={1} dist={0} animate={false} color="black" geo={[7, 15, 7]} position={[0, -9.15, 0]} />
+              <Box time={4} dist={4} animate={true} color="black" geo={[4, 4, 4]} position={[20, 3, -20]} />
+              <Box time={2} dist={2} animate={true} color={0x8a0000} geo={[1, 1, 1]} position={[5, -3, -15]} />
 
               {/* Drei helpers */}
-              <OrbitControls enableZoom={false} enableRotate={true} enablePan={false} minPolarAngle={Math.PI / 3} maxPolarAngle={Math.PI / 2} />
-              <Environment preset="city" />
+              <OrbitControls enableZoom={false} enableRotate={true} enablePan={false} minAzimuthAngle={-1} maxAzimuthAngle={-2} minPolarAngle={Math.PI / 3} maxPolarAngle={Math.PI / 2} />
+              {/* Light position helper */}
+              {/* <Box geo={[0.5, 0.5, 0.5]} position={[-3, 5, 1]} /> */}
+              <Environment preset="forest" />
             </SheetProvider>
           </Suspense>
         </Canvas>
@@ -65,5 +75,6 @@ const Scene = ({ section, setSection }) => {
     </div>
   )
 }
+
 
 export default Scene
