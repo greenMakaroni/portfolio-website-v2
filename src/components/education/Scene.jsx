@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unknown-property */
 import { useState, useEffect, Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, Center, Environment, Grid, GizmoHelper, GizmoViewport} from '@react-three/drei'
+import { OrbitControls, Center, Environment} from '@react-three/drei'
 
 // models
 import { Dmu } from './3Dmodels/Dmu.jsx'
@@ -65,8 +65,6 @@ const Scene = ({ section }) => {
 
               {/* Drei helpers */}
               <OrbitControls enableZoom={false} enableRotate={true} enablePan={false} minAzimuthAngle={-1} maxAzimuthAngle={-2} minPolarAngle={Math.PI / 3} maxPolarAngle={Math.PI / 2} />
-              {/* Light position helper */}
-              {/* <Box geo={[0.5, 0.5, 0.5]} position={[-3, 5, 1]} /> */}
               <Environment preset="forest" />
             </SheetProvider>
           </Suspense>
