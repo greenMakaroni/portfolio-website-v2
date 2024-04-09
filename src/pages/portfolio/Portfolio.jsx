@@ -32,8 +32,8 @@ const Portfolio = () => {
         } w-screen flex flex-col items-start select-none`}
       >
 
-        <div className=" border-4 border-dashed rounded-tr-2xl rounded-bl-2xl border-[#8a0000] px-[20px] mt-[150px] flex flex-row justify-center items-center ">
-          <h1 className="animate-elementIn mr-[75px] opacity-0 text-4xl text-[#8a0000] font-['Kanit'] font-bold">
+        <div className="animate-elementIn opacity-0  border-4 border-dashed rounded-tr-2xl rounded-bl-2xl border-[#8a0000] px-[20px] mt-[150px] flex flex-row justify-center items-center ">
+          <h1 className="mr-[75px] text-4xl text-[#8a0000] font-['Kanit'] font-bold">
             My CV
           </h1>
           <Button icon={<VisibilityIcon />} text={"Online PDF"} link={PDF} />
