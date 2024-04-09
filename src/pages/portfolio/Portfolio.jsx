@@ -32,16 +32,19 @@ const Portfolio = () => {
         } w-screen flex flex-col items-start select-none`}
       >
 
-        <div className=" border-l-4 border-double border-b-4 rounded-bl-xl border-[#8a0000] px-[20px] mt-[150px] flex flex-row justify-center items-center ">
+        <div className=" border-4 border-dashed rounded-tr-2xl rounded-bl-2xl border-[#8a0000] px-[20px] mt-[150px] flex flex-row justify-center items-center ">
           <h1 className="animate-elementIn mr-[75px] opacity-0 text-4xl text-[#8a0000] font-['Kanit'] font-bold">
             My CV
           </h1>
           <Button icon={<VisibilityIcon />} text={"Online PDF"} link={PDF} />
         </div>
 
-        <h1 className="px-[20px] mt-[75px] animate-elementIn opacity-0 text-4xl text-[#8a0000] font-['Kanit'] font-bold">
-          Personal Projects
-        </h1>
+        <div className="px-[20px]">
+          <h1 className="border-b-4 border-dashed border-[#8a0000] py-[10px] ml-[20px]  mt-[75px] animate-elementIn opacity-0 text-4xl text-[#8a0000] font-['Kanit'] font-bold">
+            Personal Projects
+          </h1>
+        </div>
+ 
         {projects.map((project, index) => {
           return (
             <Project
