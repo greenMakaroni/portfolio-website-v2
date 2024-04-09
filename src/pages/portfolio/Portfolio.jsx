@@ -1,7 +1,8 @@
 // Hooks
 import { useEffect } from "react"
 import useWindowDimensions from "../../custom_hooks/useWindowDimensions.jsx"
-
+import Button from "../../components/shared/Button.jsx"
+import PDF from './Resume.pdf'
 
 // Components
 import Navigation from '../../components/navigation/Navigation'
@@ -26,8 +27,13 @@ const Portfolio = () => {
       <div className="w-screen h-screen fixed bg-portfolioBg bg-cover -z-20">
           </div>
       <div className={`${isMobile ? "" : "pl-[10vw]"} w-screen flex flex-col items-start select-none`}>
+ 
+
         <h1 className="mt-[150px] animate-elementIn opacity-0 text-4xl text-[#8a0000] font-['Kanit'] font-bold">
           Personal Projects
+          <span>
+            <Button text="My Resume" link={PDF} />
+          </span>
         </h1>
           {
             projects.map((project, index) => {
