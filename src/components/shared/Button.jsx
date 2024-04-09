@@ -1,6 +1,6 @@
 import { memo } from 'react'
 
-const Button = ({ text, link }) => {
+const Button = ({ text, link, icon }) => {
   return (
     <div className="z-40">
         <button
@@ -29,7 +29,9 @@ const Button = ({ text, link }) => {
           hover:cursor-pointer "
 
           onClick={() => window.open(link, "_blank")}>
-          {text}
+          <span className="mr-[15px]">
+            {icon}
+          </span> {text}
         </button>
     </div>
   )

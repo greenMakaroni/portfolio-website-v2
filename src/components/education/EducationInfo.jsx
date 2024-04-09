@@ -10,6 +10,8 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import QueryStatsRoundedIcon from '@mui/icons-material/QueryStatsRounded';
 import EngineeringIcon from '@mui/icons-material/Engineering';
 import AccountBalanceOutlinedIcon from '@mui/icons-material/AccountBalanceOutlined';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+
 
 // Hooks
 import { useEffect } from 'react'
@@ -56,7 +58,7 @@ const EducationInfo = ({ setSection }) => {
           </Info>
           <div className="mb-[15px]">
           </div>
-          <Button text="Course Results" link={PDF} />
+          <Button icon={<VisibilityIcon />} text="Course Results" link={PDF} />
         </InfoSection>
       </div>
 
@@ -97,7 +99,7 @@ const EducationInfo = ({ setSection }) => {
           <Info paragraph="November 2nd, 2023" >
             <CalendarMonthRoundedIcon sx={{ fontSize: 22 }} />
           </Info>
-          <Button text="View online" link="https://coursera.org/share/23b81ece187b0654c98ada825c5a3ca2" />
+          <Button icon={<VisibilityIcon />} text="View online" link="https://coursera.org/share/23b81ece187b0654c98ada825c5a3ca2" />
 
           <div className="mb-[20vh]">
           </div>
@@ -111,7 +113,7 @@ const EducationInfo = ({ setSection }) => {
           <Info paragraph="October 13th, 2020" >
             <CalendarMonthRoundedIcon sx={{ fontSize: 22 }} />
           </Info>
-          <Button text="View online" link="https://www.udemy.com/certificate/UC-79a9ec62-66fe-4a13-9890-f954ceadcfec/" />
+          <Button icon={<VisibilityIcon />} text="View online" link="https://www.udemy.com/certificate/UC-79a9ec62-66fe-4a13-9890-f954ceadcfec/" />
 
           <div className="mb-[20vh]">
           </div>
@@ -125,7 +127,7 @@ const EducationInfo = ({ setSection }) => {
           <Info paragraph="November 5th, 2019" >
             <CalendarMonthRoundedIcon sx={{ fontSize: 22 }} />
           </Info>
-          <Button text="View online" link="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=395&cvid=4yFp9n9HAW1ZqqgywoTHOg==" />
+          <Button icon={<VisibilityIcon />} text="View online" link="https://www.certiport.com/Portal/Pages/PrintTranscriptInfo.aspx?action=Cert&id=395&cvid=4yFp9n9HAW1ZqqgywoTHOg==" />
 
           <div className="h-[400px] mb-[40px]">
           </div>
