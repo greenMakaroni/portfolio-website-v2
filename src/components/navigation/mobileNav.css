@@ -11,7 +11,7 @@
     background: #ffffff;
     border-radius: 50%;
     z-index: 7;
-    box-shadow: 0px 0px 35px #ff8800;
+    box-shadow: 0px 0px 35px #8a0000;
     user-select: none;
 }
 
@@ -103,7 +103,7 @@
 .mobile-active {
     text-decoration: underline;
     text-underline-offset: 20px;
-    text-decoration-color: #ff8800;
+    text-decoration-color: #8a0000;
     text-decoration-thickness: 2px;
     text-underline-offset: 7px;
 }

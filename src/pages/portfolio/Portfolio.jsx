@@ -32,15 +32,28 @@ const Portfolio = () => {
         } w-screen flex flex-col items-start select-none`}
       >
 
-        <div className="animate-elementIn opacity-0  border-4 border-dashed rounded-tr-2xl rounded-bl-2xl border-[#8a0000] px-[20px] mt-[150px] flex flex-row justify-center items-center ">
-          <h1 className="mr-[75px] text-4xl text-[#8a0000] font-['Kanit'] font-bold">
+        <div className={
+          `
+          flex 
+          justify-between 
+          animate-elementIn 
+          opacity-0  
+          py-[10px] 
+          px-[20px] 
+          mt-[100px] 
+          flex-row 
+          items-center
+          ${!isMobile && " border-2 border-dashed rounded-tr-2xl rounded-bl-2xl border-[#8a0000] "}`
+        }>
+
+          <h1 className="mr-[50px] text-4xl text-[#8a0000] font-['Kanit'] font-bold">
             My CV
           </h1>
           <Button icon={<VisibilityIcon />} text={"Online PDF"} link={PDF} />
         </div>
 
         <div className="px-[20px]">
-          <h1 className="border-b-4 border-dashed border-[#8a0000] py-[10px] ml-[20px]  mt-[75px] animate-elementIn opacity-0 text-4xl text-[#8a0000] font-['Kanit'] font-bold">
+          <h1 className="py-[10px] ml-[20px]  mt-[75px] animate-elementIn opacity-0 text-4xl font-['Kanit'] bg-gradient-to-r from-[#8a0000] to-[#fc7474] inline-block text-transparent bg-clip-text font-bold">
             Personal Projects
           </h1>
         </div>
