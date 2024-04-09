@@ -14,7 +14,7 @@ import Box from './3Dmodels/Box.jsx'
 import { SheetProvider, PerspectiveCamera } from '@theatre/r3f'
 import { getProject } from '@theatre/core'
 import dmuEntryAnimation from "./dmu_entry.json"
-import { animationController, resetAnimation, entry } from "./Animations.jsx"
+import { animationController } from "./Animations.jsx"
 
 // Loader
 import Loader from '../shared/Loader.jsx'
@@ -35,21 +35,8 @@ const Scene = ({ section }) => {
   const [isLoaded, setLoaded] = useState(false)
 
   useEffect(() => { 
-    isLoaded && entry(sheet_entry)
-  
-    return (
-      resetAnimation(sheet_entry)
-    ) }, [isLoaded])
-
-  // this logic is no good here *********************************************************** redo
-  useEffect(() => { 
-    if(section.current == "first" && section.prev == "first") {
-      return
-    } else {
-       animationController(sheet_entry, section) 
-    }
-
-  }, [section])
+    animationController(sheet_entry, section, isLoaded)
+     }, [isLoaded, section])
 
   return (
     <div className={`m-0 p-0 absolute flex flex-row justify-end w-screen h-screen`}>

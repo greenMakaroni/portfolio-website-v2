@@ -12,7 +12,6 @@ import EngineeringIcon from '@mui/icons-material/Engineering';
 import AccountBalanceOutlinedIcon from '@mui/icons-material/AccountBalanceOutlined';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 
-
 // Hooks
 import { useEffect } from 'react'
 import useWindowDimensions from '../../custom_hooks/useWindowDimensions.jsx'
@@ -36,9 +35,6 @@ const EducationInfo = ({ setSection }) => {
 
   return (
     <div className={`flex flex-col justify-start`}>
-      <div className="w-screen h-screen fixed -z-10">
-      </div>
-
       <div className="flex items-center mb-[20vw] ">
         <InfoSection setSection={setSection} param="first" isMobile={isMobile}>
           <h1 className=" mb-[5vh] text-4xl font-['Kanit'] font-bold bg-gradient-to-r from-[#8a0000] to-[#fc7474] inline-block text-transparent bg-clip-text">
