@@ -2,6 +2,7 @@
 import InfoSection from './InfoSection'
 import Info from './Info'
 import Button from '../shared/Button'
+import Journey from './journey/Journey.jsx';
 
 // Icons
 import CalendarMonthRoundedIcon from '@mui/icons-material/CalendarMonthRounded';
@@ -35,7 +36,7 @@ const EducationInfo = ({ setSection }) => {
 
   return (
     <div className={`flex flex-col justify-start`}>
-      <div className="flex items-center mb-[20vw] ">
+      <div className="flex items-center mb-[20vw]">
         <InfoSection setSection={setSection} param="first" isMobile={isMobile}>
           <h1 className=" mb-[5vh] text-4xl font-['Kanit'] font-bold bg-gradient-to-r from-[#8a0000] to-[#fc7474] inline-block text-transparent bg-clip-text">
             Bachelor's degree
@@ -55,7 +56,9 @@ const EducationInfo = ({ setSection }) => {
           <div className="mb-[15px]">
           </div>
           <Button icon={<VisibilityIcon />} text="Course Results" link={PDF} />
+          <Journey />
         </InfoSection>
+      
       </div>
 
       <div className="h-screen w-screen flex items-center mb-[20vw] ">
