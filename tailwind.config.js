@@ -12,7 +12,8 @@ export default {
     extend: {
       backgroundImage: {
         'homeBg': "url('/homeBg.jpg')",
-        'portfolioBg': "url('/portfolioBg.jpg')"
+        'portfolioBg': "url('/portfolioBg.jpg')",
+        'journeyButtonBg': "url('/dmu_logo.png')"
       },
       keyframes: {
         'moveCanvas': {

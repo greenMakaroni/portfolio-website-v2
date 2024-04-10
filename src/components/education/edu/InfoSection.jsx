@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react"
-import useOnScreen from "../../custom_hooks/useOnScreen"
+import useOnScreen from "../../../custom_hooks/useOnScreen"
 
 const InfoSection = (props) => {
 

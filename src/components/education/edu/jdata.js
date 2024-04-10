@@ -1,4 +1,4 @@
-export const journey = [
+ export const j = [
     [
         {
             par: " Embarking on my academic journey at De Montfort University in Leicester felt like stepping into a world of endless possibilities. From the very beginning, during the foundational year of computing, I found myself immersed in a whirlwind of learning and discovery that would shape my trajectory in ways I never imagined."

@@ -2,7 +2,7 @@
 // Components
 import Navigation from "../../components/navigation/Navigation.jsx"
 import Scene from "../../components/education/Scene.jsx"
-import EducationInfo from "../../components/education/EducationInfo.jsx"
+import EducationInfo from "../../components/education/edu/EducationInfo.jsx"
 import Footer from "../../components/footer/Footer.jsx"
 
 // Hooks
