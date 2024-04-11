@@ -23,7 +23,7 @@ export default function Nav() {
   }, [scrollPosition.prev])
 
   return (
-    <nav className={`backdrop-blur-sm duration-150 hover:bg-white fixed flex flex-row items-center justify-center w-screen h-[60px]  py-[40px] select-none duration-100 top-0 right-0 overflow-hidden z-40 ${show ? "opacity-100" : "opacity-0"}`}>
+    <nav className={`duration-150 hover:bg-white fixed flex flex-row items-center justify-center w-screen h-[60px]  py-[40px] select-none duration-100 top-0 right-0 overflow-hidden z-40 ${show ? "opacity-100" : "opacity-0"}`}>
       <div className="flex flex-row m-0 p-0 w-screen justify-center">
         <Link to="/" className={`
         hover:bg-gradient-to-r 

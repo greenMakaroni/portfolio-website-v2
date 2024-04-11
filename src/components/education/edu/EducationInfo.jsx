@@ -17,7 +17,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { useEffect } from "react";
 import useWindowDimensions from "../../../custom_hooks/useWindowDimensions.jsx";
 
-import PDF from './Appraisal Document.pdf'
+import PDF from "./Appraisal Document.pdf";
 
 const EducationInfo = ({ setSection }) => {
   const { width } = useWindowDimensions();
@@ -48,9 +48,10 @@ const EducationInfo = ({ setSection }) => {
           </Info>
           <div className="mb-[15px]"></div>
           <Button icon={<VisibilityIcon />} text="Course Results" link={PDF} />
-          <Journey />
+          <Journey isMobile={isMobile} />
         </InfoSection>
       </div>
+
       <div className="h-screen w-screen flex items-center mb-[20vw] ">
         <InfoSection setSection={setSection} param="second" isMobile={isMobile}>
           <h1 className=" mb-[5vh] text-4xl font-['Kanit'] font-bold bg-gradient-to-r from-[#8a0000] to-[#fc7474] inline-block text-transparent bg-clip-text">
@@ -68,6 +69,7 @@ const EducationInfo = ({ setSection }) => {
           <div className="mb-[20px]"></div>
         </InfoSection>
       </div>
+      
       <div className="mb-[20vh] w-screen flex items-center">
         <InfoSection setSection={setSection} param="third" isMobile={isMobile}>
           <h1 className="mb-[40px] animate-elementIn opacity-0 text-4xl font-['Kanit'] font-bold bg-gradient-to-r from-[#8a0000] to-[#fc7474] inline-block text-transparent bg-clip-text">
