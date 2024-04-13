@@ -13,7 +13,7 @@ const Contact = () => {
   return (
     <div className="w-screen h-screen flex flex-col">
       <Navigation />
-      <div className="w-screen h-screen flex flex-col">
+      <div className="w-screen h-screen flex flex-col justify-center">
         <Map />
         <Card isMobile={isMobile} />
         
