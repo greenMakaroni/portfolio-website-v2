@@ -1,10 +1,11 @@
 import { useState, useMemo, useEffect } from "react"
-export default function useOnScreen(ref) {
+
+export default function useOnScreen(ref, t = 0.1) {
 
     const [isIntersecting, setIntersecting] = useState(false)
 
     const observer = useMemo(() => new IntersectionObserver(
-        ([entry]) => setIntersecting(entry.isIntersecting), { threshold: 0.01 }
+        ([entry]) => setIntersecting(entry.isIntersecting), { threshold: t }
     ), [ref])
 
 

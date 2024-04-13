@@ -22,7 +22,7 @@ const firebaseConfig = {
 
 // // init firebase
 const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
+const analytics = getAnalytics(app);
 
 function App() {
 

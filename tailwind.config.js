@@ -23,12 +23,18 @@ export default {
         'elementIn': {
           '0%': {filter: "blur(2px)", opacity: '0', marginLeft: '-5vw'},
           '100%': {filter: "blur(0)", opacity: '1', marginLeft: '0'}
+        },
+        'parIn': {
+          '0%': {opacity: '0'},
+          '100%': {opacity: '1'}
         }
       },
       animation: {
         moveCanvas: '4s moveCanvas ease-in-out 1s forwards',
         infoElementIn: '1.3s elementIn ease 2s forwards',
-        elementIn: 'elementIn 1s forwards'
+        elementIn: 'elementIn 1s forwards',
+        parIn: 'parIn 1s forwards'
+
       },
     },
   },
