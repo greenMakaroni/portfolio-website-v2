@@ -2,7 +2,6 @@
 import InfoSection from "./InfoSection";
 import Info from "./Info";
 import Button from "../../shared/Button";
-import Journey from "./Journey";
 
 // Icons
 import QueryStatsRoundedIcon from "@mui/icons-material/QueryStatsRounded";
@@ -48,7 +47,6 @@ const EducationInfo = ({ setSection }) => {
           </Info>
           <div className="mb-[15px]"></div>
           <Button icon={<VisibilityIcon />} text="Course Results" link={PDF} />
-          <Journey isMobile={isMobile} />
         </InfoSection>
       </div>
 
@@ -69,7 +67,7 @@ const EducationInfo = ({ setSection }) => {
           <div className="mb-[20px]"></div>
         </InfoSection>
       </div>
-      
+
       <div className="mb-[20vh] w-screen flex items-center">
         <InfoSection setSection={setSection} param="third" isMobile={isMobile}>
           <h1 className="mb-[40px] animate-elementIn opacity-0 text-4xl font-['Kanit'] font-bold bg-gradient-to-r from-[#8a0000] to-[#fc7474] inline-block text-transparent bg-clip-text">

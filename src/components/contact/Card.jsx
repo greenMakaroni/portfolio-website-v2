@@ -11,7 +11,7 @@ const Card = ( { isMobile } ) => {
       </h1>
       <h1 className="my-[10px] font-['Kanit']">
         <span className="mr-[15px]">
-          <EmailIcon sx={{ fontSize: 30 }} />
+          <EmailIcon sx={{ fontSize: 22 }} />
         </span>
         mrtn.dawid@gmail.com
       </h1>
