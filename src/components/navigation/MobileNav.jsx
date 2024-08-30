@@ -22,21 +22,23 @@ const MobileNav = () => {
           { url: "/portfolio", text: "Portfolio" },
           { url: "/contact", text: "Contact" },
         ].map(({ url, text }, index) => {
-          <Link
-            key={index}
-            to={url}
-            style={
-              open
-                ? { animation: "none" }
-                : { animation: "linkFadeIn ease 1s;" }
-            }
-            className={
-              location.pathname === url ? "link mobile-active" : "link"
-            }
-            onClick={() => setOpen(!open)}
-          >
-            {text}
-          </Link>;
+          return (
+            <Link
+              key={index}
+              to={url}
+              style={
+                open
+                  ? { animation: "none" }
+                  : { animation: "linkFadeIn ease 1s;" }
+              }
+              className={
+                location.pathname === url ? "link mobile-active" : "link"
+              }
+              onClick={() => setOpen(!open)}
+            >
+              {text}
+            </Link>
+          );
         })}
       </nav>
     );
