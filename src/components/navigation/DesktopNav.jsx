@@ -24,17 +24,29 @@ export default function Nav() {
 
   return (
     <nav
-      className={`duration-150 hover:bg-white fixed flex flex-row items-center justify-center w-screen h-[60px]  py-[40px] select-none  top-0 right-0 overflow-hidden z-40 ${
+      className={`duration-150 hover:bg-white fixed flex flex-row items-center justify-center w-screen h-[80px] select-none  top-0 right-0 overflow-hidden z-40 ${
         show ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="flex flex-row m-0 p-0 w-screen justify-center">
+      <div className="flex flex-row w-1/2 justify-evenly">
         {[
-          { url: "/", text: "home" },
-          { url: "/education", text: "education" },
-          { url: "/portfolio", text: "portfolio" },
-          { url: "/contact", text: "contact" },
-        ].map(({ url, text }, index) => {
+          {
+            url: "/",
+            text: "home",
+          },
+          {
+            url: "/portfolio",
+            text: "portfolio",
+          },
+          {
+            url: "/education",
+            text: "education",
+          },
+          {
+            url: "/contact",
+            text: "contact",
+          },
+        ].map(({ url, text, icon }, index) => {
           return (
             <Link
               key={index}
@@ -47,11 +59,11 @@ export default function Nav() {
         hover:text-transparent 
         hover:bg-clip-text 
         duration-150
-        mr-[30px] p-0 text-base text-black font-['Geologica'] font-thin ${
-          location.pathname === url
-            ? "underline decoration-[#8a0000] decoration-2 underline-offset-8"
-            : "no-underline"
-        }`}
+         p-4 text-base text-black font-['Kanit'] font-thin ${
+           location.pathname === url
+             ? "underline decoration-[#8a0000] decorations underline-offset-8"
+             : "no-underline"
+         }`}
             >
               {text}
             </Link>

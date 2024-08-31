@@ -84,9 +84,9 @@ const Scene = ({ section }) => {
 
               {/* Drei helpers */}
               <OrbitControls
-                enableZoom={true}
+                enableZoom={false}
                 enableRotate={true}
-                enablePan={true}
+                enablePan={false}
                 minAzimuthAngle={-1}
                 maxAzimuthAngle={-2}
                 minPolarAngle={Math.PI / 3}

@@ -29,8 +29,8 @@ const Portfolio = () => {
         } w-screen flex flex-col items-start select-none`}
       >
         <div className="px-[20px]">
-          <h1 className="py-[10px] ml-[20px]  mt-[75px] animate-elementIn opacity-0 text-4xl font-['Kanit'] bg-gradient-to-r from-[#8a0000] to-[#fc7474] inline-block text-transparent bg-clip-text font-bold">
-            Personal Projects
+          <h1 className="py-[10px] ml-[20px]  mt-[100px] animate-elementIn opacity-0 text-4xl font-['Geologica'] bg-gradient-to-r to-[#8a0000] from-[#b74e4e] inline-block text-transparent bg-clip-text font-bold">
+            personal projects
           </h1>
         </div>
 
