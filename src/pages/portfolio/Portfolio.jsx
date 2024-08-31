@@ -5,7 +5,7 @@ import useWindowDimensions from "../../custom_hooks/useWindowDimensions.jsx";
 // Components
 import Navigation from "../../components/navigation/Navigation.jsx";
 import Project from "../../components/portfolio/Project.jsx";
-import Footer from "../../components/footer/footer.jsx";
+import Footer from "../../components/footer/Footer.jsx";
 import Scene from "../../components/portfolio/Scene.jsx";
 
 // Data

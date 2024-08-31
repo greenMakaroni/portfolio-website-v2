@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="flex flex-col w-[100vw] bg-black z-50">
+    <div className="flex flex-col w-screen bg-black z-50">
       <h1 className="font-['Kanit'] font-extralight text-white text-center text-[25px] pt-[75px] pb-[20px]">
         Dawid Markieton{" "}
       </h1>

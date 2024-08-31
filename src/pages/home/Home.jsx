@@ -1,6 +1,6 @@
 // Components
 import Navigation from "../../components/navigation/Navigation.jsx";
-import Footer from "../../components/footer/footer.jsx";
+import Footer from "../../components/footer/Footer.jsx";
 
 // Hooks
 import { useEffect } from "react";
@@ -11,13 +11,10 @@ const Home = () => {
   }, []);
 
   return (
-    <>
+    <div className="flex flex-col">
       <Navigation />
-      <div className="z-50 h-screen w-screen overflow-y-auto overflow-x-hidden ">
-        <div className=" h-screen w-screen">home</div>
-        <Footer />
-      </div>
-    </>
+      {/* <Footer /> */}
+    </div>
   );
 };
 
