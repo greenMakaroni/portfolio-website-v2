@@ -28,8 +28,14 @@ const Portfolio = () => {
           isMobile ? "" : "pl-[10vw]"
         } w-screen flex flex-col items-start select-none`}
       >
-        <div className="px-[20px]">
-          <h1 className="py-[10px] ml-[20px]  mt-[100px] animate-elementIn opacity-0 text-4xl font-['Geologica'] bg-gradient-to-r to-[#8a0000] from-[#b74e4e] inline-block text-transparent bg-clip-text font-bold">
+        <div
+          className={`px-[20px] ${
+            isMobile && "flex items-center justify-center "
+          }`}
+        >
+          <h1
+            className={`py-[10px] ml-[20px]  mt-[100px] animate-elementIn opacity-0 text-4xl font-['Geologica'] bg-gradient-to-r to-[#8a0000] from-[#b74e4e] inline-block text-transparent bg-clip-text font-bold`}
+          >
             personal projects
           </h1>
         </div>
@@ -38,8 +44,6 @@ const Portfolio = () => {
           return (
             <Project
               key={index}
-              num={index + 1}
-              buttonText={project.buttonText}
               title={project.title}
               description={project.description}
               link={project.link}

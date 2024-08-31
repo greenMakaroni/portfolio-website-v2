@@ -52,16 +52,13 @@ export default function Nav() {
               key={index}
               to={url}
               className={`
-        hover:bg-gradient-to-r 
-        hover:from-[#8a0000] 
-        hover:to-[#fc7474] 
-        hover:inline-block 
-        hover:text-transparent 
-        hover:bg-clip-text 
+        hover:underline
+        hover:underline-offset-8
+        hover:decoration-red-800
         duration-150
          p-4 text-base text-black font-['Kanit'] font-thin ${
            location.pathname === url
-             ? "underline decoration-[#8a0000] decorations underline-offset-8"
+             ? "bg-gradient-to-r from-[#8a0000] to-[#fc7474] inline-block text-transparent bg-clip-text "
              : "no-underline"
          }`}
             >

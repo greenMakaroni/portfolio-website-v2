@@ -17,10 +17,10 @@ const MobileNav = () => {
         }
       >
         {[
-          { url: "/", text: "Home" },
-          { url: "/education", text: "Education" },
-          { url: "/portfolio", text: "Portfolio" },
-          { url: "/contact", text: "Contact" },
+          { url: "/", text: "home" },
+          { url: "/education", text: "education" },
+          { url: "/portfolio", text: "portfolio" },
+          { url: "/contact", text: "contact" },
         ].map(({ url, text }, index) => {
           return (
             <Link
@@ -32,7 +32,9 @@ const MobileNav = () => {
                   : { animation: "linkFadeIn ease 1s;" }
               }
               className={
-                location.pathname === url ? "link mobile-active" : "link"
+                location.pathname === url
+                  ? "link mobile-active"
+                  : "link font-['Kanit']"
               }
               onClick={() => setOpen(!open)}
             >
