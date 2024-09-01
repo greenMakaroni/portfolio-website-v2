@@ -19,8 +19,9 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col ">
       <Navigation />
+      <div className="bg-portfolioBg fixed w-screen h-screen -z-10"></div>
       {!isMobile && <Scene />}
       <div className="w-screen h-screen fixed -z-20"></div>
       <div

@@ -7,7 +7,7 @@ import { OrbitControls, Center, Environment } from "@react-three/drei";
 // models
 import { Dmu } from "./3Dmodels/Dmu.jsx";
 import Box from "./3Dmodels/Box.jsx";
-
+import FloorGrid from "./3Dmodels/FloorGrid.jsx";
 // theatre.js
 import { SheetProvider, PerspectiveCamera } from "@theatre/r3f";
 import { getProject } from "@theatre/core";

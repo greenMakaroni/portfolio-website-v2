@@ -9,7 +9,7 @@ export default {
     extend: {
       backgroundImage: {
         homeBg: "url('/homeBg.jpg')",
-        portfolioBg: "url('/portfolioBg.jpg')",
+        portfolioBg: "url('/bg_projects.jpg')",
         journeyButtonBg: "url('/dmu_logo.png')",
       },
       keyframes: {
