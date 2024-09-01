@@ -15,17 +15,17 @@ const Cluster = () => {
     box.current.position.x = THREE.MathUtils.lerp(
       box.current.position.x,
       (3 - Math.sin(t / 2)) / 2,
-      0.3
+      0.1
     );
     box.current.position.y = THREE.MathUtils.lerp(
       box.current.position.y,
       (3 - Math.sin(t / 3)) / 2,
-      0.3
+      0.1
     );
     box.current.position.z = THREE.MathUtils.lerp(
       box.current.position.z,
       (5 - Math.sin(t / 3)) / 2,
-      0.3
+      0.1
     );
   });
 
