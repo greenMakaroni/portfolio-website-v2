@@ -22,7 +22,6 @@ const Education = () => {
   return (
     <div className="flex flex-col">
       <Navigation />
-      <div className="bg-portfolioBg fixed -z-10 w-screen h-screen"></div>
       <div className=" flex flex-row">
         {!isMobile && <Scene />}
         <div

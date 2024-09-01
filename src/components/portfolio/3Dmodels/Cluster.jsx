@@ -5,7 +5,7 @@ import { useRef } from "react";
 // model
 import Box from "./Box.jsx";
 
-const box_sizes = [...Array(400).keys()].map(() => (Math.random() * 7) / 10);
+const box_sizes = [...Array(300).keys()];
 
 const Cluster = () => {
   const box = useRef();
@@ -35,9 +35,9 @@ const Cluster = () => {
         return (
           <Box
             key={i}
-            scale={(Math.random() * 7) / 10}
+            scale={(Math.random() * 6) / 10}
             position={[
-              Math.random() * 12,
+              Math.random() * 10,
               Math.random() * 12 - 7,
               Math.random() * 10 - 13,
             ]}
