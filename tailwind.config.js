@@ -13,6 +13,10 @@ export default {
         journeyButtonBg: "url('/dmu_logo.png')",
       },
       keyframes: {
+        appear: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
         moveCanvas: {
           "0%": { filter: "blur(2px)", marginRight: "0", opacity: "0" },
           "100%": { filter: "blur(0)", marginRight: "-10vw", opacity: "1" },
@@ -31,6 +35,7 @@ export default {
         infoElementIn: "1.3s elementIn ease 3s forwards",
         elementIn: "elementIn 1s forwards",
         parIn: "parIn 1s forwards",
+        appear: " appear 1s forwards",
       },
     },
   },

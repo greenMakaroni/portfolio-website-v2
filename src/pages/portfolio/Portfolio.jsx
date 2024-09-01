@@ -21,7 +21,7 @@ const Portfolio = () => {
   return (
     <div className="flex flex-col ">
       <Navigation />
-      <div className="bg-portfolioBg blur-sm fixed w-screen h-screen -z-10"></div>
+      <div className="bg-portfolioBg animate-appear opacity-0 blur-sm fixed w-screen h-screen -z-10"></div>
       {!isMobile && <Scene />}
       <div className="w-screen h-screen fixed -z-20"></div>
       <div
