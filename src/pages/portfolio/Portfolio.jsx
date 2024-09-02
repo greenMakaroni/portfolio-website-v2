@@ -35,7 +35,7 @@ const Portfolio = () => {
           }`}
         >
           <h1
-            className={`py-[10px] ml-[20px]  mt-[100px] animate-elementIn opacity-0 text-4xl font-['Geologica'] bg-gradient-to-r to-[#8a0000] from-[#b74e4e] inline-block text-transparent bg-clip-text font-bold`}
+            className={`py-[10px] ml-[20px]  mt-[100px] animate-elementIn opacity-0 text-4xl font-['Geologica'] bg-gradient-to-br to-[#8a0000] from-[#ffbebe] inline-block text-transparent bg-clip-text font-bold`}
           >
             personal projects
           </h1>
@@ -48,6 +48,8 @@ const Portfolio = () => {
               title={project.title}
               description={project.description}
               link={project.link}
+              date={project.date}
+              destination={project.destination}
             />
           );
         })}

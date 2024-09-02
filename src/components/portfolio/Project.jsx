@@ -3,7 +3,7 @@ import useOnScreen from "../../custom_hooks/useOnScreen.jsx";
 import useWindowDimensions from "../../custom_hooks/useWindowDimensions.jsx";
 import { ImArrowRight } from "react-icons/im";
 
-const Project = ({ title, description, link }) => {
+const Project = ({ title, description, link, date }) => {
   const { width } = useWindowDimensions();
   const [hovered, setHovered] = useState(false);
   const isMobile = width < 650;
@@ -18,7 +18,7 @@ const Project = ({ title, description, link }) => {
       ref={project}
       className={`${
         isMobile
-          ? `bg-gradient-to-br from-[#ff7a7a]  to-[#8a0000] w-screen shadow-lg shadow-red-950 duration-300 border border-[#8a0000] flex flex-col items-center justify-center `
+          ? `bg-gradient-to-br from-[#ff7a7a]  to-[#8a0000] w-screen  duration-300 border border-[#8a0000] flex flex-col items-center justify-center `
           : ` duration-300 w-[32vw] border border-[#8a0000] flex flex-col items-center justify-center  ${
               hovered && "bg-gradient-to-br  from-[#ff7a7a]  to-[#8a0000]"
             }`
@@ -27,10 +27,18 @@ const Project = ({ title, description, link }) => {
       }`}
     >
       <div className="flex flex-col">
+        <p
+          className={`duration-150 font-['Courier_Prime'] text-[13px] font-thin ${
+            hovered ? "text-white" : "text-red-800"
+          } `}
+        >
+          {" "}
+          {date}{" "}
+        </p>
         <h1
           className={`${hovered ? "text-white" : "text-[#8a0000]"} ${
             isMobile && "text-white"
-          } flex flex-row items-center duration-300 text-[18px] font-['Kanit'] font-bold`}
+          } flex flex-row items-center duration-150 text-xl font-['Kanit'] font-bold`}
         >
           {title}{" "}
           <ImArrowRight
@@ -42,7 +50,7 @@ const Project = ({ title, description, link }) => {
         <p
           className={`${hovered ? "text-white" : "text-black"} ${
             isMobile && "text-white"
-          } mt-4 duration-300  mr-[30px] p-0 font-['Courier_Prime'] text-[11px] font-extralight tracking-wider`}
+          } mt-4 duration-150  mr-[30px] p-0 font-['Courier_Prime'] text-[11px] font-extralight tracking-wider`}
         >
           {" "}
           {description}{" "}
