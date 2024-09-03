@@ -5,7 +5,7 @@ import { useRef } from "react";
 // model
 import Box from "./Box.jsx";
 
-const box_sizes = [...Array(300).keys()];
+const box_sizes = [...Array(256).keys()];
 
 const Cluster = () => {
   const box = useRef();

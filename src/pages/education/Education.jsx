@@ -34,46 +34,6 @@ const Education = () => {
           >
             education
           </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 ">
-            {[
-              {
-                title: "Degree type",
-                text: "Bachelor of Science",
-                icon: <BsMortarboardFill className="h-[20px] w-[20px]" />,
-              },
-              {
-                title: "Field of study",
-                text: "Software Engineering",
-                icon: <FaSearch className="h-[20px] w-[20px]" />,
-              },
-              {
-                title: "Grade classification",
-                text: "First-Class Honours (1st)",
-                icon: <GiTrophy className="h-[20px] w-[20px]" />,
-              },
-              {
-                title: "Time period",
-                text: "September 2020 - June 2023",
-                icon: <IoCalendar className="h-[20px] w-[20px]" />,
-              },
-            ].map(({ title, text, icon }, index) => {
-              return (
-                <div
-                  key={index}
-                  className="my-[5vh] flex flex-col items-start justify-center p-2"
-                >
-                  <div className="mb-[10px] flex flex-row items-center justify-center">
-                    {icon}
-                    <h2 className="ml-[10px] font-['Kanit'] text-md font-bold">
-                      {" "}
-                      {title}
-                    </h2>
-                  </div>
-                  <p className="font-['Courier_Prime'] text-sm">{text}</p>
-                </div>
-              );
-            })}
-          </div>
         </div>
       </div>
       {/* <Footer /> */}

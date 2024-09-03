@@ -29,7 +29,7 @@ const Project = ({ title, description, link, date }) => {
       <div className="flex flex-col">
         <p
           className={`duration-150 font-['Courier_Prime'] text-[13px] font-thin ${
-            hovered ? "text-white" : "text-red-800"
+            hovered ? "text-white" : "text-red-900"
           } `}
         >
           {" "}
