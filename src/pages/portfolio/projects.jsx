@@ -21,7 +21,7 @@ const projects = [
     buttonText: "Inspect Code",
     date: "November 2023",
     icons: [
-      <SiMysql className={`mr-5 w-[35px] h-[35px] `} />,
+      <SiMysql className={`mr-5 w-[38px] h-[38px] `} />,
       <SiPhp className={`mr-5 w-[33px] h-[33px]`} />,
       <FaLaravel className={`mr-5 w-[25px] h-[25px] `} />,
       <RiTailwindCssFill className={`mr-5 w-[25px] h-[25px] `} />,

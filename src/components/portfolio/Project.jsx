@@ -19,10 +19,10 @@ const Project = ({ title, description, link, date, icons }) => {
       className={`${
         isMobile
           ? `bg-gradient-to-br from-[#ff7a7a]  to-[#8a0000] w-screen  duration-300 border border-[#8a0000] flex flex-col items-center justify-center `
-          : ` duration-300 w-[32vw] border border-[#8a0000] flex flex-col items-start justify-center  ${
+          : ` duration-300 w-[38vw] border border-[#8a0000] flex flex-col items-start justify-center  ${
               hovered && "bg-gradient-to-br from-[#751e1e] to-[#d24c4c]"
             }`
-      } py-[55px] px-8 hover:cursor-pointer opacity-0 relative mt-[8vh] mb-[25vh] flex flex-col items-start ${
+      } py-[55px] px-11 hover:cursor-pointer opacity-0 relative mt-[8vh] mb-[25vh] flex flex-col items-start ${
         isVisible && "animate-elementIn"
       }`}
     >
