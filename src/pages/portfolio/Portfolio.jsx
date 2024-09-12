@@ -9,7 +9,7 @@ import Footer from "../../components/footer/Footer.jsx";
 import Scene from "../../components/portfolio/Scene.jsx";
 
 // Data
-import { projects } from "./projects.js";
+import { projects } from "./projects.jsx";
 
 const Portfolio = () => {
   const { width } = useWindowDimensions();
@@ -35,7 +35,7 @@ const Portfolio = () => {
           }`}
         >
           <h1
-            className={`py-[10px] ml-[20px]  mt-[100px] animate-elementIn opacity-0 text-4xl font-['Geologica'] bg-gradient-to-br to-[#8a0000] from-[#ffbebe] inline-block text-transparent bg-clip-text font-bold`}
+            className={`py-[10px] ml-[20px]  mt-[100px] animate-elementIn opacity-0 text-4xl font-['Geologica'] bg-gradient-to-br from-[#8a0000] to-[#ffbebe] inline-block text-transparent bg-clip-text font-bold`}
           >
             personal projects
           </h1>
@@ -50,6 +50,7 @@ const Portfolio = () => {
               link={project.link}
               date={project.date}
               destination={project.destination}
+              icons={project.icons}
             />
           );
         })}

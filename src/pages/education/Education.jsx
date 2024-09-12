@@ -30,7 +30,7 @@ const Education = () => {
           } animate-infoElementIn opacity-0  flex flex-col`}
         >
           <h1
-            className={` py-[10px]  mt-[100px] text-4xl font-['Geologica'] bg-gradient-to-r to-[#8a0000] from-[#b74e4e] inline-block text-transparent bg-clip-text font-bold`}
+            className={` py-[10px]  mt-[100px] text-4xl font-['Geologica'] bg-gradient-to-br from-[#8a0000] to-[#b74e4e] inline-block text-transparent bg-clip-text font-bold`}
           >
             education
           </h1>

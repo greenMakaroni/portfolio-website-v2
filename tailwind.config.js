@@ -17,6 +17,11 @@ export default {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        arrowBounce: {
+          "0%": { marginLeft: "0.5rem" },
+          "50%": { marginLeft: "1.5rem" },
+          "100%": { marginLeft: "0.5rem" },
+        },
         moveCanvas: {
           "0%": { filter: "blur(2px)", marginRight: "0", opacity: "0" },
           "100%": { filter: "blur(0)", marginRight: "-10vw", opacity: "1" },
@@ -31,6 +36,7 @@ export default {
         },
       },
       animation: {
+        arrowBounce: "1s arrowBounce ease-in-out infinite",
         moveCanvas: "3s moveCanvas ease-in-out 1s forwards",
         infoElementIn: "1.3s elementIn ease 3s forwards",
         elementIn: "elementIn 1s forwards",

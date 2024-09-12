@@ -5,37 +5,43 @@ import { useRef } from "react";
 // model
 import Box from "./Box.jsx";
 
-const box_sizes = [...Array(192).keys()];
+// gradient from white through pink to dark cherry red
+const colors = [0xeeeeee, 0xff597b, 0x444444, 0xda0037];
+
+const box_sizes = [...Array(192)].map((e, i) => {
+  return colors[Math.floor(Math.random() * colors.length)];
+});
 
 const Cluster = () => {
-  const box = useRef();
+  const box_group = useRef();
 
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
-    box.current.position.x = THREE.MathUtils.lerp(
-      box.current.position.x,
+    box_group.current.position.x = THREE.MathUtils.lerp(
+      box_group.current.position.x,
       (3 - Math.sin(t / 2)) / 2,
       0.1
     );
-    box.current.position.y = THREE.MathUtils.lerp(
-      box.current.position.y,
+    box_group.current.position.y = THREE.MathUtils.lerp(
+      box_group.current.position.y,
       (3 - Math.sin(t / 3)) / 2,
       0.1
     );
-    box.current.position.z = THREE.MathUtils.lerp(
-      box.current.position.z,
+    box_group.current.position.z = THREE.MathUtils.lerp(
+      box_group.current.position.z,
       (5 - Math.sin(t / 3)) / 2,
       0.1
     );
   });
 
   return (
-    <group ref={box}>
-      {box_sizes.map((box, i) => {
+    <group ref={box_group}>
+      {box_sizes.map((color, i) => {
         return (
           <Box
             key={i}
             scale={(Math.random() * 4 + 2) / 10}
+            color={color}
             position={[
               Math.random() * 10,
               Math.random() * 12 - 7,

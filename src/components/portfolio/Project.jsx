@@ -3,7 +3,7 @@ import useOnScreen from "../../custom_hooks/useOnScreen.jsx";
 import useWindowDimensions from "../../custom_hooks/useWindowDimensions.jsx";
 import { ImArrowRight } from "react-icons/im";
 
-const Project = ({ title, description, link, date }) => {
+const Project = ({ title, description, link, date, icons }) => {
   const { width } = useWindowDimensions();
   const [hovered, setHovered] = useState(false);
   const isMobile = width < 650;
@@ -19,8 +19,8 @@ const Project = ({ title, description, link, date }) => {
       className={`${
         isMobile
           ? `bg-gradient-to-br from-[#ff7a7a]  to-[#8a0000] w-screen  duration-300 border border-[#8a0000] flex flex-col items-center justify-center `
-          : ` duration-300 w-[32vw] border border-[#8a0000] flex flex-col items-center justify-center  ${
-              hovered && "bg-gradient-to-br  from-[#ff7a7a]  to-[#8a0000]"
+          : ` duration-300 w-[32vw] border border-[#8a0000] flex flex-col items-start justify-center  ${
+              hovered && "bg-gradient-to-br from-[#751e1e] to-[#d24c4c]"
             }`
       } py-[55px] px-8 hover:cursor-pointer opacity-0 relative mt-[8vh] mb-[25vh] flex flex-col items-start ${
         isVisible && "animate-elementIn"
@@ -38,13 +38,13 @@ const Project = ({ title, description, link, date }) => {
         <h1
           className={`${hovered ? "text-white" : "text-[#8a0000]"} ${
             isMobile && "text-white"
-          } flex flex-row items-center duration-150 text-xl font-['Kanit'] font-bold`}
+          } flex flex-row items-center duration-150 text-xl font-['Kanit'] font-bold mb-[15px]`}
         >
           {title}{" "}
           <ImArrowRight
             className={`${
-              hovered ? "ml-6" : "ml-2"
-            } h-[20px] w-[20px] duration-150`}
+              hovered && "animate-arrowBounce"
+            } ml-2 h-[22px] w-[22px] duration-150`}
           />
         </h1>
         <p
@@ -55,6 +55,16 @@ const Project = ({ title, description, link, date }) => {
           {" "}
           {description}{" "}
         </p>
+      </div>
+
+      <div
+        className={`${
+          hovered ? "text-white" : "text-red-800"
+        } mt-6 flex flex-row items-center flex-wrap w-full`}
+      >
+        {icons.map((e) => {
+          return e;
+        })}
       </div>
     </div>
   );
