@@ -6,7 +6,7 @@ const Box = (props) => {
     <mesh {...props}>
       <boxGeometry args={[1, 1, 1]} />
       <meshStandardMaterial color={props.color} />
-      <Outlines thickness={0.05} color={0x870900} />
+      <Outlines thickness={0.07} color={0x870900} />
     </mesh>
   );
 };

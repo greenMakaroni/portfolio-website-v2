@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import { Outlines } from "@react-three/drei";
 import * as THREE from "three";
 
 function Box(props) {
@@ -31,7 +30,6 @@ function Box(props) {
     <mesh ref={box} receiveShadow {...props}>
       <boxGeometry args={props.geo} />
       <meshStandardMaterial color={props.color} />
-      <Outlines thickness={0.03} color="red" />
     </mesh>
   );
 }

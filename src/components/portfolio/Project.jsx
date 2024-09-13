@@ -22,7 +22,7 @@ const Project = ({ title, description, link, date, icons }) => {
           : ` duration-300 w-[38vw] border border-[#8a0000] flex flex-col items-start justify-center  ${
               hovered && "bg-gradient-to-br from-[#751e1e] to-[#d24c4c]"
             }`
-      } py-[55px] px-11 hover:cursor-pointer opacity-0 relative mt-[8vh] mb-[25vh] flex flex-col items-start ${
+      } py-11 px-6 hover:cursor-pointer opacity-0 relative mt-[8vh] mb-[33vh] flex flex-col items-start ${
         isVisible && "animate-elementIn"
       }`}
     >
@@ -50,7 +50,7 @@ const Project = ({ title, description, link, date, icons }) => {
         <p
           className={`${hovered ? "text-white" : "text-black"} ${
             isMobile && "text-white"
-          } mt-4 duration-150  mr-[30px] p-0 font-['Courier_Prime'] text-[11px] font-extralight tracking-wider`}
+          } mt-4 duration-150  mr-[30px] p-0 font-['Courier_Prime'] text-[12px] font-extralight tracking-wider`}
         >
           {" "}
           {description}{" "}
