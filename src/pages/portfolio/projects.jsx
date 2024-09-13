@@ -57,8 +57,7 @@ const projects = [
   },
   {
     title: "Java module chooser",
-    description:
-      "MVC desktop application written in Java for choosing optional modules for the final year at the university. This was a 2nd year's Object-Oriented Programming module coursework. GUI created using javafx library. ",
+    description: `MVC desktop application written in Java for choosing optional modules for the final year at the university. GUI created using javafx library. `,
     link: "https://github.com/greenMakaroni/Module-Chooser-GUI",
     buttonText: "Inspect Code",
     date: "December 2021",
