@@ -18,9 +18,9 @@ export default {
           "100%": { opacity: "1" },
         },
         arrowBounce: {
-          "0%": { marginLeft: "0.5rem" },
-          "50%": { marginLeft: "1.5rem" },
-          "100%": { marginLeft: "0.5rem" },
+          "0%": { marginLeft: "1rem" },
+          "50%": { marginLeft: "2rem" },
+          "100%": { marginLeft: "1rem" },
         },
         moveCanvas: {
           "0%": { filter: "blur(2px)", marginRight: "0", opacity: "0" },

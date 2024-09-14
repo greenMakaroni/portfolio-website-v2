@@ -16,15 +16,15 @@ const projects = [
   {
     title: "My notes",
     description:
-      "Full stack web application for creating and managing notes. It's a CRUD application created as a solution to a technical interview for a company that ghosted me afterwards, leaving me with $1 bill for running EC2 instance on AWS.",
+      "Full stack web application for creating and managing notes. It's a CRUD application created as a solution to a technical interview for a company that ghosted me afterwards, leaving me with $0.17 bill for running EC2 instance on AWS.",
     link: "https://github.com/greenMakaroni/myNotes",
     buttonText: "Inspect Code",
     date: "November 2023",
     icons: [
-      <SiMysql className={`mr-5 w-[35px] h-[35px] `} />,
-      <SiPhp className={`mr-5 w-[33px] h-[33px]`} />,
-      <FaLaravel className={`mr-5 w-[25px] h-[25px] `} />,
-      <RiTailwindCssFill className={`mr-5 w-[25px] h-[25px] `} />,
+      <SiMysql className={`mr-7 w-[35px] h-[35px] `} />,
+      <SiPhp className={`mr-7 w-[33px] h-[33px]`} />,
+      <FaLaravel className={`mr-7 w-[25px] h-[25px] `} />,
+      <RiTailwindCssFill className={`mr-7 w-[25px] h-[25px] `} />,
     ],
   },
   {
@@ -35,8 +35,8 @@ const projects = [
     buttonText: "View Online",
     date: "August 2023",
     icons: [
-      <FaReact className={`mr-5 w-[25px] h-[25px]`} />,
-      <RiTailwindCssFill className={`mr-5 w-[25px] h-[25px] `} />,
+      <FaReact className={`mr-7 w-[25px] h-[25px]`} />,
+      <RiTailwindCssFill className={`mr-7 w-[25px] h-[25px] `} />,
     ],
   },
   {
@@ -47,12 +47,12 @@ const projects = [
     buttonText: "Inspect Code",
     date: "July 2022",
     icons: [
-      <FaReact className={`mr-5 w-[25px] h-[25px]`} />,
-      <FaBootstrap className={`mr-5 w-[28px] h-[28px]`} />,
-      <SiExpress className={`mr-5 w-[22px] h-[22px]`} />,
-      <SiMongodb className={`mr-5 w-[22px] h-[22px]`} />,
-      <GrGraphQl className={`mr-5 w-[25px] h-[25px]`} />,
-      <SiApollographql className={`mr-5 w-[22px] h-[22px]`} />,
+      <FaReact className={`mr-7 w-[25px] h-[25px]`} />,
+      <FaBootstrap className={`mr-7 w-[28px] h-[28px]`} />,
+      <SiExpress className={`mr-7 w-[22px] h-[22px]`} />,
+      <SiMongodb className={`mr-7 w-[22px] h-[22px]`} />,
+      <GrGraphQl className={`mr-7 w-[25px] h-[25px]`} />,
+      <SiApollographql className={`mr-7 w-[22px] h-[22px]`} />,
     ],
   },
   {
@@ -61,7 +61,7 @@ const projects = [
     link: "https://github.com/greenMakaroni/Module-Chooser-GUI",
     buttonText: "Inspect Code",
     date: "December 2021",
-    icons: [<FaJava className={`mr-5 w-[35px] h-[35px]`} />],
+    icons: [<FaJava className={`mr-7 w-[35px] h-[35px]`} />],
   },
   {
     title: "E-commerce store",
@@ -71,9 +71,9 @@ const projects = [
     buttonText: "Inspect Code",
     date: "August 2021",
     icons: [
-      <FaReact className={`mr-5 w-[25px] h-[25px]`} />,
-      <FaStripe className={`mr-5 w-[35px] h-[35px]`} />,
-      <SiMui className={`mr-5 w-[25px] h-[25px]`} />,
+      <FaReact className={`mr-7 w-[25px] h-[25px]`} />,
+      <FaStripe className={`mr-7 w-[35px] h-[35px]`} />,
+      <SiMui className={`mr-7 w-[25px] h-[25px]`} />,
     ],
   },
 ];

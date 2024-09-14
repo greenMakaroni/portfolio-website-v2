@@ -44,7 +44,7 @@ const Project = ({ title, description, link, date, icons }) => {
           <ImArrowRight
             className={`${
               hovered && "animate-arrowBounce"
-            } ml-2 h-[22px] w-[22px] duration-150`}
+            } ml-4 h-[22px] w-[22px] duration-150`}
           />
         </h1>
         <p
