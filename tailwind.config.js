@@ -37,8 +37,8 @@ export default {
       },
       animation: {
         arrowBounce: "1s arrowBounce ease-in-out infinite",
-        moveCanvas: "3s moveCanvas ease-in-out 1s forwards",
-        infoElementIn: "1.3s elementIn ease 3s forwards",
+        moveCanvas: "1s moveCanvas ease-in-out 1s forwards",
+        infoElementIn: "1s elementIn ease 1s forwards",
         elementIn: "elementIn 1s forwards",
         parIn: "parIn 1s forwards",
         appear: " appear 1s forwards",

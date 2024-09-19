@@ -1,8 +1,16 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unknown-property */
-import { useState, useEffect, Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Center, Environment } from "@react-three/drei";
+import { useState, useEffect, Suspense, useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import {
+  OrbitControls,
+  Center,
+  Image,
+  Environment,
+  ScrollControls,
+  useScroll,
+  Html,
+} from "@react-three/drei";
 
 // models
 import { Dmu } from "./3Dmodels/Dmu.jsx";
@@ -56,6 +64,9 @@ const Scene = ({ section }) => {
       <div className="m-0 p-0 z-[0] w-screen h-screen fixed opacity-0 animate-moveCanvas">
         {/* { play the transition when the scene is loaded} */}
         <Canvas shadows>
+          <fog attach="fog" args={["#17171b", 10, 20]} />
+          <color attach="background" args={["#ffffff"]} />
+
           {/* { Suspense execution and serve loader until models are loaded } */}
           <Suspense fallback={<Loader setLoaded={setLoaded} />}>
             {/* { animation sheet provider } */}
@@ -71,16 +82,13 @@ const Scene = ({ section }) => {
 
               {/* Models */}
               <Center>
-                <Dmu />
+                <ScrollControls pages={4} infinite>
+                  <Rig rotation={[0, 0, 0.15]}>
+                    <Dmu />
+                  </Rig>
+                </ScrollControls>
               </Center>
-              <Box
-                time={1}
-                dist={0}
-                animate={false}
-                color="black"
-                geo={[7, 15, 7]}
-                position={[0, -9.15, 0]}
-              />
+              <Box geo={[7, 15, 7]} position={[0, -9.15, 0]} />
 
               {/* Drei helpers */}
               <OrbitControls
@@ -100,5 +108,15 @@ const Scene = ({ section }) => {
     </div>
   );
 };
+
+function Rig(props) {
+  const ref = useRef();
+  const scroll = useScroll();
+  useFrame((state, delta) => {
+    ref.current.rotation.y = -scroll.offset * (Math.PI * 2); // Rotate contents
+    state.events.update(); // Raycasts every frame rather than on pointer-move
+  });
+  return <group ref={ref} {...props} />;
+}
 
 export default Scene;
