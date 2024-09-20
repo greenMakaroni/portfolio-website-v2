@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unknown-property */
+
 import { useState, useEffect, Suspense, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import {
@@ -12,9 +13,11 @@ import {
   Html,
 } from "@react-three/drei";
 
-// models
+// Scene models
 import { Dmu } from "./3Dmodels/Dmu.jsx";
 import Box from "./3Dmodels/Box.jsx";
+
+//
 
 // theatre.js
 import { SheetProvider, PerspectiveCamera } from "@theatre/r3f";
@@ -64,9 +67,6 @@ const Scene = ({ section }) => {
       <div className="m-0 p-0 z-[0] w-screen h-screen fixed opacity-0 animate-moveCanvas">
         {/* { play the transition when the scene is loaded} */}
         <Canvas shadows>
-          <fog attach="fog" args={["#17171b", 10, 20]} />
-          <color attach="background" args={["#ffffff"]} />
-
           {/* { Suspense execution and serve loader until models are loaded } */}
           <Suspense fallback={<Loader setLoaded={setLoaded} />}>
             {/* { animation sheet provider } */}
@@ -82,12 +82,14 @@ const Scene = ({ section }) => {
 
               {/* Models */}
               <Center>
-                <ScrollControls pages={4} infinite>
-                  <Rig rotation={[0, 0, 0.15]}>
-                    <Dmu />
-                  </Rig>
-                </ScrollControls>
+                <Dmu />
               </Center>
+              {/* Rig Carousel */}
+              {/* <ScrollControls pages={4} infinite>
+                  <Rig rotation={[0, 0, 0.15]}>
+                  // Rig anythong to rotate horizontally on scroll
+                  </Rig>
+                </ScrollControls> */}
               <Box geo={[7, 15, 7]} position={[0, -9.15, 0]} />
 
               {/* Drei helpers */}
