@@ -6,7 +6,6 @@ import {
   ScrollControls,
   Float,
   Mask,
-  Plane,
 } from "@react-three/drei";
 import * as THREE from "three";
 import url from "./av.webp";
@@ -27,7 +26,7 @@ function Card({ url, ...props }) {
   const ref = useRef();
 
   return (
-    <Float floatIntensity={0.2} rotationIntensity={0.5}>
+    <Float floatIntensity={0.15} rotationIntensity={0.4}>
       <Image
         scale={3}
         castShadow
@@ -48,7 +47,7 @@ function Cards({ radius = 1.6, count = 2 }) {
         url={url}
         position={[
           Math.sin((i / count) * Math.PI * 2) * radius * 3,
-          1,
+          2.5,
           Math.cos((i / count) * Math.PI * 2) * radius * 3,
         ]}
         rotation={[0, Math.PI + (i / count) * Math.PI * 2, 0]}
