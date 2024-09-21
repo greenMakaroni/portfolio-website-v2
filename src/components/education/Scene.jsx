@@ -41,7 +41,7 @@ const Scene = ({ section }) => {
     if (isLoaded) {
       sheet_entry.project.ready
         .then(() =>
-          sheet_entry.sequence.play({ iterationCount: 1, range: [0.1, 4.5] })
+          sheet_entry.sequence.play({ iterationCount: 1, range: [0.1, 4.2] })
         )
         .then(() => {
           sheet_entry.sequence.play({
@@ -76,9 +76,9 @@ const Scene = ({ section }) => {
               <Center>
                 <Dmu />
               </Center>
-              <Center>
+              {/* <Center>
                 <Carousel />
-              </Center>
+              </Center> */}
 
               <Box position={[0, -9.15, 0]} />
 
