@@ -1,15 +1,23 @@
-import { useRef } from "react";
-import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
-import { MeshReflectorMaterial } from "@react-three/drei";
-function Box(props) {
-  const box = useRef();
+import { RoundedBox } from "@react-three/drei";
 
+function Box({
+  args = [7, 15, 7],
+  radius = 0.12,
+  smoothness = 6,
+  color = "#696969",
+  ...props
+}) {
   return (
-    <mesh ref={box} receiveShadow {...props}>
-      <boxGeometry args={props.geo} />
-      <meshStandardMaterial color="#17171b" />
-    </mesh>
+    <RoundedBox
+      args={args}
+      radius={radius}
+      smoothness={smoothness}
+      receiveShadow
+      {...props}
+    >
+      <meshPhongMaterial color={color} />
+    </RoundedBox>
   );
 }
 

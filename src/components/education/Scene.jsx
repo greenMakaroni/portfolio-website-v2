@@ -80,7 +80,7 @@ const Scene = ({ section }) => {
                 <Carousel />
               </Center>
 
-              <Box geo={[7, 15, 7]} position={[0, -9.15, 0]} />
+              <Box position={[0, -9.15, 0]} />
 
               {/* Drei helpers */}
               <OrbitControls
