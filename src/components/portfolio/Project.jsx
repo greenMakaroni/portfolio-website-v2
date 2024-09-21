@@ -19,7 +19,7 @@ const Project = ({ title, description, link, date, icons }) => {
       className={`${
         isMobile
           ? `bg-gradient-to-br from-[#ff7a7a]  to-[#8a0000] w-screen  duration-300 border border-[#8a0000] flex flex-col items-center justify-center `
-          : `bg-white duration-300 w-[38vw] border border-[#8a0000] flex flex-col items-start justify-center  ${
+          : `bg-white duration-300 w-[30vw] border border-[#8a0000] flex flex-col items-start justify-center  ${
               hovered && "bg-gradient-to-br from-[#751e1e] to-[#d24c4c]"
             }`
       } py-11 px-6 hover:cursor-pointer opacity-0 relative mt-[8vh] mb-[33vh] flex flex-col items-start ${

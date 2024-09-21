@@ -23,8 +23,8 @@ export default {
           "100%": { marginLeft: "1rem" },
         },
         moveCanvas: {
-          "0%": { filter: "blur(2px)", marginRight: "0", opacity: "0" },
-          "100%": { filter: "blur(0)", marginRight: "-10vw", opacity: "1" },
+          "0%": { filter: "blur(2px)", opacity: "0" },
+          "100%": { filter: "blur(0)", opacity: "1" },
         },
         elementIn: {
           "0%": { filter: "blur(2px)", opacity: "0", marginLeft: "-5vw" },

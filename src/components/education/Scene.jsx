@@ -1,22 +1,14 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unknown-property */
 
-import { useState, useEffect, Suspense, useRef } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import {
-  OrbitControls,
-  Center,
-  Image,
-  Environment,
-  ScrollControls,
-  useScroll,
-  Html,
-} from "@react-three/drei";
+import { useState, useEffect, Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Center, Environment } from "@react-three/drei";
 
 // Scene models
 import { Dmu } from "./3Dmodels/Dmu.jsx";
 import Box from "./3Dmodels/Box.jsx";
-
+import Carousel from "./3Dmodels/Carousel.jsx";
 //
 
 // theatre.js
@@ -84,12 +76,10 @@ const Scene = ({ section }) => {
               <Center>
                 <Dmu />
               </Center>
-              {/* Rig Carousel */}
-              {/* <ScrollControls pages={4} infinite>
-                  <Rig rotation={[0, 0, 0.15]}>
-                  // Rig anythong to rotate horizontally on scroll
-                  </Rig>
-                </ScrollControls> */}
+              <Center>
+                <Carousel />
+              </Center>
+
               <Box geo={[7, 15, 7]} position={[0, -9.15, 0]} />
 
               {/* Drei helpers */}
@@ -110,15 +100,5 @@ const Scene = ({ section }) => {
     </div>
   );
 };
-
-function Rig(props) {
-  const ref = useRef();
-  const scroll = useScroll();
-  useFrame((state, delta) => {
-    ref.current.rotation.y = -scroll.offset * (Math.PI * 2); // Rotate contents
-    state.events.update(); // Raycasts every frame rather than on pointer-move
-  });
-  return <group ref={ref} {...props} />;
-}
 
 export default Scene;
