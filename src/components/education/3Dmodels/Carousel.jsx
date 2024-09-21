@@ -29,7 +29,7 @@ function Card({ url, ...props }) {
   return (
     <Float floatIntensity={0.2} rotationIntensity={0.5}>
       <Image
-        scale={2}
+        scale={3}
         castShadow
         ref={ref}
         url={url}
@@ -40,7 +40,7 @@ function Card({ url, ...props }) {
   );
 }
 
-function Cards({ radius = 1.6, count = 3 }) {
+function Cards({ radius = 1.6, count = 2 }) {
   {
     return Array.from({ length: count }, (_, i) => (
       <Card
@@ -48,7 +48,7 @@ function Cards({ radius = 1.6, count = 3 }) {
         url={url}
         position={[
           Math.sin((i / count) * Math.PI * 2) * radius * 3,
-          0,
+          1,
           Math.cos((i / count) * Math.PI * 2) * radius * 3,
         ]}
         rotation={[0, Math.PI + (i / count) * Math.PI * 2, 0]}

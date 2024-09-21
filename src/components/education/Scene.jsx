@@ -76,9 +76,9 @@ const Scene = ({ section }) => {
               <Center>
                 <Dmu />
               </Center>
-              {/* <Center>
+              <Center>
                 <Carousel />
-              </Center> */}
+              </Center>
 
               <Box position={[0, -9.15, 0]} />
 
