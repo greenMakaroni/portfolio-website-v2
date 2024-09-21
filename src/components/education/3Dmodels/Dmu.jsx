@@ -24,7 +24,7 @@ export const Dmu = (props) => {
         theatreKey="pedestal"
         geometry={nodes.pedestal.geometry}
         material={pedestalMaterial}
-        position={[0.01, -0.09, 0]}
+        position={[0.01, -0.12, 0]}
         scale={[0.28, 0.28, 0.28]}
       />
       <editable.mesh
