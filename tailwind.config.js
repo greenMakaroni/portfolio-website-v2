@@ -8,6 +8,7 @@ export default {
     },
     extend: {
       backgroundImage: {
+        eduBg: "url('/bg_edu.jpg')",
         homeBg: "url('/homeBg.jpg')",
         portfolioBg: "url('/bg_projects.jpg')",
         journeyButtonBg: "url('/dmu_logo.png')",

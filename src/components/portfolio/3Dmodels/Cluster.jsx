@@ -6,7 +6,7 @@ import { useRef } from "react";
 import Box from "./Box.jsx";
 
 // gradient from white through pink to dark cherry red
-const colors = [0xeeeeee, 0x444444];
+const colors = ["#000000", "#ffffff"];
 
 const box_sizes = [...Array(128)].map((e, i) => {
   return colors[Math.floor(Math.random() * colors.length)];

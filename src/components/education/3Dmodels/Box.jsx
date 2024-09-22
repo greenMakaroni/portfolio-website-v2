@@ -1,4 +1,3 @@
-import * as THREE from "three";
 import { RoundedBox } from "@react-three/drei";
 
 function Box({

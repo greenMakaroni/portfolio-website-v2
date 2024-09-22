@@ -7,6 +7,7 @@ import { useGLTF, useTexture } from "@react-three/drei";
 import { editable } from "@theatre/r3f";
 import * as THREE from "three";
 import dmuURL from "./dmu.glb";
+import { Outlines } from "@react-three/drei";
 
 export const Dmu = (props) => {
   const { nodes } = useGLTF(dmuURL);
@@ -24,7 +25,7 @@ export const Dmu = (props) => {
         theatreKey="pedestal"
         geometry={nodes.pedestal.geometry}
         material={pedestalMaterial}
-        position={[0.01, -0.12, 0]}
+        position={[0.01, -0.14, 0]}
         scale={[0.28, 0.28, 0.28]}
       />
       <editable.mesh
