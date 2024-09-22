@@ -552,19 +552,19 @@
                     "handles": [
                       0.5,
                       1,
-                      0.175,
-                      0.885
+                      0.455,
+                      0.03
                     ],
                     "type": "bezier",
                     "value": 15
                   },
                   {
                     "id": "6pz-C-fezJ",
-                    "position": 5,
+                    "position": 3.033,
                     "connectedRight": true,
                     "handles": [
-                      0.299,
-                      1.006,
+                      0.515,
+                      0.955,
                       0.5,
                       0
                     ],
@@ -584,19 +584,19 @@
                     "handles": [
                       0.5,
                       1,
-                      0.175,
-                      0.885
+                      0.455,
+                      0.03
                     ],
                     "type": "bezier",
                     "value": 15
                   },
                   {
                     "id": "XdezRsCT5h",
-                    "position": 5,
+                    "position": 3.033,
                     "connectedRight": true,
                     "handles": [
-                      0.299,
-                      1.006,
+                      0.515,
+                      0.955,
                       0.5,
                       0
                     ],
@@ -616,19 +616,19 @@
                     "handles": [
                       0.5,
                       1,
-                      0.175,
-                      0.885
+                      0.455,
+                      0.03
                     ],
                     "type": "bezier",
                     "value": 15
                   },
                   {
                     "id": "rre3kdzwcf",
-                    "position": 5,
+                    "position": 3.033,
                     "connectedRight": true,
                     "handles": [
-                      0.299,
-                      1.006,
+                      0.515,
+                      0.955,
                       0.5,
                       0
                     ],
@@ -682,17 +682,30 @@
                 "__debugName": "Camera:[\"fov\"]",
                 "keyframes": [
                   {
-                    "id": "Yns1we_gnj",
-                    "position": 5,
+                    "id": "YsJi02n-S-",
+                    "position": 0,
                     "connectedRight": true,
                     "handles": [
                       0.5,
                       1,
+                      0.455,
+                      0.03
+                    ],
+                    "type": "bezier",
+                    "value": 41.200000000000095
+                  },
+                  {
+                    "id": "X_w35Z9zUH",
+                    "position": 3.033,
+                    "connectedRight": true,
+                    "handles": [
+                      0.515,
+                      0.955,
                       0.5,
                       0
                     ],
                     "type": "bezier",
-                    "value": 35.000000000000064
+                    "value": 37
                   }
                 ]
               },
@@ -3463,6 +3476,8 @@
   },
   "definitionVersion": "0.4.0",
   "revisionHistory": [
+    "VhJckUpVeh40Ws-a",
+    "vaa7oGW194rcE8l5",
     "7rgS1lhOaybyQA4l",
     "EK82ZlxXw_SAc3LY",
     "X7shc662J3nl3qEi",

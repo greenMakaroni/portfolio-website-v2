@@ -14,6 +14,7 @@ function Rig(props) {
   const ref = useRef();
   const scroll = useScroll();
   useFrame((state, delta) => {
+    console.log(scroll.offset);
     // Rotate contents
     ref.current.rotation.y = -scroll.offset * (Math.PI * 2);
     // Raycasts every frame rather than on pointer-move
@@ -27,19 +28,12 @@ function Card({ url, ...props }) {
 
   return (
     <Float floatIntensity={0.15} rotationIntensity={0.4}>
-      <Image
-        scale={3}
-        castShadow
-        ref={ref}
-        url={url}
-        side={THREE.DoubleSide}
-        {...props}
-      ></Image>
+      <Image scale={5} castShadow ref={ref} url={url} {...props}></Image>
     </Float>
   );
 }
 
-function Cards({ radius = 1.6, count = 2 }) {
+function Cards({ radius = 3, count = 4 }) {
   {
     return Array.from({ length: count }, (_, i) => (
       <Card

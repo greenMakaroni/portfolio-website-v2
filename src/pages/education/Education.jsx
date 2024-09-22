@@ -19,18 +19,13 @@ const Education = () => {
     <div className="flex flex-col">
       <Navigation />
       <div className=" flex flex-row">
+        {/* render scene on desktop */}
         {!isMobile && <Scene />}
         <div
           className={`${
             isMobile ? "" : "pl-[10vw]"
           } animate-infoElementIn opacity-0  flex flex-col`}
-        >
-          <h1
-            className={`py-[10px] mt-[100px] text-4xl font-['Geologica'] bg-gradient-to-br from-[#8a0000] to-[#b74e4e] inline-block text-transparent bg-clip-text font-bold`}
-          >
-            education
-          </h1>
-        </div>
+        ></div>
       </div>
       {/* <Footer /> */}
     </div>
