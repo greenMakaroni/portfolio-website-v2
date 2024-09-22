@@ -19,6 +19,15 @@ import dmuEntryAnimation from "./dmu_entry.json";
 // Loader
 import Loader from "../shared/Loader.jsx";
 
+// postprocessing
+import {
+  Bloom,
+  DepthOfField,
+  EffectComposer,
+  Noise,
+  Vignette,
+} from "@react-three/postprocessing";
+
 /* --------------------------- Animation development mode --------------------------- */
 // import { onChange, val } from "@theatre/core";
 // import studio from "@theatre/studio";
@@ -92,7 +101,18 @@ const Scene = ({ section }) => {
                 minPolarAngle={Math.PI / 3}
                 maxPolarAngle={Math.PI / 2}
               />
+
               <Environment preset="forest" />
+              {/* postprocessing */}
+
+              <EffectComposer>
+                <Bloom
+                  luminanceThreshold={0.2}
+                  luminanceSmoothing={1}
+                  height={100}
+                />
+                <Vignette eskil={false} offset={0.1} darkness={1} />
+              </EffectComposer>
             </SheetProvider>
           </Suspense>
         </Canvas>

@@ -1,12 +1,6 @@
 import { useRef, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
-import {
-  useScroll,
-  Image,
-  ScrollControls,
-  Float,
-  Mask,
-} from "@react-three/drei";
+import { useScroll, Image, ScrollControls, Float } from "@react-three/drei";
 import * as THREE from "three";
 
 function Rig(props) {
@@ -31,7 +25,7 @@ function Card({ url, ...props }) {
   );
 }
 
-function Cards({ radius = 5, count = 4 }) {
+function Cards({ radius = 4.5, count = 4 }) {
   {
     return Array.from({ length: count }, (_, i) => (
       <group>
