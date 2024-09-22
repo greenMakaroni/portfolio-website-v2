@@ -108,7 +108,7 @@ const Scene = ({ section }) => {
               <EffectComposer>
                 <Bloom
                   luminanceThreshold={0.2}
-                  luminanceSmoothing={1}
+                  luminanceSmoothing={0.8}
                   height={100}
                 />
                 <Vignette eskil={false} offset={0.1} darkness={1} />
