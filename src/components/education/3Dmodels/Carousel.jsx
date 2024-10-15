@@ -1,7 +1,6 @@
 import { useRef, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
 import { useScroll, Image, ScrollControls, Float } from "@react-three/drei";
-import * as THREE from "three";
 
 function Rig(props) {
   const ref = useRef();

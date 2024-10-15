@@ -20,13 +20,7 @@ import dmuEntryAnimation from "./dmu_entry.json";
 import Loader from "../shared/Loader.jsx";
 
 // postprocessing
-import {
-  Bloom,
-  DepthOfField,
-  EffectComposer,
-  Noise,
-  Vignette,
-} from "@react-three/postprocessing";
+import { Bloom, EffectComposer, Vignette } from "@react-three/postprocessing";
 
 /* --------------------------- Animation development mode --------------------------- */
 // import { onChange, val } from "@theatre/core";

@@ -7,7 +7,6 @@ import { useGLTF, useTexture } from "@react-three/drei";
 import { editable } from "@theatre/r3f";
 import * as THREE from "three";
 import dmuURL from "./dmu.glb";
-import { Outlines } from "@react-three/drei";
 
 export const Dmu = (props) => {
   const { nodes } = useGLTF(dmuURL);
