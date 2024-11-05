@@ -42,10 +42,6 @@ export default function Nav() {
             url: "/education",
             text: "education",
           },
-          {
-            url: "/contact",
-            text: "contact",
-          },
         ].map(({ url, text, icon }, index) => {
           return (
             <Link

@@ -20,7 +20,6 @@ const MobileNav = () => {
           { url: "/", text: "home" },
           { url: "/education", text: "education" },
           { url: "/portfolio", text: "portfolio" },
-          { url: "/contact", text: "contact" },
         ].map(({ url, text }, index) => {
           return (
             <Link
