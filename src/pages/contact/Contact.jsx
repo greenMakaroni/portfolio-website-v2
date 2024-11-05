@@ -7,6 +7,7 @@ import Footer from "../../components/footer/Footer";
 import Map from "../../components/contact/Map";
 import { FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
+
 const Contact = () => {
   const { width } = useWindowDimensions();
   const isMobile = width < 650;

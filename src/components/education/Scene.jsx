@@ -96,7 +96,8 @@ const Scene = ({ section }) => {
                 maxPolarAngle={Math.PI / 2}
               />
 
-              <Environment preset="forest" />
+              {/* ENVIRONMENT REQUIRES INTERNET CONNECTION, IT MAKES API CALL TO GITHUB REPO NEED TO MAKE IT LOCAL */}
+              {/* <Environment preset="forest" /> */}
               {/* postprocessing */}
 
               <EffectComposer>
