@@ -9,7 +9,6 @@ import { OrbitControls, Center, Environment } from "@react-three/drei";
 import { Dmu } from "./3Dmodels/Dmu.jsx";
 import Box from "./3Dmodels/Box.jsx";
 import Carousel from "./3Dmodels/Carousel.jsx";
-//
 
 // theatre.js
 import { SheetProvider, PerspectiveCamera } from "@theatre/r3f";
@@ -37,9 +36,8 @@ const sheet_entry = getProject("Logo entry", {
   state: dmuEntryAnimation,
 }).sheet("Logo entry"); // Animation Sheet
 
-const Scene = ({ section }) => {
+const Scene = () => {
   const [isLoaded, setLoaded] = useState(false);
-
   useEffect(() => {
     if (isLoaded) {
       sheet_entry.project.ready
@@ -53,7 +51,7 @@ const Scene = ({ section }) => {
           });
         });
     }
-  }, [isLoaded, section]);
+  }, [isLoaded]);
 
   return (
     <div
@@ -74,7 +72,6 @@ const Scene = ({ section }) => {
               />
               {/* Lights */}
               <spotLight castShadow intensity={0.4} position={[-4, 6, 4]} />
-
               {/* Models */}
               <Center>
                 <Dmu />
@@ -82,9 +79,7 @@ const Scene = ({ section }) => {
               <Center>
                 <Carousel />
               </Center>
-
               <Box position={[0, -9.15, 0]} />
-
               {/* Drei helpers */}
               <OrbitControls
                 enableZoom={false}
@@ -95,11 +90,9 @@ const Scene = ({ section }) => {
                 minPolarAngle={Math.PI / 3}
                 maxPolarAngle={Math.PI / 2}
               />
-
               {/* ENVIRONMENT REQUIRES INTERNET CONNECTION, IT MAKES API CALL TO GITHUB REPO NEED TO MAKE IT LOCAL */}
               {/* <Environment preset="forest" /> */}
               {/* postprocessing */}
-
               <EffectComposer>
                 <Bloom
                   luminanceThreshold={0.2}

@@ -5,6 +5,7 @@ import { useScroll, Image, ScrollControls, Float } from "@react-three/drei";
 function Rig(props) {
   const ref = useRef();
   const scroll = useScroll();
+
   useFrame((state, delta) => {
     // Rotate contents
     ref.current.rotation.y = -scroll.offset * (Math.PI * 2);
