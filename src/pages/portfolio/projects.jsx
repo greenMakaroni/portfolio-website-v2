@@ -20,7 +20,7 @@ const projects = [
     description:
       "Developed a next-generation software suite to optimize inkroom operations for print industry clients. ",
     link: "https://radical-dave-3170a.web.app/portfolio",
-    buttonText: "Not Available Yet...",
+    buttonText: "Coming soon...",
     date: "September 2024",
     icons: [
       <FaReact className={`mr-7 w-[30px] h-[30px]`} />,
