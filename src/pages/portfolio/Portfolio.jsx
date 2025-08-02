@@ -6,7 +6,6 @@ import useWindowDimensions from "../../custom_hooks/useWindowDimensions.jsx";
 import Navigation from "../../components/navigation/Navigation.jsx";
 import Project from "../../components/portfolio/Project.jsx";
 import Footer from "../../components/footer/Footer.jsx";
-import Scene from "../../components/portfolio/Scene.jsx";
 
 // Data
 import { projects } from "./projects.jsx";
@@ -46,6 +45,7 @@ const Portfolio = () => {
                 date={project.date}
                 destination={project.destination}
                 icons={project.icons}
+                buttonText={project.buttonText}
               />
             );
           })}

@@ -47,7 +47,7 @@ const projects = [
     description:
       "Interactive rating component challenge found on www.frontendmentor.io",
     link: "https://greenmakaroni.github.io/Interactive-rating-component/",
-    buttonText: "View Online",
+    buttonText: "Visit Site",
     date: "August 2023",
     icons: [
       <FaReact className={`mr-7 w-[30px] h-[30px]`} />,

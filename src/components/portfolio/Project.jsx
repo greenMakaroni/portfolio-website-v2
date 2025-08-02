@@ -3,7 +3,7 @@ import useOnScreen from "../../custom_hooks/useOnScreen.jsx";
 import useWindowDimensions from "../../custom_hooks/useWindowDimensions.jsx";
 import { ImArrowRight } from "react-icons/im";
 
-const Project = ({ title, description, link, date, icons }) => {
+const Project = ({ title, description, link, date, icons, buttonText }) => {
   const { width } = useWindowDimensions();
   const [hovered, setHovered] = useState(false);
   const isMobile = width < 650;
@@ -28,14 +28,26 @@ const Project = ({ title, description, link, date, icons }) => {
     >
       <div className="flex flex-col h-full justify-between ">
         <div className="flex flex-col">
-          <p
-            className={`duration-150 font-['Courier_Prime'] text-[13px] font-thin ${
-              hovered ? "text-white" : "text-red-900"
-            } `}
-          >
-            {" "}
-            {date}{" "}
-          </p>
+          <div className="flex flex-row items-center justify-between">
+            <p
+              className={`duration-150 font-['Courier_Prime'] text-[13px] font-thin ${
+                hovered ? "text-white" : "text-red-900"
+              } `}
+            >
+              {" "}
+              {date}{" "}
+            </p>
+            {hovered && (
+              <p
+                className={`ml-6 animate-[0.8s_pulse_infinite] duration-150 font-['Courier_Prime'] text-[13px] font-thin ${
+                  hovered ? "text-white" : "text-red-900"
+                } `}
+              >
+                {" "}
+                {buttonText}{" "}
+              </p>
+            )}
+          </div>
           <h1
             className={`${
               hovered ? "text-white" : "text-[#8a0000]"
