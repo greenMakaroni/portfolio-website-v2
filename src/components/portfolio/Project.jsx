@@ -22,49 +22,50 @@ const Project = ({ title, description, link, date, icons }) => {
           : `bg-white duration-300 w-1/4 border border-[#8a0000] flex flex-col ${
               hovered && "bg-gradient-to-br from-[#751e1e] to-[#d24c4c]"
             }`
-      } py-11 px-6 hover:cursor-pointer opacity-0 relative flex flex-col items-start ${
+      } pt-11 px-6 hover:cursor-pointer opacity-0 relative flex flex-col items-start ${
         isVisible && "animate-parIn"
       }`}
     >
-      <div className="flex flex-col">
-        <p
-          className={`duration-150 font-['Courier_Prime'] text-[13px] font-thin ${
-            hovered ? "text-white" : "text-red-900"
-          } `}
-        >
-          {" "}
-          {date}{" "}
-        </p>
-        <h1
-          className={`${
-            hovered ? "text-white" : "text-[#8a0000]"
-          }  flex flex-row items-center duration-150 text-xl font-['Kanit'] font-bold mb-[15px]`}
-        >
-          {title}{" "}
-          <ImArrowRight
+      <div className="flex flex-col h-full justify-between ">
+        <div className="flex flex-col">
+          <p
+            className={`duration-150 font-['Courier_Prime'] text-[13px] font-thin ${
+              hovered ? "text-white" : "text-red-900"
+            } `}
+          >
+            {" "}
+            {date}{" "}
+          </p>
+          <h1
             className={`${
-              hovered && "animate-arrowBounce"
-            } ml-4 h-[22px] w-[22px] duration-150`}
-          />
-        </h1>
-        <p
+              hovered ? "text-white" : "text-[#8a0000]"
+            }  flex flex-row items-center duration-150 text-xl font-['Kanit'] font-bold mb-[15px]`}
+          >
+            {title}{" "}
+            <ImArrowRight
+              className={`${
+                hovered && "animate-arrowBounce"
+              } ml-4 h-[22px] w-[22px] duration-150`}
+            />
+          </h1>
+          <p
+            className={`${
+              hovered ? "text-white" : "text-black"
+            }  mt-4 duration-150  mr-[30px] p-0 font-['Courier_Prime'] text-[12px] font-extralight tracking-wider`}
+          >
+            {" "}
+            {description}{" "}
+          </p>
+        </div>
+        <div
           className={`${
-            hovered ? "text-white" : "text-black"
-          }  mt-4 duration-150  mr-[30px] p-0 font-['Courier_Prime'] text-[12px] font-extralight tracking-wider`}
+            hovered ? "text-white" : "text-red-800"
+          } mt-6 flex flex-row items-center my-2 flex-wrap w-full`}
         >
-          {" "}
-          {description}{" "}
-        </p>
-      </div>
-
-      <div
-        className={`${
-          hovered ? "text-white" : "text-red-800"
-        } mt-6 flex flex-row items-center flex-wrap w-full`}
-      >
-        {icons.map((e) => {
-          return e;
-        })}
+          {icons.map((e) => {
+            return e;
+          })}
+        </div>
       </div>
     </div>
   );

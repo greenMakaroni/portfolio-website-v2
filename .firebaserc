@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "radical-dave-3170a"
-  }
+  },
+  "targets": {
+    "radical-dave-3170a": {
+      "hosting": {
+        "main": [
+          "radical-dave-3170a"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
