@@ -19,8 +19,8 @@ const projects = [
     title: "ESM Management",
     description:
       "Developed a next-generation software suite to optimize inkroom operations for print industry clients. ",
-    link: "https://github.com/greenMakaroni/react-commercejs-storefront",
-    buttonText: "Inspect Code",
+    link: "https://radical-dave-3170a.web.app/portfolio",
+    buttonText: "Not Available Yet...",
     date: "September 2024",
     icons: [
       <FaReact className={`mr-7 w-[30px] h-[30px]`} />,
