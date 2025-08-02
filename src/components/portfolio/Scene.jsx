@@ -14,7 +14,7 @@ import Loader from "../../components/shared/Loader.jsx";
 
 const Scene = () => {
   return (
-    <div className="absolute flex flex-row justify-end w-screen h-screen">
+    <div className="absolute flex flex-row justify-end w-screen h-screen blur-sm">
       <div className="w-screen h-screen fixed">
         {/* { play the transition when the scene is loaded} */}
         <Canvas shadows>

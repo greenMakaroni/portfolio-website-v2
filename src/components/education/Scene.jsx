@@ -76,9 +76,9 @@ const Scene = () => {
               <Center>
                 <Dmu />
               </Center>
-              <Center>
+              {/* <Center>
                 <Carousel />
-              </Center>
+              </Center> */}
               <Box position={[0, -9.15, 0]} />
               {/* Drei helpers */}
               <OrbitControls
@@ -91,16 +91,16 @@ const Scene = () => {
                 maxPolarAngle={Math.PI / 2}
               />
               {/* ENVIRONMENT REQUIRES INTERNET CONNECTION, IT MAKES API CALL TO GITHUB REPO NEED TO MAKE IT LOCAL */}
-              {/* <Environment preset="forest" /> */}
+              <Environment preset="forest" />
               {/* postprocessing */}
-              <EffectComposer>
+              {/* <EffectComposer>
                 <Bloom
                   luminanceThreshold={0.2}
                   luminanceSmoothing={0.8}
                   height={100}
                 />
                 <Vignette eskil={false} offset={0.1} darkness={1} />
-              </EffectComposer>
+              </EffectComposer> */}
             </SheetProvider>
           </Suspense>
         </Canvas>

@@ -11,8 +11,24 @@ import { SiApollographql } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import { FaStripe } from "react-icons/fa";
 import { SiMui } from "react-icons/si";
+import { BiLogoSpringBoot } from "react-icons/bi";
+import { BiLogoPostgresql } from "react-icons/bi";
 
 const projects = [
+  {
+    title: "ESM Management",
+    description:
+      "Developed a next-generation software suite to optimize inkroom operations for print industry clients. Contributed across the full stack—from designing intuitive UIs to integrating backend services and databases—ensuring high performance, scalability, and user adoption.",
+    link: "https://github.com/greenMakaroni/react-commercejs-storefront",
+    buttonText: "Inspect Code",
+    date: "September 2024",
+    icons: [
+      <FaReact className={`mr-7 w-[30px] h-[30px]`} />,
+      <BiLogoSpringBoot className={`mr-7 w-[30px] h-[30px]`} />,
+      <BiLogoPostgresql className={`mr-7 w-[30px] h-[30px]`} />,
+      <FaJava className={`mr-7 w-[35px] h-[35px]`} />,
+    ],
+  },
   {
     title: "My notes",
     description:
@@ -35,7 +51,7 @@ const projects = [
     buttonText: "View Online",
     date: "August 2023",
     icons: [
-      <FaReact className={`mr-7 w-[25px] h-[25px]`} />,
+      <FaReact className={`mr-7 w-[30px] h-[30px]`} />,
       <RiTailwindCssFill className={`mr-7 w-[25px] h-[25px] `} />,
     ],
   },
@@ -47,7 +63,7 @@ const projects = [
     buttonText: "Inspect Code",
     date: "July 2022",
     icons: [
-      <FaReact className={`mr-7 w-[25px] h-[25px]`} />,
+      <FaReact className={`mr-7 w-[30px] h-[30px]`} />,
       <FaBootstrap className={`mr-7 w-[28px] h-[28px]`} />,
       <SiExpress className={`mr-7 w-[22px] h-[22px]`} />,
       <SiMongodb className={`mr-7 w-[22px] h-[22px]`} />,
@@ -71,7 +87,7 @@ const projects = [
     buttonText: "Inspect Code",
     date: "August 2021",
     icons: [
-      <FaReact className={`mr-7 w-[25px] h-[25px]`} />,
+      <FaReact className={`mr-7 w-[30px] h-[30px]`} />,
       <FaStripe className={`mr-7 w-[35px] h-[35px]`} />,
       <SiMui className={`mr-7 w-[25px] h-[25px]`} />,
     ],

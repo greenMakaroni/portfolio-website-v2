@@ -19,40 +19,37 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col">
       <Navigation />
-      {!isMobile && <Scene />}
-      <div className="w-screen h-screen fixed -z-20"></div>
+
       <div
         className={`${
-          isMobile ? "" : "pl-[10vw]"
+          isMobile ? "flex items-start justify-center" : "px-2"
         } w-screen flex flex-col items-start select-none`}
       >
-        <div
-          className={`px-[20px] ${
-            isMobile && "flex items-center justify-center "
-          }`}
-        >
+        <div className={`${isMobile && "flex items-center justify-center "}`}>
           <h1
-            className={`py-[10px] ml-[20px]  mt-[100px] animate-elementIn opacity-0 text-4xl font-['Geologica'] bg-gradient-to-br from-[#8a0000] to-[#ffbebe] inline-block text-transparent bg-clip-text font-bold`}
+            className={`pl-1 mt-[100px] animate-elementIn opacity-0 text-4xl font-['Geologica'] bg-gradient-to-br from-[#be2d2d] to-[#aa0606] inline-block text-transparent bg-clip-text font-bold`}
           >
-            personal projects
+            Projects
           </h1>
         </div>
 
-        {projects.map((project, index) => {
-          return (
-            <Project
-              key={index}
-              title={project.title}
-              description={project.description}
-              link={project.link}
-              date={project.date}
-              destination={project.destination}
-              icons={project.icons}
-            />
-          );
-        })}
+        <div className="flex flex-row flex-wrap my-6">
+          {projects.map((project, index) => {
+            return (
+              <Project
+                key={index}
+                title={project.title}
+                description={project.description}
+                link={project.link}
+                date={project.date}
+                destination={project.destination}
+                icons={project.icons}
+              />
+            );
+          })}
+        </div>
       </div>
       <Footer />
     </div>

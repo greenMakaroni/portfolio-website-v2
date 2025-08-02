@@ -18,12 +18,12 @@ const Project = ({ title, description, link, date, icons }) => {
       ref={project}
       className={`${
         isMobile
-          ? `bg-gradient-to-br from-[#ff7a7a]  to-[#8a0000] w-screen  duration-300 border border-[#8a0000] flex flex-col items-center justify-center `
-          : `bg-white duration-300 w-[36vw] border border-[#8a0000] flex flex-col items-start justify-center  ${
+          ? `w-screen duration-300 border border-[#8a0000] flex flex-col items-center justify-center `
+          : `bg-white duration-300 w-1/4 border border-[#8a0000] flex flex-col ${
               hovered && "bg-gradient-to-br from-[#751e1e] to-[#d24c4c]"
             }`
-      } py-11 px-6 hover:cursor-pointer opacity-0 relative mt-[8vh] mb-[33vh] flex flex-col items-start ${
-        isVisible && "animate-elementIn"
+      } py-11 px-6 hover:cursor-pointer opacity-0 relative flex flex-col items-start ${
+        isVisible && "animate-parIn"
       }`}
     >
       <div className="flex flex-col">
@@ -36,9 +36,9 @@ const Project = ({ title, description, link, date, icons }) => {
           {date}{" "}
         </p>
         <h1
-          className={`${hovered ? "text-white" : "text-[#8a0000]"} ${
-            isMobile && "text-white"
-          } flex flex-row items-center duration-150 text-xl font-['Kanit'] font-bold mb-[15px]`}
+          className={`${
+            hovered ? "text-white" : "text-[#8a0000]"
+          }  flex flex-row items-center duration-150 text-xl font-['Kanit'] font-bold mb-[15px]`}
         >
           {title}{" "}
           <ImArrowRight
@@ -48,9 +48,9 @@ const Project = ({ title, description, link, date, icons }) => {
           />
         </h1>
         <p
-          className={`${hovered ? "text-white" : "text-black"} ${
-            isMobile && "text-white"
-          } mt-4 duration-150  mr-[30px] p-0 font-['Courier_Prime'] text-[12px] font-extralight tracking-wider`}
+          className={`${
+            hovered ? "text-white" : "text-black"
+          }  mt-4 duration-150  mr-[30px] p-0 font-['Courier_Prime'] text-[12px] font-extralight tracking-wider`}
         >
           {" "}
           {description}{" "}
