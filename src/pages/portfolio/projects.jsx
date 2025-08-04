@@ -23,7 +23,7 @@ const projects = [
     buttonText: "Coming soon...",
     date: "September 2024",
     icons: [
-      <FaReact className={`mr-7 w-[30px] h-[30px]`} />,
+      <FaReact className={`mr-7 w-[26px] h-[26px]`} />,
       <BiLogoSpringBoot className={`mr-7 w-[30px] h-[30px]`} />,
       <BiLogoPostgresql className={`mr-7 w-[30px] h-[30px]`} />,
       <FaJava className={`mr-7 w-[35px] h-[35px]`} />,
@@ -50,7 +50,7 @@ const projects = [
     buttonText: "Visit Site",
     date: "August 2023",
     icons: [
-      <FaReact className={`mr-7 w-[30px] h-[30px]`} />,
+      <FaReact className={`mr-7 w-[26px] h-[26px]`} />,
       <RiTailwindCssFill className={`mr-7 w-[30px] h-[30px] `} />,
     ],
   },
@@ -61,7 +61,7 @@ const projects = [
     buttonText: "Inspect Code",
     date: "July 2022",
     icons: [
-      <FaReact className={`mr-7 w-[30px] h-[30px]`} />,
+      <FaReact className={`mr-7 w-[26px] h-[26px]`} />,
       <SiExpress className={`mr-7 w-[30px] h-[30px]`} />,
       <SiMongodb className={`mr-7 w-[25px] h-[25px]`} />,
       <GrGraphQl className={`mr-7 w-[28px] h-[28px]`} />,
@@ -83,7 +83,7 @@ const projects = [
     buttonText: "Inspect Code",
     date: "August 2021",
     icons: [
-      <FaReact className={`mr-7 w-[30px] h-[30px]`} />,
+      <FaReact className={`mr-7 w-[26px] h-[26px]`} />,
       <FaStripe className={`mr-7 w-[40px] h-[40px]`} />,
       <SiMui className={`mr-7 w-[25px] h-[25px]`} />,
     ],

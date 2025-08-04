@@ -22,7 +22,7 @@ const Education = () => {
         <div className="animate-appear opacity-0 fixed w-screen h-screen -z-10"></div>
 
         {/* render scene on desktop */}
-        {!isMobile && <Scene />}
+        <Scene />
         <div
           className={`${
             isMobile ? "" : "pl-[10vw]"

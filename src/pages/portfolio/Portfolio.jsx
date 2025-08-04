@@ -23,7 +23,7 @@ const Portfolio = () => {
 
       <div
         className={`${
-          isMobile ? "flex items-start justify-center" : "px-2"
+          isMobile ? "flex items-start justify-center" : "px-1"
         } w-screen flex flex-col items-start select-none`}
       >
         <div className={`${isMobile && "flex items-center justify-center "}`}>

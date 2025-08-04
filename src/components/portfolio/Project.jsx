@@ -72,7 +72,7 @@ const Project = ({ title, description, link, date, icons, buttonText }) => {
         <div
           className={`${
             hovered ? "text-white" : "text-red-800"
-          } mt-6 flex flex-row items-center my-2 flex-wrap w-full`}
+          } mt-6 flex flex-row items-center my-4 flex-wrap w-full`}
         >
           {icons.map((e) => {
             return e;
