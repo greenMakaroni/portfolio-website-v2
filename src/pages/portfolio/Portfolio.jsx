@@ -18,13 +18,13 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col ">
       <Navigation />
 
       <div
         className={`${
           isMobile ? "flex items-start justify-center" : "px-1"
-        } w-screen flex flex-col items-start select-none`}
+        } w-screen flex flex-col items-start select-none `}
       >
         <div className={`${isMobile && "flex items-center justify-center "}`}>
           <h1

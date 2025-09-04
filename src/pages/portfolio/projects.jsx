@@ -18,7 +18,7 @@ const projects = [
   {
     title: "ESM Management",
     description:
-      "Developed a next-generation software suite to optimize inkroom operations for print industry clients. ",
+      "Developed a next-generation software suite to optimize inkroom operations for print industry giants. ",
     link: "https://radical-dave-3170a.web.app/portfolio",
     buttonText: "Coming soon...",
     date: "September 2024",

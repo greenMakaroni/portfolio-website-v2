@@ -16,18 +16,18 @@ const Education = () => {
   }, []);
 
   return (
-    <div className=" flex flex-col">
+    <div className=" flex flex-col p-0">
       <Navigation />
-      <div className="flex flex-row">
-        <div className="animate-appear opacity-0 fixed w-screen h-screen -z-10"></div>
+      <div className="flex flex-row ">
+        {/* <div className="animate-appear opacity-0 fixed w-screen h-screen -z-10"></div> */}
 
         {/* render scene on desktop */}
         <Scene />
-        <div
+        {/* <div
           className={`${
             isMobile ? "" : "pl-[10vw]"
           } animate-infoElementIn opacity-0  flex flex-col`}
-        ></div>
+        ></div> */}
       </div>
       {/* <Footer /> */}
     </div>
