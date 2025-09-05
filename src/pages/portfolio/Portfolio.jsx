@@ -22,7 +22,7 @@ const Portfolio = () => {
       <Navigation />
 
       <div
-        className={`${
+        className={`mb-[15vh] ${
           isMobile ? "flex items-start justify-center" : "px-1"
         } w-screen flex flex-col items-start select-none `}
       >
@@ -34,7 +34,7 @@ const Portfolio = () => {
           </h1>
         </div>
 
-        <div className="flex flex-row flex-wrap my-6">
+        <div className="flex flex-row flex-wrap mt-6 mb-11">
           {projects.map((project, index) => {
             return (
               <Project

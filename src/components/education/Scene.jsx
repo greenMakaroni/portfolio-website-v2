@@ -27,19 +27,21 @@ import Loader from "../shared/Loader.jsx";
 import { Bloom, EffectComposer, Vignette } from "@react-three/postprocessing";
 
 /* --------------------------- Animation development mode --------------------------- */
-import { onChange, val } from "@theatre/core";
-import studio from "@theatre/studio";
+// import { onChange, val } from "@theatre/core";
+// import studio from "@theatre/studio";
 
-studio.initialize();
+// studio.initialize();
 
+// const sheet_entry = getProject("Logo entry", {
+//   state: dmuEntryAnimation,
+// }).sheet("Logo entry"); // Animation Sheet
+
+/* --------------------------- Animation production mode --------------------------- */
 const sheet_entry = getProject("Logo entry", {
   state: dmuEntryAnimation,
 }).sheet("Logo entry"); // Animation Sheet
 
-/* --------------------------- Animation production mode --------------------------- */
-// const sheet_entry = getProject("Logo entry", {
-//   state: dmuEntryAnimation,
-// }).sheet("Logo entry"); // Animation Sheet
+/* ------------------------------------------------------------------------------------- */
 
 // Helper that (re)plays the intro then the idle loop
 async function playIntroThenLoop() {
@@ -89,7 +91,7 @@ const Scene = () => {
 
   return (
     <div
-      className={`m-0 p-0 absolute flex flex-row justify-end w-screen h-screen border-2 border-green-400`}
+      className={`m-0 p-0 absolute flex flex-row justify-end w-screen h-screen`}
     >
       <div className="m-0 p-0 z-[0] w-screen h-screen fixed opacity-0 animate-moveCanvas">
         {/* { play the transition when the scene is loaded} */}
