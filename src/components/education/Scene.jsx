@@ -65,46 +65,68 @@ async function playIntroThenLoop() {
 }
 
 const Scene = () => {
+  const [start, setStart] = useState(false);
   const camRef = useRef();
 
   useEffect(() => {
-    let cancelled = false;
+    // flag to prevent state updates after unmount
+    let cancelled = false; // boolean guard used inside the async IIFE
+
     (async () => {
-      await sheet_entry.project.ready; // ensure Theatre is ready
-      if (!cancelled) {
-        sheet_entry.sequence.pause();
-        sheet_entry.sequence.position = 0;
-        await sheet_entry.sequence.play({
-          iterationCount: 1,
-          range: [0.1, 4.2],
-        });
-        await sheet_entry.sequence.play({
-          iterationCount: Infinity,
-          range: [5, 9],
-        });
-      }
+      // 1) wait until Theatre project is fully initialized
+      await sheet_entry.project.ready; // .ready -> Promise that resolves when Theatre is ready
+
+      if (cancelled) return; // if unmounted while waiting, bail out
+
+      const seq = sheet_entry.sequence; // cache the sequence reference locally
+
+      // 2) hard reset any existing playback before starting
+      seq.pause(); // .pause() -> stop current playback immediately
+      seq.position = 0; // set playback head to the very beginning (time = 0)
+
+      // 3) play the intro ONCE and wait for it to finish
+      await seq.play({
+        iterationCount: 1, // play exactly once
+        range: [0.1, 4.2], // [startTime, endTime] in seconds on your timeline
+      }); // await resolves when the one-shot finishes
+
+      if (cancelled) return; // if unmounted during the intro, bail out safely
+
+      // 4) now signal your R3F rig that it can start running in useFrame
+      setStart(true); // flip your gate so useFrame logic activates
+
+      // 5) start the infinite loop — IMPORTANT: do NOT await this (it never resolves)
+      void seq.play({
+        iterationCount: Infinity, // loop forever
+        range: [5, 9], // loop segment
+      }); // fire-and-forget so effect can complete
     })();
+
+    // cleanup to avoid leaks and stale state updates
     return () => {
-      cancelled = true;
-      sheet_entry.sequence.pause();
-      sheet_entry.sequence.position = 0;
+      cancelled = true; // prevent any pending async from calling setState
+      setStart(false); // gate off your useFrame on unmount/navigation
+      try {
+        sheet_entry.sequence.pause(); // stop playback if it’s running
+        sheet_entry.sequence.position = 0; // rewind for next mount
+      } catch {
+        /* ignore if sequence went away */
+      }
     };
-  }, []);
+  }, [sheet_entry]);
+
+  console.log("start: ", start);
 
   function CameraRig({ camRef, target = [0, 0, 0], radius = 20 }) {
     // ^ React component that will run inside <Canvas>, so it's allowed to use useFrame
 
-    useFrame(
-      (state /* renderer state */, delta /* seconds since last frame */) => {
-        // ^ runs every animation frame on the R3F render loop (only valid inside <Canvas>)
-
-        if (!camRef.current) return; // guard against null ref during mount/unmount
-        const t = state.clock.elapsedTime * 0.1; // read accumulated time from the internal clock
-        camRef.current.position.x = Math.sin(t) * radius; // animate x on a circle of radius `radius`
-        camRef.current.position.z = Math.cos(t) * radius; // keep a circular path by animating z too
-        camRef.current.lookAt(...target); // always face the target point (origin by default)
-      }
-    );
+    useFrame((state) => {
+      if (!start || !camRef.current) return;
+      const t = state.clock.elapsedTime * 0.1;
+      camRef.current.position.x = Math.sin(t) * radius;
+      camRef.current.position.z = Math.cos(t) * radius;
+      camRef.current.lookAt(0, 0, 0);
+    });
 
     return null; // this controller renders nothing; it only updates the camera each frame
   }
@@ -128,7 +150,7 @@ const Scene = () => {
                 fov={75}
               />
 
-              <CameraRig camRef={camRef} target={[0, 1, 0]} radius={12} />
+              <CameraRig camRef={camRef} target={[0, 1, 0]} radius={11} />
 
               {/* <PerspectiveCamera
                 theatreKey="Camera"
