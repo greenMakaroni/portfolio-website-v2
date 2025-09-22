@@ -65,6 +65,8 @@ async function playIntroThenLoop() {
 }
 
 const Scene = () => {
+  const camRef = useRef();
+
   useEffect(() => {
     let cancelled = false;
     (async () => {
@@ -89,6 +91,24 @@ const Scene = () => {
     };
   }, []);
 
+  function CameraRig({ camRef, target = [0, 0, 0], radius = 20 }) {
+    // ^ React component that will run inside <Canvas>, so it's allowed to use useFrame
+
+    useFrame(
+      (state /* renderer state */, delta /* seconds since last frame */) => {
+        // ^ runs every animation frame on the R3F render loop (only valid inside <Canvas>)
+
+        if (!camRef.current) return; // guard against null ref during mount/unmount
+        const t = state.clock.elapsedTime * 0.1; // read accumulated time from the internal clock
+        camRef.current.position.x = Math.sin(t) * radius; // animate x on a circle of radius `radius`
+        camRef.current.position.z = Math.cos(t) * radius; // keep a circular path by animating z too
+        camRef.current.lookAt(...target); // always face the target point (origin by default)
+      }
+    );
+
+    return null; // this controller renders nothing; it only updates the camera each frame
+  }
+
   return (
     <div
       className={`m-0 p-0 absolute flex flex-row justify-end w-screen h-screen`}
@@ -102,10 +122,20 @@ const Scene = () => {
             <SheetProvider sheet={sheet_entry}>
               <PerspectiveCamera
                 theatreKey="Camera"
+                ref={camRef}
+                makeDefault
+                position={[0, 2, 5]}
+                fov={75}
+              />
+
+              <CameraRig camRef={camRef} target={[0, 1, 0]} radius={12} />
+
+              {/* <PerspectiveCamera
+                theatreKey="Camera"
                 makeDefault
                 position={[-10, -20, 10]}
                 fov={30}
-              />
+              /> */}
               {/* Lights */}
               <spotLight castShadow intensity={0.4} position={[-4, 6, 4]} />
               {/* Models */}
