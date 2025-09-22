@@ -14,7 +14,7 @@ import { SiMui } from "react-icons/si";
 import { BiLogoSpringBoot } from "react-icons/bi";
 import { BiLogoPostgresql } from "react-icons/bi";
 
-const projects = [
+const professionalProjects = [
   {
     title: "ESM Management",
     description:
@@ -29,6 +29,9 @@ const projects = [
       <FaJava className={`mr-7 w-[35px] h-[35px]`} />,
     ],
   },
+];
+
+const personalProjects = [
   {
     title: "My Notes",
     description: "Full stack web application for creating and managing notes. ",
@@ -90,4 +93,4 @@ const projects = [
   },
 ];
 
-export { projects };
+export { personalProjects, professionalProjects };

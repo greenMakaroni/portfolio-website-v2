@@ -19,7 +19,7 @@ const Project = ({ title, description, link, date, icons, buttonText }) => {
       className={`${
         isMobile
           ? `w-screen h-[40vh] my-4 duration-300 border border-[#8a0000] flex flex-col items-center justify-center `
-          : `bg-white duration-300 w-[24.6vw] border border-[#8a0000] flex flex-col ${
+          : `bg-white duration-300 w-[33vw] border border-[#8a0000] flex flex-col ${
               hovered && "bg-gradient-to-br from-[#751e1e] to-[#d24c4c]"
             }`
       } pt-11 px-6 hover:cursor-pointer opacity-0 relative flex flex-col items-start ${
