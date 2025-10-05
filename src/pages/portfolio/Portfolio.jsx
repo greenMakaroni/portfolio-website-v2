@@ -28,13 +28,13 @@ const Portfolio = () => {
       >
         <div className={`${isMobile && "flex items-center justify-center "}`}>
           <h1
-            className={`pl-1 mt-[100px] animate-elementIn opacity-0 text-3xl font-['Geologica'] bg-gradient-to-br from-[#be2d2d] to-[#aa0606] inline-block text-transparent bg-clip-text font-bold`}
+            className={`pl-1 mt-[100px] animate-parIn opacity-0 text-3xl font-['Geologica'] bg-gradient-to-br from-[#be2d2d] to-[#aa0606] inline-block text-transparent bg-clip-text font-bold`}
           >
             Professional Projects
           </h1>
         </div>
 
-        <div className="flex flex-row flex-wrap mt-6 mb-11">
+        <div className="flex flex-row flex-wrap mt-6 mb-11 px-1">
           {professionalProjects.map((project, index) => {
             return (
               <Project
@@ -53,13 +53,13 @@ const Portfolio = () => {
 
         <div className={`${isMobile && "flex items-center justify-center "}`}>
           <h1
-            className={`pl-1 mt-[100px] animate-elementIn opacity-0 text-3xl font-['Geologica'] bg-gradient-to-br from-[#be2d2d] to-[#aa0606] inline-block text-transparent bg-clip-text font-bold`}
+            className={`pl-1 mt-[100px] animate-parIn opacity-0 text-3xl font-['Geologica'] bg-gradient-to-br from-[#be2d2d] to-[#aa0606] inline-block text-transparent bg-clip-text font-bold`}
           >
             Personal Projects
           </h1>
         </div>
 
-        <div className="flex flex-row flex-wrap mt-6 mb-11">
+        <div className="flex flex-row flex-wrap mt-6 mb-11 px-1">
           {personalProjects.map((project, index) => {
             return (
               <Project

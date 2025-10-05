@@ -1,16 +1,11 @@
-import MobileNav from "./MobileNav"
-import DesktopNav from "./DesktopNav"
+import MobileNav from "./MobileNav";
+import DesktopNav from "./DesktopNav";
 
 // window dimensions hook
-import useWindowDimensions from '../../custom_hooks/useWindowDimensions';
+import useWindowDimensions from "../../custom_hooks/useWindowDimensions";
 
 export default function Navigation() {
+  const { width } = useWindowDimensions();
 
-    const { width } = useWindowDimensions();
-
-  return (
-    <>
-        { width < 650 ? <MobileNav /> : <DesktopNav /> }
-    </>
-  )
+  return <>{width < 650 ? <MobileNav /> : <DesktopNav />}</>;
 }

@@ -22,9 +22,37 @@ export default function Nav() {
     }
   }, [scrollPosition.prev]);
 
+  function styleDesktopNav(url) {
+    console.log("location.pathname: ", location.pathname);
+    switch (location.pathname) {
+      case "/":
+        return `hover:underline
+          underline-offset-8
+          hover:decoration-white
+          p-4 text-base text-white font-['Kanit']  
+          ${
+            location.pathname === url ? `text-white underline` : "no-underline"
+          }`;
+
+      case "/education":
+        return `hover:underline
+          hover:underline-offset-8
+          hover:decoration-red-800
+          p-4 text-base text-black font-['Kanit']  
+          ${location.pathname === url ? `text-red-900 ` : "no-underline"}`;
+
+      default:
+        return `hover:underline
+          hover:underline-offset-8
+          hover:decoration-red-800
+          p-4 text-base text-black font-['Kanit']  
+          ${location.pathname === url ? `text-red-900 ` : "no-underline"}`;
+    }
+  }
+
   return (
     <nav
-      className={` hover:bg-white fixed flex flex-row items-center justify-center w-screen h-[80px] select-none  top-0 right-0 overflow-hidden z-40 ${
+      className={`  fixed flex flex-row items-center justify-center w-screen h-[80px] select-none  top-0 right-0 overflow-hidden z-40 ${
         show ? "opacity-100" : "opacity-0"
       }`}
     >
@@ -44,19 +72,7 @@ export default function Nav() {
           },
         ].map(({ url, text, icon }, index) => {
           return (
-            <Link
-              key={index}
-              to={url}
-              className={`
-        hover:underline
-        hover:underline-offset-8
-        hover:decoration-red-800
-         p-4 text-base text-black font-['Kanit'] font-thin ${
-           location.pathname === url
-             ? "bg-gradient-to-r from-[#8a0000] to-[#fc7474] inline-block text-transparent bg-clip-text "
-             : "no-underline"
-         }`}
-            >
+            <Link key={index} to={url} className={styleDesktopNav(url)}>
               {text}
             </Link>
           );

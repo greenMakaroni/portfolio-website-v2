@@ -42,7 +42,7 @@ export default {
         infoElementIn: "1s elementIn ease 1s forwards",
         elementIn: "elementIn 1s forwards",
         parIn: "parIn 1s forwards",
-        appear: " appear 1s forwards",
+        appear: " appear 1.5s forwards",
       },
     },
   },

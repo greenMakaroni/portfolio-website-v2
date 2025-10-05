@@ -123,6 +123,16 @@ const Scene = () => {
     useFrame((state) => {
       if (!start || !camRef.current) return;
       const t = state.clock.elapsedTime * 0.1;
+      // console.log("t: ", t);
+      // console.log(
+      //   "camRef.current.position.x = Math.sin(t) * radius: ",
+      //   (camRef.current.position.x = Math.sin(t) * radius)
+      // );
+
+      // console.log(
+      //   "camRef.current.position.z = Math.cos(t) * radius: ",
+      //   (camRef.current.position.z = Math.cos(t) * radius)
+      // );
       camRef.current.position.x = Math.sin(t) * radius;
       camRef.current.position.z = Math.cos(t) * radius;
       camRef.current.lookAt(0, 0, 0);
@@ -150,7 +160,7 @@ const Scene = () => {
                 fov={75}
               />
 
-              <CameraRig camRef={camRef} target={[0, 1, 0]} radius={11} />
+              {/* <CameraRig camRef={camRef} target={[0, 1, 0]} radius={11} /> */}
 
               {/* <PerspectiveCamera
                 theatreKey="Camera"
